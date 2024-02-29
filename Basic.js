@@ -61,3 +61,31 @@ console.log(a) //
 for(let i =0;i<10;i++) {
     console.log(i)
 }
+
+var n1 = 2345.666;
+
+console.log(n1 , typeof n1)
+
+
+
+// javascript predefined function alert
+
+// function
+// function call is same as java
+// alert('Are you sure you are 18+? ')
+// confirm('Are you sure you are 18+?')
+
+
+
+//   Function declartion
+
+function addTwonumber(a,b) {
+    //  body of function
+    // mathmatical operator 
+    var c = a + b; 
+    console.log('this is inside the function' ,c)
+}
+
+//  this is function calling
+addTwonumber(10 , 20);
+
