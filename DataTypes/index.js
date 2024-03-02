@@ -24,11 +24,22 @@ var typeValue =  typeof typeof  typeof typeof  typeof typeof typeof a;
 
 console.log(typeValue)
 
-function getData  () {
-    return 'Helo';
+
+
+// Boolean 
+//  String 
+ // Number
+
+ var check1 = false;
+ var check2 =  true
+
+if(check1) {
+    console.log('inside if')
+} else if(check2){
+    console.log('inside else if')
+} else {
+    console.log('inside else')
 }
-
-
 
 
 
