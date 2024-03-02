@@ -7,7 +7,8 @@
 
 
 
-// There is three keyword in javascript that use for creating the variable
+// There is three keyword in javascript that use for creating the variable (let  , var and  const)
+
 // unlike Java Javascript does not need any type delcration
 
 // here a is variable name
@@ -89,3 +90,17 @@ function addTwonumber(a,b) {
 //  this is function calling
 addTwonumber(10 , 20);
 
+
+
+
+ //var users =[]; // variable declaration and assignment
+ // var users; //  Variable Declration
+//  var users ;
+//   users = []; this is just assignment
+
+// In java Semicolon(;) is very importatnt withoutt this or if we missed this colon  there is syntax error
+// In javascript there is no syntax error if you missed this semicolon
+
+
+
+console.log("Hey Semocolon is not required")
