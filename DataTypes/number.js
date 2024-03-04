@@ -49,12 +49,40 @@ for(var k =0;k<100;k++) {
 }
 
 
+// 0-1
+// Math.random( )> 0,1 => 0 , .1 , .2 , .5 , .6 , ..... , .99999 , 1
+
+// 0-10
 
 
 
-
+// 0-10 => 0<=9
+// Math.random() => .3*10 => 3 , 9.9 , 
 
 
 // .1*10 =>1 
 
 // .999*10 => 9.9
+
+
+// Generate  the random number between , 50 to 90
+
+
+var start  =50 ;
+var end  =90;
+for(var j =0;j<20;j++ ) {
+// here i will create 100 random number b/w 50 to 90
+
+// Math.random() => decimal => parseInt , Math.ceil  and Math.floor
+var random = Math.floor(Math.random()*(end-start+1)+start);
+console.log('random=>' , random)
+}
+
+
+
+// Math.random()*(90-50+1)+50
+// Math.randomw()*41 +50;
+
+
+// Math.randomw()*41  0-41 , 41 will be not included , 40.99999999999+50 => 90
+
