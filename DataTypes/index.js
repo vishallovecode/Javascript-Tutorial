@@ -18,12 +18,18 @@ console.log('Checking type::' ,  typeof areYouCommitted)
 console.log('Checking type:::' ,  typeof areYouSingle)
 
 
-var a = 20;
+var a = 20; // number
 
-var typeValue =  typeof typeof  typeof typeof  typeof typeof typeof a;
+var typeValue =  typeof (typeof  (typeof (typeof  (typeof (typeof (typeof a))))));
 
 console.log(typeValue)
 
+
+
+// typeof 'number'
+
+
+// 'string'
 
 
 // Boolean 
@@ -42,4 +48,16 @@ if(check1) {
 }
 
 
+
+
+// Javascript
+
+// NodeJs(server) , ReactJs(web), ReactNative(app)
+
+
+// typeof variable_name => 'number'
+
+
+
+ 
 
