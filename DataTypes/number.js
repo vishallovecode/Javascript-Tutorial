@@ -19,8 +19,8 @@ console.log('n3=>' ,n3)
 
 // floor and ceil round off
 
-const n4  = Math.ceil(n2); // roof
-const n5 = Math.floor(n2); // jameen
+var n4  = Math.ceil(n2); // roof
+var n5 = Math.floor(n2); // jameen
 console.log('n4=>' , n4 , 'n5=>', n5)
 
 //
@@ -68,21 +68,84 @@ for(var k =0;k<100;k++) {
 // Generate  the random number between , 50 to 90
 
 
-var start  =50 ;
-var end  =90;
+var min  =50 ;
+var max  =90;
 for(var j =0;j<20;j++ ) {
-// here i will create 100 random number b/w 50 to 90
-
+// here i will create 100 random number b/w 50 to 90 (include me)
 // Math.random() => decimal => parseInt , Math.ceil  and Math.floor
-var random = Math.floor(Math.random()*(end-start+1)+start);
+var random = Math.floor(Math.random()*(max-min+1)+min);
 console.log('random=>' , random)
 }
-
-
-
 // Math.random()*(90-50+1)+50
 // Math.randomw()*41 +50;
-
-
 // Math.randomw()*41  0-41 , 41 will be not included , 40.99999999999+50 => 90
 
+
+
+// include => inclusive
+// exclude => exlusive
+
+// Guys  => Include me
+// Guys=>  Exlude me
+
+// Math.random()* => 0-1=> .99999999999999
+
+
+// Math.random()*(90-50);
+// Math.random()*40  + 50 // => 0-40
+
+
+// function generateNumber (min , max) {
+//     return Math.floor(Math.random()*(max-min+1)+min);
+// }
+
+// generateNumber(90 , 190);
+
+// Math.min()
+// This function will take the multiple parameter and it will return the value which is minimum among all
+
+
+const minimum  = Math.min(-1 , -30 , -49 , 100 , 4 , 5 , 6);
+console.log('Minimum =>' , minimum)
+
+
+// Math.max()
+// This function will take the multiple parameter and it will return the value which is maximum among all
+
+
+const maximum  = Math.max(-1 , -30 , -49 , 100 , 4 , 5 , 6);
+console.log('Maximum =>' , maximum)
+
+
+
+// String  the value which closed by single quote or double quote is called string
+
+var  numeric = '23456';
+
+console.log(typeof numeric) // string
+
+// 1. use parseInt()
+const intS = parseInt(numeric)
+const ints2 = +numeric;
+console.log('intS' , typeof  intS)
+console.log('ints2' , typeof  ints2)
+
+// accessign dom 
+
+// Todo:2
+var inputValue = document.getElementById('input').value;
+console.log('inputValue=>', inputValue , 'type=>' , typeof inputValue )
+
+// to convert numeric string into number we can use two ways
+
+
+
+// parseFloat 
+
+const numeric1 ='1245.555';
+
+console.log('float', parseInt(numeric1))
+console.log('float', +numeric1)
+console.log('float', parseFloat(numeric1))
+
+// PLUS DISADVANTAGE
