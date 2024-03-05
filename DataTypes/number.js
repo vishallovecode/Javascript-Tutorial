@@ -168,10 +168,25 @@ var a12 = parseInt(a11);
 var a13 = parseInt(b11);
 var a14=  parseInt(b12)
 
-console.log('a11' , +a11) // NaN
-console.log('b11' , +b11) //NaN
-console.log('b12' , +b12) // NaN
+// Note 1 => if we use +  operator before the numeric string it will try to convert it into the number , 
+// if it there is any value apart from the number inside the string it will gives the error as NAN
+console.log('a11 plus' , +a11) // NaN
+console.log('b11 plus' , +b11) //NaN
+console.log('b12 plus' , +b12) // NaN
+
+
+// Note 2 => parseInt convert all the numeric string to the number like + operator , but is we have any value apart from the number inside the string
+// Case: 1 when the number are in starting => it will return the only number which is in starting 
+//Example => 234Vishal => in this string we have 234 is in starting of string , parseInt return 234 as output it will neglect rest of it
+
+// Case: 2 when the number are in starting and between of the string => it will only return the starting number
+//Example => 234Vishal344 => in this string we have 234 is in starting of string , parseInt return 234 as output it will neglect rest of it
+
+// Case: 3  if we have any value other than number in starting it will return NaN (Not  a number)
 
 console.log('a12==' , a12) // 234
 console.log('a13==' , a13) // 23
 console.log('a14==' , a14) // NaN
+
+
+// Note 1 => parseInt
