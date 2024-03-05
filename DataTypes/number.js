@@ -216,3 +216,11 @@ console.log(isNaN(NaN)); // true
 console.log(isNaN('_234')) // true
 console.log(isNaN('234')) // false
 console.log(isNaN('2344VISHAL')) // true
+console.log(isNaN('2334a9999')) // true
+
+console.log(isNaN(''))
+
+console.log(isNaN('A')) // NaN
+
+
+
