@@ -190,3 +190,29 @@ console.log('a14==' , a14) // NaN
 
 
 // Note 1 => parseInt
+
+
+//NaN => this means NOT A Number
+// what is the data type of NaN
+
+console.log('Type of NaN' ,typeof NaN);
+
+console.log( typeof 'Surjeet');  // string
+
+
+var data  = parseInt('stru') //  NaN
+
+console.log(typeof data ); // number
+
+// function (vvv important)
+
+// isNaN
+var n22 = 23;
+// isNaN() =>  is a function provided by javascript and it globally  present it  takes number as argument  , if number is NaN than it will return 
+// true else false
+
+console.log(isNaN(n22)); // false
+console.log(isNaN(NaN)); // true
+console.log(isNaN('_234')) // true
+console.log(isNaN('234')) // false
+console.log(isNaN('2344VISHAL')) // true
