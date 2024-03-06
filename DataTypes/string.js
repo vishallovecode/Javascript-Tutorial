@@ -76,4 +76,76 @@ console.log(sentence.split('a'));
 
 
 
+//
+
+ var num3 = 23455678;
+var num3S  =  num3.toString(); //  '23455678'
+var length =  num3S.length;
+console.log(length)
+
+ console.log(num3.toString().length)
+
+ // Conveting Array into string
+
+//  join
+
+ var array = [3,4,5,6,7,8];
+ console.log(array.join('?')) // '3?4?5?6?7?8'
+ console.log(array.join('-')) // '3-4-5-6-7-8'
+ console.log(array.join('')) // '345678'
+ console.log(array.join('---')) // '3---4---5---6---7---8'
+
+
+
+// TODO:Prototype
+
+Array.prototype.myJoin  = function  (seperator) {
+    var s = ''
+    for(var i =0;i<this.length;i++) {
+        if(i===this.length-1) {
+            s = s+ this[i]
+        } else {
+            s = s+ this[i]+ seperator
+        }
+    }
+    return s;
+}
+// console.log(array.myJoin(':'))
+
+
+function join (seperator , array) {
+    var s = ''
+    for(var i =0;i<array.length;i++) {
+        if(i===array.length-1) {
+            s = s+ array[i]
+        } else {
+            s = s+ array[i]+ seperator
+        }
+    }
+    return s;
+}
+console.log(join(':' , array))
+
+// 
+var sentence = "Hello we are learning String datatype";
+
+// IT will replace first value which is there in string
+console.log(sentence.replace('Hello', `E`));
+
+
+console.log(sentence.replaceAll('e', `E`));
+
+ 
+console.log(sentence.startsWith('o we are' , 4)) // true
+console.log(sentence.endsWith('datatype' ,10)) // false
+console.log(sentence.startsWith('ello')) // false
+console.log(sentence.endsWith('datatype')) // true
+
+ // replace
+ // substring 
+ // concat
+ // endWith
+ // startWith
+ // includes
+
 
