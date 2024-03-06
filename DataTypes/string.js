@@ -203,3 +203,17 @@ console.log("tts=>>", tts); //
 
 
 
+
+
+//Plus Operator
+// left or right if there string then dusre ko bhi string bna deta ha
+
+//  60 + '60' =>  6060
+
+
+// Minus operator
+
+// left or right if there is any numeric string value it will convert it into number
+
+// '30'-30 => 30-30 => 0
+// '30' - '30' =>  30-30 => 0
