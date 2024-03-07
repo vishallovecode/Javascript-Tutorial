@@ -88,3 +88,46 @@ console.log("'' || false || 0 || 4 || 5 || 6 || 0 => " , '' || false || 0 || 4 |
 const result  = (100/100 -1) ||  2;
 
 console.log(result)
+
+
+//  AND (&&)
+
+//this will return false if anyone the condition gives falsy value , whenever it get falsy value
+// it will return false and stop execution
+
+
+function call () {
+    console.log('hey call')
+    return true;
+}
+
+
+var result2 =  2 && 3 && 4 && 0 && call();
+console.log('result2' , result2)
+
+
+
+if(8>7 && 5<6 && 2>3 && call()) {
+     console.log('Hey')
+} else {
+     console.log('hey else')
+}
+
+if(8>7 & 5<6 & 2>3 & call()) {
+    console.log('Hey')
+} else {
+    console.log('hey else')
+}
+
+// Not operator
+// it will do the things in oposite
+
+var res1 =  !2; 
+console.log(res1)
+
+console.log(typeof !3)
+
+console.log(!0)
+
+
+//  Ternary Operation
