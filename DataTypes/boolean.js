@@ -131,3 +131,9 @@ console.log(!0)
 
 
 //  Ternary Operation
+
+// var check3 = true;
+var a  =  8>4 ? 'Greater': 'Smalller'
+
+
+//  Plus operator,  assigment operator , eqaul operator  ,  > , < 
