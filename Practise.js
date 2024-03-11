@@ -229,3 +229,6 @@ console.log(null == 'null') // false
 
 
 console.log(null == 0); //  false  special case // 
+
+
+// null means absence of value, and 0 is value itself
