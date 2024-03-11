@@ -228,4 +228,4 @@ console.log(undefined == 'undefined') // UNDEFINED MEANS NOTHING // FALSE
 console.log(null == 'null') // false
 
 
-console.log(null == 0); //  false
+console.log(null == 0); //  false  special case
