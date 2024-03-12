@@ -199,9 +199,9 @@ console.log('Vishal' < 'VISHAL') //
 
  
 // diff == and === 
-// equal operator(==)=> this will check the value only;
+// equal operator(==)=> this will check the value only and here type coercion happen;
 
-// strict equal operator(===)=> this will check type and  value  
+// strict equal operator(===)=> this will check type and  value   
 
 
 console.log('checker@@@@@@@@@@@')
@@ -214,7 +214,7 @@ console.log(null == undefined) // true  NULL=> 0 ==  UNDEFINED=>0 (special case)
 
 console.log(undefined ==  NaN) //  undefined =>0 ==NaN => FALSE
 
-console.log(undefined==0) //   false
+console.log(undefined==0) //   false ()
 
 console.log(null<=1) //  0<=1 // true
 
@@ -232,3 +232,12 @@ console.log(null == 0); //  false  special case //
 
 
 // null means absence of value, and 0 is value itself
+
+console.log(NaN==NaN) // FALSE
+
+
+console.log(NaN===NaN) // FALSE
+
+
+// +'ZSDC' =>NaN
+// +'ZSSCSDC' =>NaN

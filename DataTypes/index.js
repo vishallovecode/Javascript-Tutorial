@@ -61,3 +61,10 @@ if(check1) {
 
  
 
+
+
+// Type Casting => Explicit Type Conversion  is called as type casting , developer or in your source code 
+// if you use any function and construtor to convert value from one data type to another
+
+
+// Type Coercion =>Implicit type conversion  , when Javascript convert one data type to another while doing any operations
