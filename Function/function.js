@@ -159,6 +159,7 @@ a() // hey
 
 
 // TODO: functoon statement vs function expression in details
+// function expression  => If we  assign the  function in variable that is called function expression
  var b = function getFullName() {
     console.log('Surprise !!!!');
  }
@@ -202,16 +203,70 @@ function getFullName() {
 
   function multiplyThree(func , a) {
     // func  => callback  function
-        console.log(func) // 
+        // console.log(func) //  this will print whole function  // function multiplyTwoDigit(a,b) {return a*b}
         var result  = func(30, 30); //  900
         return result *a // 27000
   }
 
 
-  function multiplyTwoDigit(a,b) {
-    return a*b
-  }
+  function multiplyTwoDigit(a,b) {return a*b}
 
   //the function which is passed as arguments is called as callback function
   multiplyThree(multiplyTwoDigit , 30); // here we are passing  the function as arguments 
 
+
+
+
+  // this is  higher order funtion which takes first parameter as callback function  , 
+//   second parameter as delay means after how much time delay we want to execute that function
+
+function callBack () {
+    console.log('I will call later');
+}
+// todo:
+  setTimeout(callBack , 5000);
+
+  // function 
+  // return  keyword 
+  // parameters 
+  // arguments
+  // higher order function 
+  // callback function 
+  // function expression  
+  // function declration 
+  // anonymour function 
+  // we cann assign function to variable
+
+
+
+function func () {
+    console.log('hey')
+}
+
+function func () {
+    console.log('Hey2')
+}
+
+
+console.log(typeof func) // 'function'
+
+func();
+
+// IIFE  (Immediately Invoked Functions     Expressions)
+// The function is called as soon as function is created ,  this type of function does 
+// not need explicit call or invoked
+// IIFE functions reference will be not available in memory for later use like another function , 
+// this will help us to optimized memory and removed unnecessary function reference from memory
+// this type of the function called only once. so we dont need referece to store for further call
+
+
+(
+    function (a, b,c) {
+        console.log('hey i am Invoked immediately' , a,b,c)
+    }
+) (10 , 20 , 30);
+
+
+//
+
+func ();
