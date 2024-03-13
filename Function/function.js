@@ -63,7 +63,7 @@ console.log(result) // undefined
 console.log(callMe()); //  checker and undefined
 
 
-
+// interview 
 
 function getName () {
     var b ='Vishal';
@@ -117,7 +117,7 @@ console.log(result) //      NaN
 
 
 
-function multiplyByNumberOr3(value , multiplier=3) {
+function multiplyByNumberOr3(value , multiplier=3) { // here three is default value
     return value*multiplier;
 }
 
@@ -127,3 +127,61 @@ console.log(res) // 100
 
 var result  =multiplyByNumberOr3(10) // 
 console.log(result) //      30
+
+
+
+
+
+// interview 
+
+function returnNumber () {
+    return ; '9915378881'
+}
+
+
+console.log(returnNumber()); // undefined
+
+
+
+// anonymous function
+// the functions which is not  named  .
+
+
+
+
+var a = function ()  {
+    console.log('Hey')
+}
+
+
+
+a() // hey
+
+
+// TODO: functoon statement vs function expression in details
+ var b = function getFullName() {
+    console.log('Surprise !!!!');
+ }
+//  b() // ?? 
+
+ console.log(b) //  function itself
+ console.log(b()) //  Surprise !!!!
+ //console.log(getFullName) // this will throw error here js neglect name of function in function expression
+
+
+
+// if there is no variable defined or declared in js then js gives referenece error
+
+// Types of function
+
+// diff  b/w normal function and arrow functions in terms of "this"
+// arrow functions
+
+
+
+
+function getFullName() {
+    console.log('Surprise !!!!');
+ }
+
+  //console.log(getFullName) / function
