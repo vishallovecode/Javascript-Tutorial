@@ -185,3 +185,33 @@ function getFullName() {
  }
 
   //console.log(getFullName) / function
+
+
+  // we can do whatever we can do with function  
+  // we can assign function into variable  
+  // we can pass any number of arguments
+  // we can pass any type of data in arguments 
+
+
+  // we can pass function as a arguments
+
+// here we are accepting function as  parameter
+// the function which accept the function as parameter is called higher order functions
+
+
+
+  function multiplyThree(func , a) {
+    // func  => callback  function
+        console.log(func) // 
+        var result  = func(30, 30); //  900
+        return result *a // 27000
+  }
+
+
+  function multiplyTwoDigit(a,b) {
+    return a*b
+  }
+
+  //the function which is passed as arguments is called as callback function
+  multiplyThree(multiplyTwoDigit , 30); // here we are passing  the function as arguments 
+
