@@ -250,7 +250,7 @@ function func () {
 
 console.log(typeof func) // 'function'
 
-func();
+func(); //  Hey2
 
 // IIFE  (Immediately Invoked Functions     Expressions)
 // The function is called as soon as function is created ,  this type of function does 
