@@ -270,3 +270,84 @@ func(); //  Hey2
 //
 
 func ();
+
+
+function getName() {
+    console.log('Hey')
+}
+
+
+getName();
+
+
+
+
+
+//  Youtube  => Link=> Amazon => Amazon  
+// B2B  => 5000 
+
+//  
+
+// 
+// IIFE
+ var b = (
+    function (a) {
+        console.log(a);
+        return a ;
+    }
+) (20);
+
+
+
+console.log(b)
+
+
+//
+//  var dataChecker = function () {
+
+//  }
+// // typeof dataChecker => function
+
+// var dataChecker = function  () {
+
+// }
+
+
+function HOF (callback) {
+    // callback = function (){console.log('hey')}
+   callback();
+}
+
+
+var call1= function (){console.log('hey')}
+
+console.log(call1) // function (){console.log('hey')}
+
+HOF(call1) ; //  hey 
+
+HOF(function (){console.log('hey')})
+
+
+//
+
+
+//Arrow function 
+
+var printFullName = ()=> {
+    console.log('Hey, I am arrow function....')
+}
+
+printFullName(); //Hey, I am arrow function....
+
+
+
+// var multiplyEachParam =(a,b,c,d) =>  {
+//     return  a*b*c*d;
+// }
+// below code are shortand of above code
+
+var multiplyEachParam =(a,b,c,d) => a*b*c*d;
+
+var res = multiplyEachParam(20, 30, 40,40);
+
+console.log(res)
