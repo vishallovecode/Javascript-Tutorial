@@ -397,7 +397,7 @@ function HOF () {
 //   Function Method 
 
 // call  , bind  , apply (Todo)
-
+// normal function
 var myFunc = function getName(a,b) {
     return a+b;
 }
@@ -420,11 +420,28 @@ function getCall (a,b,c,d) {
  getCall(20,30, 40, 50)
 
  var   getCall1  = (a,b,c,d) =>{
-    // we have one keyword (arguments) which accessible only inside the normal function
-    console.log(arguments) // this will throw the error  , because arguments are not defined inside
+    // console.log(arguments) // this will throw the error  , because arguments are not defined inside
     //the arrow functions
  }
 getCall1(20,30, 40, 50);
 
 
 
+// Rest and Spread Operator  TODO
+
+function getData(a,b,c,d) {
+    console.log(a,b,c,d)
+}
+
+
+var getData2 = (a,b,c,d,e)=>{
+    console.log(a,b,c,d,e)
+}
+
+// if we write anyFunctionname.length it will gives the total parameter , declare at the time 
+// of function declaration
+
+console.log('getData=>', getData.length, ':::' , 'getData2=>', getData2.length)
+
+
+console.log(getData2.toString())
