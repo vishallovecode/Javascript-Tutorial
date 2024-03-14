@@ -387,9 +387,44 @@ function HOF () {
 // res();
 
 // Below code are shorthand of above code
-var res1 =  HOF();
+// var res1 =  HOF();
 
-console.log('HEY', res1)
+// console.log('HEY', res1)
 
 
-res1()
+// res1()
+
+//   Function Method 
+
+// call  , bind  , apply (Todo)
+
+var myFunc = function getName(a,b) {
+    return a+b;
+}
+
+
+console.log(myFunc.name) // getName
+
+var myFunc =  (a,b) =>{
+    return a+b;
+}
+
+
+console.log(myFunc.name) // myFunc
+
+
+function getCall (a,b,c,d) {
+    // we have one keyword (arguments) which accessible only inside the normal function
+    console.log(arguments) // THIS WILL GIVES US ARRAY OF ARGUMENTS
+}
+ getCall(20,30, 40, 50)
+
+ var   getCall1  = (a,b,c,d) =>{
+    // we have one keyword (arguments) which accessible only inside the normal function
+    console.log(arguments) // this will throw the error  , because arguments are not defined inside
+    //the arrow functions
+ }
+getCall1(20,30, 40, 50);
+
+
+
