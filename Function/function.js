@@ -444,5 +444,7 @@ var getData2 = (a,b,c,d,e)=>{
 console.log('getData=>', getData.length, ':::' , 'getData2=>', getData2.length)
 
 
+
+// this toString method will convert the whole function in string format  => this return function as string
 console.log(getData2.toString())
 
