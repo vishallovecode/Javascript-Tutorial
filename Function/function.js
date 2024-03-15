@@ -437,14 +437,36 @@ function getData(a,b,c,d) {
 var getData2 = (a,b,c,d,e)=>{
     console.log(a,b,c,d,e)
 }
-
 // if we write anyFunctionname.length it will gives the total parameter , declare at the time 
 // of function declaration
 
 console.log('getData=>', getData.length, ':::' , 'getData2=>', getData2.length)
-
-
-
 // this toString method will convert the whole function in string format  => this return function as string
 console.log(getData2.toString())
 
+
+
+
+// Recursion 
+// function removeCharacter(s){
+//     var a = s.split(''); 
+//     a.pop();
+//     var s =  a.join('');
+//     if(s.length ==1) {
+//         return s;
+//     }
+//     else {
+//         return removeCharacter(s)
+//     }
+// }
+
+
+// var res =removeCharacter('Hello')
+// console.log(res)
+
+
+
+// flatten array 
+// Flatten object 
+// advanced curry 
+// deepEqual 
