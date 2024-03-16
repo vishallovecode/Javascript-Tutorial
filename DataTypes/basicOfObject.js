@@ -50,3 +50,6 @@ console.log(employe)
  // dynamic key assigning , here key is variable which is stroring the Country as value  
  // we want to make Country of the key of employe data
  employe[key] =  'India'
+
+
+ // Todo : string templating
