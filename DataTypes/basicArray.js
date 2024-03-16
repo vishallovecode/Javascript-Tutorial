@@ -60,4 +60,41 @@ console.log('2=>' ,array); // [1, 2,3,4,5,6,7]
 
 
 
-// Dyanamic
+// Dynamic length 
+
+
+var array  = [1,3,4,5,6,7];
+
+
+array.push(10);
+array.push(10);
+
+
+array.length = 5; // here we are assigning length of array to 5 so rest of the element which is present in 
+// 5-1  index will be removed from array
+console.log(array.length)
+console.log(array)
+
+
+
+var array = [];
+array.length = 10;
+
+console.log(array) // [undefined ,undefined, undefined,undefined,undefined,undefined,undefined,undefined,undefined]
+console.log(array[0]) // undefined
+array[5]= 100
+
+//  indexOutOfBoundExpection (in java you will get this error if you try to access the  index which greater than or equal to length)
+// Javascript does not give error if you try to access the index  greater than ir equal to length 
+// it will give undefined as output
+
+var array3 = [3,4];
+
+console.log(array3[5]) // undefined
+
+
+ 
+
+
+
+
