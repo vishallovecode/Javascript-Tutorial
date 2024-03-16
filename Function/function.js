@@ -470,3 +470,20 @@ console.log(getData2.toString())
 // Flatten object 
 // advanced curry 
 // deepEqual 
+
+
+
+const getValue = (num) => {
+    if(num<10){
+    return num;
+    }
+    var sum=0;
+    while(num>0){
+        var a=num%10;
+        num=(num-a)/10;
+        sum+=a;
+    }
+    return getValue(sum);
+    };
+
+    getValue(7893);

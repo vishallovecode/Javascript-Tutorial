@@ -51,9 +51,9 @@ console.log(a) //
 // 1  String
 // 2. Number
 // 3. Boolean
-// 4. Object (Array)
+// 4. Object (Array) (Non-Primitive data type)
 // 5. Bigint
-// 6. Sybmbol
+// 6. Symbol
 // 7. Null
 // 8. Undefined
 
