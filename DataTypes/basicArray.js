@@ -95,6 +95,8 @@ console.log(array3[5]) // undefined
 
  
 
+// Todo:  Map , filter , forEach , reduce , find , findIndex , some  , every  , splice  , slice , shift , unshift , pop , push
+
 
 
 
