@@ -41,8 +41,9 @@
 //  console.log('' <  3); //  falsyValue <3 => 0<3 => true
 
 
-//  console.log("a">"2"); //  
+//  console.log("a">"2"); //   // 
 
+// Todo
 // console.log("a" > 2); // here JS is considering the 'a' as a truthy value so that is converted into the number the value of truthy  value in number is 1  
 // // as result 1>2 => false
 
