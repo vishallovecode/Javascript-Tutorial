@@ -68,6 +68,16 @@ const cc = 30;
 // let and const will be there is tdz before assigning any value but var variable will be not
 
 
+//  var yunus ;
+//  yunus = 'Yunus'
+
+
+//   let yunus ;
+//   yunus = 'Yunus Khan'
+
+
+
+
 
 
 
