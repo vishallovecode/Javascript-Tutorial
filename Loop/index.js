@@ -61,10 +61,56 @@ const employee = {
 // }
 
 for(let key in employee) {
-    console.log('for of employee ' , key)
-    console.log(employee[key]) // this will return the value here we are using variable key 
+    console.log('for of employee ' , key)  // this will return the value here we are using variable key 
+    console.log(employee[key]) // 
 
     //  to access the value of object using key thats why we put the key with []=> this bracket
     
     // here key is  pointing to the key of employee object
 }
+
+
+function add(x, y) {
+    return x + y;
+  }
+  
+  function multiply(x, y) {
+    return x * y;
+  }
+  
+  function calculator(x, y, operation) {
+
+    // x=2
+    // y=3
+    return operation(2, 3);
+  }
+
+  calculator(2, 3, add);
+
+
+
+  function greeting(name) {                        
+    console.log('Hello ' + name);
+  }
+  
+  function processUserInput(callback) {
+    // callback =  greeting => reference of function
+    var name = 'John';
+    // greeting('John')
+    callback(name);
+  }
+  
+// function passed as a  whole value and reference
+  // function
+  console.log(greeting) //  function greeting(name) {console.log('Hello ' + name);}
+  processUserInput( function greeting(name) {console.log('Hello ' + name);});
+
+
+
+// function add (a) {
+// // a =30
+// }
+
+
+// var ddd =30;
+// add(ddd);
