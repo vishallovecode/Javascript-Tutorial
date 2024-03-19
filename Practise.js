@@ -44,8 +44,7 @@
 //  console.log("a">"2"); //   // 
 
 // Todo
-// console.log("a" > 2); // here JS is considering the 'a' as a truthy value so that is converted into the number the value of truthy  value in number is 1  
-// // as result 1>2 => false
+
 
 // // number zero is consider as a falys value string zero is not na falsy value
 // // number  => 0
@@ -296,3 +295,37 @@ console.log(NaN===NaN) // FALSE
 // Let rref be the result of evaluating RelationalExpression.
 // Let rval be GetValue(rref).
 // Return the result of performing the strict equality comparison rval === lval. (See 11.9.6)
+
+
+
+// Comparing a(string) and b(number)
+// If Type(a) is String and Type(b) is Number,
+// Here javascript does coercion and  try to convert string into number
+
+console.log('a'>2);  // here a ='a' , b=2 , js try to convert a.toNumber => NaN>2 => FALSE
+
+console.log('a'<2);  // here a ='a' , b=2 , js try to convert a.toNumber => NaN<2 => FALSE
+
+
+
+//IF a  is string and b is string 
+// If Type(a) is String and Type(b) is also string
+// Then JS try to compare one by one or character to character if caharcter are same it will go for comparing next character so on, if any mismatch is there return false
+//  if x and y are exactly the same sequence of characters (same length and same characters in corresponding positions). Otherwise, return false.
+
+
+console.log('ABC'<'z')
+console.log('987'< '123456');  //'9'<'1'=> 9<1=> false
+console.log('9999'< '89991')
+
+
+
+// Null as A Special case
+// Null is treated as a special case ,at the time of equal comparison it will coersed (automatic conversion)
+// to the undefined
+// null==0 => false
+// null ==undefined = true
+
+
+ //relation comarsion me null will coresed (automatic conversion)
+ // thats why null>=0  true

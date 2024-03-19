@@ -34,5 +34,9 @@ try {
     // throw is keyword which is used to throw the error
     throw new Error('Hey Me to error bhej rha hun');
 } catch(err) {
-    console.error(err)
+    console.error(err) //
+    console.error(err.message) //
 }
+
+// More Practise: Try and Catch
+
