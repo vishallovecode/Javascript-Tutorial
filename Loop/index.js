@@ -61,5 +61,10 @@ const employee = {
 // }
 
 for(let key in employee) {
-    console.log('for of employee ' , key) // here key is  pointing to the key of employee object
+    console.log('for of employee ' , key)
+    console.log(employee[key]) // this will return the value here we are using variable key 
+
+    //  to access the value of object using key thats why we put the key with []=> this bracket
+    
+    // here key is  pointing to the key of employee object
 }
