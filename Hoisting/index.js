@@ -24,6 +24,7 @@
 // All the variable define in context will be part of Global object which is equivalent to the window object
 // In global execution context this will be pointed to the window  , meand this will be bind with window 
 // the value of this will be window
+// GEC is combination of memory and thread of execution (code running) //
 
 var a = 30;
 
