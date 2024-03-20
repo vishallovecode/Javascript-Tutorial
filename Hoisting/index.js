@@ -5,7 +5,7 @@
 // TDZ(temporal dead zone)
 // block scope
 // functional scope
-// window 
+// window  (done)
 // this 
 // context
 // execution context
@@ -13,6 +13,8 @@
 // lexical environment
 // code execution 
 // CallStack
+// Gloabal Execution Context
+// Functional Execution Context
 
 
 // window is object which is represent of global memory 
