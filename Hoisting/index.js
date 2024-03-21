@@ -62,21 +62,21 @@
 
 
 // Example 3
-console.log(c1); // we are accessing c1 before declaraion 
+//console.log(c1); // we are accessing c1 before declaraion 
 
 // console.log(b1) // 
 
 // console.log(d1)
 
-let b1 = 60;
+// let b1 = 60;
  
-var c1 = 40;
+// var c1 = 40;
 
-const d1 = 90;
+// const d1 = 90;
 
-console.log(b1)
+// console.log(b1)
 
-console.log(d1)
+// console.log(d1)
 
 // let and const will get the different scope that is script scope  , the variable which is not in global
 // scope Js cannot allow to access before initialization
@@ -90,4 +90,24 @@ console.log(d1)
 // Does let and const are hoisted ?
 
 // Let const and var are hoisted  , but let and const are in different scope 
-// we cannot access before initialization
+// we cannot access before initialization because they are TDZ Zone
+// The let and const are in TDZ Zone (Temporal Dead Zone)
+
+
+// Temporal Dead Zone  => The zone where the variable is located and we cannot access that variable before
+// initialization
+
+// The area of block where a variable is inaccsessible until the value is 
+// not initialized to it.
+
+
+
+// Example
+// function declaration
+// we can access the func before declaration if it is type of  function declaration
+
+func();
+
+function func () {
+    console.log('Hi')
+}
