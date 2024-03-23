@@ -4,9 +4,16 @@ var a  =60 ;
 
  let c =50;
 
+
+ function print(res) {
+const message = 'Value is: ' + res;
+ console.log(message);
+ }
+
  function add(x, y ,z,) {
     var result = x+y+z;
-    console.log(result)
+    print(result) 
+    console.log('add end')
  }
 
  add(a ,b,c)
