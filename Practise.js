@@ -329,3 +329,16 @@ console.log('9999'< '89991')
 
  //relation comarsion me null will coresed (automatic conversion)
  // thats why null>=0  true
+
+// Todo
+
+//  (function(){var a = b = 3;})();
+ var b =3;
+function callMe() {
+    var a = 3;
+}
+callMe();
+console.log(typeof a , typeof b);
+
+
+//false

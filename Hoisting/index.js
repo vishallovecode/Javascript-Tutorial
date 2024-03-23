@@ -102,12 +102,51 @@
 
 
 
+
+
+
+// Example 3
+
+
+// console.log(c1); // we are accessing c1 before declaraion 
+
+// // console.log(b1) // 
+
+// // console.log(d1)
+
+// let b1 = 60;
+ 
+// var c1 = 40;
+
+// const d1 = 90;
+
+// console.log(b1)
+
+// console.log(d1)
+
+// function declaration vs function expression
+
+
 // Example
 // function declaration
 // we can access the func before declaration if it is type of  function declaration
 
-func();
+// func();
 
-function func () {
-    console.log('Hi')
+// function func () {
+//     console.log('Hi')
+// }
+
+console.log(call) // undefined
+// call()//  it will throw the error undefined is not a function
+// here call is like var keyword
+var call = function () {
+   console.log('call')
 }
+
+console.log(call1) // this will throw the error , Because it is tdz zone
+const call1 = ()=> {
+
+}
+// The function which type of expression , will behave like a let const or var /
+// it depends which keyword you  have use for  function assignment

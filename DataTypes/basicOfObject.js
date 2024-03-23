@@ -53,3 +53,20 @@ console.log(employe)
 
 
  // Todo : string templating
+
+
+
+ const student = {
+        name: 'XYZ',
+        lastName: 'Sharma',
+        mobile: 9915378881
+ };
+
+ console.log(student)
+ console.log(student.name) // XYZ
+
+ // LETS SAY I WANT TO THE ALL THE KEYS OF OBJECT
+
+ console.log(Object.keys(student))
+ console.log(Object.values(student))
+
