@@ -217,3 +217,38 @@ console.log("tts=>>", tts); //
 
 // '30'-30 => 30-30 => 0
 // '30' - '30' =>  30-30 => 0
+
+
+
+// Create a message to the everyuser
+//  Hi, {UserName} thank you for being with us from past {1} {Year} , Today is your {first} anniversary
+
+function generateMsg (userName , noYears ) {
+    // const  message = ' Hi, '+ userName + ' thank you for being with us from past '+ noYears + ' Years '+ ' Today is your '+  + anniversary+ ' anniversary';
+    // return message; 
+    const message = `Hi, ${userName} Thank you for being with us from past ${noYears} Years Today is your ${noYears} anniversary`
+    return message
+}
+
+
+console.log(generateMsg('Vishal Sharma', 2 , 0, 2, 2));
+console.log(generateMsg('Raj', 1 , 0, 1, 1));
+
+
+function paragraph () {
+    // const message = 'ahbsvchs dvghc
+    //         s bcds c'
+    const message = `sbdhbc
+    shjcbd
+    bsbxc
+     hsc s
+      vb sd
+       hgxc s
+       s ch d
+       bahcvd
+       bsv cgv
+        hgcdj
+        `
+        console.log(message);
+}
+paragraph()
