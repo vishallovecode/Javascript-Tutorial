@@ -17,9 +17,20 @@ const b =40 ;
 let c =50;
 
 
+ function print(res) {
+   var firstName = 'Vishal'
+   let lastName = 'Sharma'
+   const message = `Hi, ${firstName} 
+   ${lastName} 
+    Your score is:  ${res}`
+   console.log(message)
+ 
+ }
+
  function add(x, y ,z,) {
     var result = x+y+z;
-    console.log(result)
+    print(result) 
+    console.log('add end')
  }
 
  add(a ,b,c)
