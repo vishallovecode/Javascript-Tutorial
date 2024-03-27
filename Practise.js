@@ -342,3 +342,36 @@ console.log(typeof a , typeof b);
 
 
 //false
+
+
+
+// Logical && Operator
+// In logical and operator result of the operation will have two conditin
+// if any of the condition is falsy(first) then that will be return
+// Else the last condition will be return=
+
+// cond1 && cond2 
+// true(cond1) && false(cond2) => then return the value which is making whole condition false(cond2)
+// false(cond1) && true(cond2)  => then return the value which is making whole condition false(cond1)
+// true(cond1) && true (cond1) => this will return last true condition (cond2)
+
+console.log('0 && 3' , 0 && 3) //  // false && true
+console.log('1 && 0' ,1 && 0) // true && false
+
+console.log('4 && 3' , 4 && 3) //  true && true
+console.log('0 && ""' ,  0 && '') // false && false
+
+
+console.log(2 && 3 &&  4 && 5 )  //=> 5
+
+console.log(2 && 3 &&  4 && 5  && 0 )  //=> 0
+
+
+// Logical || Operator
+
+
+
+
+// In logical XOR operator result of the operation will have two conditin
+// if any of the condition is truth(first) then that will be return
+// Else the last condition will be return
