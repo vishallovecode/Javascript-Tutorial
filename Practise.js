@@ -346,7 +346,7 @@ console.log(typeof a , typeof b);
 
 
 // Logical && Operator
-// In logical and operator result of the operation will have two conditin
+// In logical and (&&) operator result of the operation will have two conditin
 // if any of the condition is falsy(first) then that will be return
 // Else the last condition will be return=
 
