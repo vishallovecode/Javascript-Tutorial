@@ -48,7 +48,9 @@ variable`
  function print() {
 console.log(globalVariable)
 console.log(x)
-console.log(result)
+console.log(result) // this is not accessible because print function is defined in global scope , it it does not find 
+// variable inside local scope it  will go for it parent  , parent of any function is scope where it defined , so print is
+// defined in Gec it will look for the variable in GEC
 
  }
  function add(x, y ,z,) {
