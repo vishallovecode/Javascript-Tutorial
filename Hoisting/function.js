@@ -63,3 +63,12 @@ console.log(result)
 
 
 
+// Whenever javascript try to access the variable from the their scope, Javascript use lexical scoping to find out the variable  
+// lets say if you want to access the variable which is defined in Gec and you are trying to access inside the function  , first it will look for function scope ,
+// if it does exist it will go for parent scope
+
+
+// whenever you call the function inside the function, lets say p1 is parent function and c1 is child function 
+// if c1 is defined outside of p1 , and called inside the p1 , in that case if javascript try to read  variable it will first look into 
+// the local scope of c1 if not then it will not look for p1 because lexical scoping in function depends on where the function 
+// is declared  not where it is called
