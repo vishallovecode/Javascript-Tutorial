@@ -146,3 +146,58 @@ console.log(result) // ?? Hello
 
 
  console.log(Boolean([])) // 
+
+
+ // Join method 
+
+ // toString() // by default behaviour of join
+
+ // toString and Join method both are used to convert array into the number of string
+ // in toString there will be the resultn with comma seperated 
+ // but in the case of Join this is default behaviour , you can choose which seperator
+ // you want to give b/w the elements
+
+
+//  var array = [1,2,3,4]
+
+//  console.log(array.join()) //  '1,2,3,4' => default seperated by comma(,)
+//  console.log(array.toString())  // '1,2,3,4'
+
+//  console.log(array.join(" ########## ")) 
+
+
+// Split method are used to convert string into the array on the basis of identifier
+
+// Given a paragraph which words are seperated with one single space 
+// find out how many words are palindrome ?
+
+
+
+
+
+function reverse(s){
+
+    //  'hello'=> ['h', 'e' ,'l', 'l', 'o'].reverse( ) => ['o','l','l','e','h']=>  // olleh
+    return s.split("").reverse().join("");
+}
+const paragraph  = 'Hello , kayak find out how many words are palindrome repaper rotator do it yar wow noon deed peep' 
+
+function countPalinDrome(para) {
+        const array  =  para.split(' ');
+        let count  = 0;
+       for(let value of array) {
+            if(value ===reverse(value)) {
+                count++
+
+            }
+       }
+       return count;
+}
+
+var result = countPalinDrome(paragraph)
+console.log(result)
+
+
+
+
+
