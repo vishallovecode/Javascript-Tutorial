@@ -54,7 +54,7 @@ ll = 40
 const cc = 30;
 // cc = 40; error:: //  Identifier 'cc' has already been declared
 
-// Todo
+
 // 4 Scope of variable  
 
 //  Var is fucntional scope 

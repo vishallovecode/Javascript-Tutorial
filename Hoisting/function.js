@@ -123,23 +123,21 @@ let a = 50;
 var b = 40;
 {
   console.log(b);
-  console.log(a); 
+//   console.log(a); 
   var b = 90;
   let a = 200;
 }
 
 //var  let const 
 function call() {
-   console.log(b); 
+   // console.log(b); 
    console.log(a); 
    let b = 55;
    var a = 65;
    console.log(a);
    console.log(b);
  }
- 
+
  call();
  console.log(a);
  console.log(b);
-console.log(a);
-console.log(b);
