@@ -171,10 +171,6 @@ console.log(result) // ?? Hello
 // Given a paragraph which words are seperated with one single space 
 // find out how many words are palindrome ?
 
-
-
-
-
 function reverse(s){
 
     //  'hello'=> ['h', 'e' ,'l', 'l', 'o'].reverse( ) => ['o','l','l','e','h']=>  // olleh
@@ -193,7 +189,6 @@ function countPalinDrome(para) {
        }
        return count;
 }
-
 var result = countPalinDrome(paragraph)
 console.log(result)
 
@@ -201,3 +196,56 @@ console.log(result)
 
 
 
+
+
+// push // pop
+
+// push is use to push the element at the last  and it returns the updated lengt
+// it modfied original array
+var array  = [1,2,3,4];
+
+console.log('Before push' , array.length , array)
+var length  = array.push(100);
+
+console.log(length , array)
+
+
+
+// pop is use to remove the element at the last  and it returns the updated removed element
+// it modfied original array
+var array  = [1,2,3,100];
+
+console.log('Before pop' , array.length , array)
+var lastElement  = array.pop();
+
+console.log(length , array)
+
+
+
+// we know how to add element in last but how should i add element at the begining
+// unshift
+
+var array  = [1,2,3,6];
+
+console.log('Before unshift' , array.length , array)
+var length  = array.unshift(12 , 24 , 56);
+
+console.log(length , array)
+
+
+
+// i know how to remove last element from array  , but how to remove first element from array  
+
+// shift
+
+var array  = [1,2,3,6];
+
+console.log('Before shift' , array.length , array)
+var shiftedElement  = array.shift();
+
+console.log(shiftedElement , array)
+
+
+// unshift and push you can give multiple  items as argument
+// pop and shift return the removed item 
+// unshift and push return the uopdated length
