@@ -249,3 +249,15 @@ console.log(shiftedElement , array)
 // unshift and push you can give multiple  items as argument
 // pop and shift return the removed item 
 // unshift and push return the uopdated length
+
+
+// map , filter , reduce  (we will writing out own methdos)
+
+
+
+const replaceCharacter = (s , chartoBeReplaced , what) => {
+    return s.replcaeAll(chartoBeReplaced , what);
+}
+var result = replaceCharacter('Hi I am Don !!!', '!' , '?');
+console.log(result);
+
