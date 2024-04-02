@@ -329,3 +329,16 @@ console.log('splicedData: ', splicedData, 'original array: ' ,employeeName)
 // Note => First parameter is from which index you want to do delete or addition operation
 // Note  => Second paramaetetr(delete count) is how many element you want to delete from first parameteter given value
 // After second parameter  you can add multiple parameter this all will be added in original from starting index which is given in first parameter
+
+
+
+// Delete using Splice  
+
+
+
+var subject = ['E' ,'H', 'C', 'M', 'S','CSE'];
+
+// here 2 element is deleted from the array  starting from 1 index .
+var res = subject.splice(1, 2 , 'rererer');
+
+console.log('deleted value:' , res , 'original modified  array:' ,subject )
