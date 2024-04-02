@@ -346,6 +346,7 @@
 // #################################### forEach() ######################################
 
 // this is declrative iteration
+// in this iteration you can get both index and value
 // this is higher order method which is given by the javascript 
 // we cann apply this function only one array not  in any another data type or (prototyp TODO)
 // this is use for iteration of array 
@@ -379,4 +380,4 @@ var array  = [1,3,4];
 
 array.forEach((elem , index , array)=>{
     console.log(elem)
-    })
+})
