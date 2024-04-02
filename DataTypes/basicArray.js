@@ -318,27 +318,65 @@
 // Adding the element into the array 
 
 
-var employeeName = ['A', 'B','C','D','E','F','G','H','I','J','K'];
+// var employeeName = ['A', 'B','C','D','E','F','G','H','I','J','K'];
 
-var splicedData =  employeeName.splice(4 , 0 , 'chipa' , 'ripa' , 'dipa');
+// var splicedData =  employeeName.splice(4 , 0 , 'chipa' , 'ripa' , 'dipa');
 
-// what exactly the splice method return  => this will return the array of deleted item
+// // what exactly the splice method return  => this will return the array of deleted item
 
-console.log('splicedData: ', splicedData, 'original array: ' ,employeeName)
+// console.log('splicedData: ', splicedData, 'original array: ' ,employeeName)
 
-// Note => First parameter is from which index you want to do delete or addition operation
-// Note  => Second paramaetetr(delete count) is how many element you want to delete from first parameteter given value
-// After second parameter  you can add multiple parameter this all will be added in original from starting index which is given in first parameter
-
-
-
-// Delete using Splice  
+// // Note => First parameter is from which index you want to do delete or addition operation
+// // Note  => Second paramaetetr(delete count) is how many element you want to delete from first parameteter given value
+// // After second parameter  you can add multiple parameter this all will be added in original from starting index which is given in first parameter
 
 
 
-var subject = ['E' ,'H', 'C', 'M', 'S','CSE'];
+// // Delete using Splice  
 
-// here 2 element is deleted from the array  starting from 1 index .
-var res = subject.splice(1, 2 , 'rererer');
 
-console.log('deleted value:' , res , 'original modified  array:' ,subject )
+
+// var subject = ['E' ,'H', 'C', 'M', 'S','CSE'];
+
+// // here 2 element is deleted from the array  starting from 1 index .
+// var res = subject.splice(1, 2 , 'rererer');
+
+// console.log('deleted value:' , res , 'original modified  array:' ,subject )
+
+// #################################### forEach() ######################################
+
+// this is declrative iteration
+// this is higher order method which is given by the javascript 
+// we cann apply this function only one array not  in any another data type or (prototyp TODO)
+// this is use for iteration of array 
+// this hof means it will accept one callback function 
+
+var interger = [1,2,3,4,5,6,7,89];
+
+function callback (element , index , originalArray) {
+        console.log(element ,index)
+}
+interger.forEach(callback);
+
+// myForEach(interger , callback)
+
+// Array.prototype.emyForEach = function (callback) {
+//     for (let i =0;i<this.length;i++) {
+//         callback(this[i] , i , this)
+//     }
+// }
+
+
+// code
+// function myForEach(array , callback) {
+//         for (let i =0;i<array.length;i++) {
+//             callback(array[i] , i , array)
+//         }
+// }
+
+
+var array  = [1,3,4];
+
+array.forEach((elem , index , array)=>{
+    console.log(elem)
+    })
