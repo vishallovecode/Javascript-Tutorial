@@ -122,75 +122,75 @@
 // console.log(result) // ?? Hello
 
 
-//  var array  = [1,2,3,4];
-//  var result  = array + 'Hello';
-//  console.log(result); // 1,2,3,4Hello
+// //  var array  = [1,2,3,4];
+// //  var result  = array + 'Hello';
+// //  console.log(result); // 1,2,3,4Hello
 
 
-//  // []=> this will give 0 when we apply any arithmetic operation 
-//  var result  = +[]+ 'Hello' ;
+// //  // []=> this will give 0 when we apply any arithmetic operation 
+// //  var result  = +[]+ 'Hello' ;
 
-//  console.log(result)
+// //  console.log(result)
 
-//  var array  = [100, 200, 300];
+// //  var array  = [100, 200, 300];
 
-//  var result  = +array+ 'Hello'; //=> NaN + 'Hello' => 'NaN'+ 'Hello'
+// //  var result  = +array+ 'Hello'; //=> NaN + 'Hello' => 'NaN'+ 'Hello'
 
-//  console.log(result) // NaNHello
+// //  console.log(result) // NaNHello
 
-//  // parseInt convert first array element into the number
-//  // + operator convert empty array into 0 but it will give NaN IF there is any element inside the array
+// //  // parseInt convert first array element into the number
+// //  // + operator convert empty array into 0 but it will give NaN IF there is any element inside the array
 
 
-//  // In boolean empty array is truthy value 
+// //  // In boolean empty array is truthy value 
 
 
-//  console.log(Boolean([])) // 
+// //  console.log(Boolean([])) // 
 
 
-//  // Join method 
+// //  // Join method 
 
-//  // toString() // by default behaviour of join
+// //  // toString() // by default behaviour of join
 
-//  // toString and Join method both are used to convert array into the number of string
-//  // in toString there will be the resultn with comma seperated 
-//  // but in the case of Join this is default behaviour , you can choose which seperator
-//  // you want to give b/w the elements
+// //  // toString and Join method both are used to convert array into the number of string
+// //  // in toString there will be the resultn with comma seperated 
+// //  // but in the case of Join this is default behaviour , you can choose which seperator
+// //  // you want to give b/w the elements
 
 
-// //  var array = [1,2,3,4]
+// // //  var array = [1,2,3,4]
 
-// //  console.log(array.join()) //  '1,2,3,4' => default seperated by comma(,)
-// //  console.log(array.toString())  // '1,2,3,4'
+// // //  console.log(array.join()) //  '1,2,3,4' => default seperated by comma(,)
+// // //  console.log(array.toString())  // '1,2,3,4'
 
-// //  console.log(array.join(" ########## ")) 
+// // //  console.log(array.join(" ########## ")) 
 
 
-// // Split method are used to convert string into the array on the basis of identifier
+// // // Split method are used to convert string into the array on the basis of identifier
 
-// // Given a paragraph which words are seperated with one single space 
-// // find out how many words are palindrome ?
+// // // Given a paragraph which words are seperated with one single space 
+// // // find out how many words are palindrome ?
 
-// function reverse(s){
+// // function reverse(s){
 
-//     //  'hello'=> ['h', 'e' ,'l', 'l', 'o'].reverse( ) => ['o','l','l','e','h']=>  // olleh
-//     return s.split("").reverse().join("");
-// }
-// const paragraph  = 'Hello , kayak find out how many words are palindrome repaper rotator do it yar wow noon deed peep' 
+// //     //  'hello'=> ['h', 'e' ,'l', 'l', 'o'].reverse( ) => ['o','l','l','e','h']=>  // olleh
+// //     return s.split("").reverse().join("");
+// // }
+// // const paragraph  = 'Hello , kayak find out how many words are palindrome repaper rotator do it yar wow noon deed peep' 
 
-// function countPalinDrome(para) {
-//         const array  =  para.split(' ');
-//         let count  = 0;
-//        for(let value of array) {
-//             if(value ===reverse(value)) {
-//                 count++
+// // function countPalinDrome(para) {
+// //         const array  =  para.split(' ');
+// //         let count  = 0;
+// //        for(let value of array) {
+// //             if(value ===reverse(value)) {
+// //                 count++
 
-//             }
-//        }
-//        return count;
-// }
-// var result = countPalinDrome(paragraph)
-// console.log(result)
+// //             }
+// //        }
+// //        return count;
+// // }
+// // var result = countPalinDrome(paragraph)
+// // console.log(result)
 
 
 
@@ -198,108 +198,134 @@
 
 
 
-// // push // pop
+// // // push // pop
 
-// // push is use to push the element at the last  and it returns the updated lengt
-// // it modfied original array
-// var array  = [1,2,3,4];
+// // // push is use to push the element at the last  and it returns the updated lengt
+// // // it modfied original array
+// // var array  = [1,2,3,4];
 
-// console.log('Before push' , array.length , array)
-// var length  = array.push(100);
+// // console.log('Before push' , array.length , array)
+// // var length  = array.push(100);
 
-// console.log(length , array)
+// // console.log(length , array)
 
 
 
-// // pop is use to remove the element at the last  and it returns the updated removed element
-// // it modfied original array
-// var array  = [1,2,3,100];
+// // // pop is use to remove the element at the last  and it returns the updated removed element
+// // // it modfied original array
+// // var array  = [1,2,3,100];
 
-// console.log('Before pop' , array.length , array)
-// var lastElement  = array.pop();
+// // console.log('Before pop' , array.length , array)
+// // var lastElement  = array.pop();
 
-// console.log(length , array)
+// // console.log(length , array)
 
 
 
-// // we know how to add element in last but how should i add element at the begining
-// // unshift
+// // // we know how to add element in last but how should i add element at the begining
+// // // unshift
 
-// var array  = [1,2,3,6];
+// // var array  = [1,2,3,6];
 
-// console.log('Before unshift' , array.length , array)
-// var length  = array.unshift(12 , 24 , 56);
+// // console.log('Before unshift' , array.length , array)
+// // var length  = array.unshift(12 , 24 , 56);
 
-// console.log(length , array)
+// // console.log(length , array)
 
 
 
-// // i know how to remove last element from array  , but how to remove first element from array  
+// // // i know how to remove last element from array  , but how to remove first element from array  
 
-// // shift
+// // // shift
 
-// var array  = [1,2,3,6];
+// // var array  = [1,2,3,6];
 
-// console.log('Before shift' , array.length , array)
-// var shiftedElement  = array.shift();
+// // console.log('Before shift' , array.length , array)
+// // var shiftedElement  = array.shift();
 
-// console.log(shiftedElement , array)
+// // console.log(shiftedElement , array)
 
 
-// unshift and push you can give multiple  items as argument
-// pop and shift return the removed item 
-// unshift and push return the uopdated length
+// // unshift and push you can give multiple  items as argument
+// // pop and shift return the removed item 
+// // unshift and push return the uopdated length
 
 
-// map , filter , reduce  (we will writing out own methdos)
+// // map , filter , reduce  (we will writing out own methdos)
 
 
 
-// const replaceCharacter = (s , chartoBeReplaced , what) => {
-//     return s.replcaeAll(chartoBeReplaced , what);
-// }
-// var result = replaceCharacter('Hi I am Don !!!', '!' , '?');
-// console.log(result);
+// // const replaceCharacter = (s , chartoBeReplaced , what) => {
+// //     return s.replcaeAll(chartoBeReplaced , what);
+// // }
+// // var result = replaceCharacter('Hi I am Don !!!', '!' , '?');
+// // console.log(result);
 
 
-// slice() and splice()
+// // slice() and splice()
 
 
 
-// slice => this method is used to create a copy of array  (portion of array);
-// slice(start , end) // start and end are optional , if you dont put any value in start it will take the 0 as a start
-// end  => if end is undefined  or value is not given then end value will be the length of array
-// start and end is index of array
-// end is exlcusive  it will look for the value till end-1
+// // slice => this method is used to create a copy of array  (portion of array);
+// // slice(start , end) // start and end are optional , if you dont put any value in start it will take the 0 as a start
+// // end  => if end is undefined  or value is not given then end value will be the length of array
+// // start and end is index of array
+// // end is exlcusive  it will look for the value till end-1
 
-var array  = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+// var array  = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 
-var slice1 = array.slice() //
-console.log(slice1)
+// var slice1 = array.slice() //
+// console.log(slice1)
 
 
 
-var slice2 = array.slice(0) // if there is only one parameter w epass then it will by defaul start value , here end is not given so end of this sliced array is end of orginal array (means end  == arraylength)
-console.log(slice2)
+// var slice2 = array.slice(0) // if there is only one parameter w epass then it will by defaul start value , here end is not given so end of this sliced array is end of orginal array (means end  == arraylength)
+// console.log(slice2)
 
 
-var slice3 = array.slice(3) // here 3 is start index
-console.log('slice3', slice3)
+// var slice3 = array.slice(3) // here 3 is start index
+// console.log('slice3', slice3)
 
 
-var slice4 = array.slice(3, 8) // 3-7
-console.log('slice4', slice4)
+// var slice4 = array.slice(3, 8) // here start index is 3  , slice will return the array starting 3 index and till 7(8-1) index
+// console.log('slice4', slice4)
 
+// // [1,2,3,4,5,6,7,8,9,10,11,12,13,14]; // indexes => [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
 
+// //Negative Value will always start form  the end
 
-//Negative Value will always start form  the end
+// var slice5 = array.slice(-8 , -3); // start  = -8
 
-var slice5 = array.slice(-8 , -3); //
 
+// [1,2,3,4,5,6,7,8,9,10,11,12,13,14];  //=>index , [-14 ,-13 ,-12, -11, -10,-9,-8,-7,-6,-5,-4 ,-3 , -2 , -1]
 
-console.log('slice5', slice5)
-console.log('original array' ,array )
+// console.log('slice5', slice5)
+// console.log('original array' ,array ) //
 
 
-// slice method does effect the original array
+// Note-> slice method does effect the original array
 
+//  ######################################## Splice() ############################
+
+//Note => Splice Method  are used to removed the element from array or add element into the array
+//Note => This method change the data of original array
+
+// Syntax => Splice(start , deletecount(how many element you want to delete ) ,  items(items which you want to add))
+// start are index 
+
+
+
+// Adding the element into the array 
+
+
+var employeeName = ['A', 'B','C','D','E','F','G','H','I','J','K'];
+
+var splicedData =  employeeName.splice(4 , 0 , 'chipa' , 'ripa' , 'dipa');
+
+// what exactly the splice method return  => this will return the array of deleted item
+
+console.log('splicedData: ', splicedData, 'original array: ' ,employeeName)
+
+// Note => First parameter is from which index you want to do delete or addition operation
+// Note  => Second paramaetetr(delete count) is how many element you want to delete from first parameteter given value
+// After second parameter  you can add multiple parameter this all will be added in original from starting index which is given in first parameter
