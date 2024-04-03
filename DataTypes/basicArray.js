@@ -470,7 +470,19 @@ console.log(newArray , newArray2 , newArray3)
 
 const students  = [{ name: 'Chapri' ,hindi: 40 , english: 60,math: 50, chemistry:90}, { name: 'Chaprayin' ,hindi: 50 , english: 50,math: 30, chemistry:60},{ name: 'Legend' ,hindi:33 , english: 33,math: 33, chemistry:33} , { name: 'Ultra Legend' ,hindi: 0 , english: 0,math: 0, chemistry:0} , { name: 'Thanos' ,hindi: 100 , english: 100,math: 100, chemistry:100}]
 
-const studentsResult  =  students.map();
+const studentsResult  =  students.map((elem , index, array)=>{
+        let result  = 'Pass'
+       for(let key in elem) {
+        if(!isNaN(elem[key])) {
+             if(elem[key]< 33) {
+                    result = 'Failed'
+                    break;
+             }
+        } 
+       }
+       elem.result  = result
+       return elem
+});
 
-
-studentsResult =  [{ name: 'Chapri' ,hindi: 40 , english: 60,math: 50, chemistry:90, result: 'PASS'}, { name: 'Chaprayin' ,hindi: 50 , english: 50,math: 30, result: 'Failed', chemistry:60},{ name: 'Legend' ,hindi:33 , english: 33,math: 33, chemistry:33, result: 'Pass'}  , { name: 'Ultra Legend' ,hindi: 0 , english: 0,math: 0, chemistry:0} , { name: 'Thanos' ,hindi: 100 , english: 100,math: 100, chemistry:100}]
+console.log(studentsResult)
+// studentsResult =  [{ name: 'Chapri' ,hindi: 40 , english: 60,math: 50, chemistry:90, result: 'PASS'}, { name: 'Chaprayin' ,hindi: 50 , english: 50,math: 30, result: 'Failed', chemistry:60},{ name: 'Legend' ,hindi:33 , english: 33,math: 33, chemistry:33, result: 'Pass'}  , { name: 'Ultra Legend' ,hindi: 0 , english: 0,math: 0, chemistry:0 , result: 'Failed'} , { name: 'Thanos' ,hindi: 100 , english: 100,math: 100, chemistry:100 ,result: 'Pass'}]
