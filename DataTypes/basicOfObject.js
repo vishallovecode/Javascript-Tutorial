@@ -78,3 +78,12 @@
 
 
 
+const employee = {
+    name: 'Vishal',
+    lastName:  "Sharma",
+    fullName:  function() {
+        console.log(this.name , this.lastName)
+    }
+}
+
+employee.fullName()

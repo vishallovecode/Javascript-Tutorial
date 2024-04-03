@@ -343,6 +343,47 @@
 
 // console.log('deleted value:' , res , 'original modified  array:' ,subject )
 
+
+
+
+// higher order function  
+
+
+
+// function hof (func) {
+
+
+//     func()
+// }
+
+
+// const call = ()=>{
+//     console.log('Hi')
+// };
+
+// // var func = call;
+
+
+// hof(call)
+
+// hof(()=>{
+//     console.log('Hi')
+// })
+
+
+
+
+// // function call (a) {
+// //     // a = r => 100
+// //     console.log(a)
+// // }
+
+// // var r = 100;
+
+// // call(r)
+
+
+
 // #################################### forEach() ######################################
 
 // this is declrative iteration
@@ -351,16 +392,24 @@
 // we cann apply this function only one array not  in any another data type or (prototyp TODO)
 // this is use for iteration of array 
 // this hof means it will accept one callback function 
+// forEach Function return undefined
 
 var interger = [1,2,3,4,5,6,7,89];
 
+
 function callback (element , index , originalArray) {
-        console.log(element ,index)
+      originalArray[index]= {element:  element , index: index}
 }
-interger.forEach(callback);
+
+// forEach is coming from array prototype
+const forEachReturn = interger.forEach(callback);
+
+console.log(interger , 'forEachReturn', forEachReturn)
 
 // myForEach(interger , callback)
 
+
+// How javascript implemented forEACH
 // Array.prototype.emyForEach = function (callback) {
 //     for (let i =0;i<this.length;i++) {
 //         callback(this[i] , i , this)
@@ -368,7 +417,7 @@ interger.forEach(callback);
 // }
 
 
-// code
+// our function which behave like forEach
 // function myForEach(array , callback) {
 //         for (let i =0;i<array.length;i++) {
 //             callback(array[i] , i , array)
@@ -376,8 +425,8 @@ interger.forEach(callback);
 // }
 
 
-var array  = [1,3,4];
+// var array  = [1,3,4];
 
-array.forEach((elem , index , array)=>{
-    console.log(elem)
-})
+// array.forEach((elem , index , array)=>{
+//     console.log(elem)
+// })
