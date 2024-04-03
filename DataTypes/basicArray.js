@@ -262,149 +262,149 @@
 // // console.log(result);
 
 
-// // slice() and splice()
+// // // slice() and splice()
 
 
 
-// // slice => this method is used to create a copy of array  (portion of array);
-// // slice(start , end) // start and end are optional , if you dont put any value in start it will take the 0 as a start
-// // end  => if end is undefined  or value is not given then end value will be the length of array
-// // start and end is index of array
-// // end is exlcusive  it will look for the value till end-1
+// // // slice => this method is used to create a copy of array  (portion of array);
+// // // slice(start , end) // start and end are optional , if you dont put any value in start it will take the 0 as a start
+// // // end  => if end is undefined  or value is not given then end value will be the length of array
+// // // start and end is index of array
+// // // end is exlcusive  it will look for the value till end-1
 
-// var array  = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+// // var array  = [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 
-// var slice1 = array.slice() //
-// console.log(slice1)
-
-
-
-// var slice2 = array.slice(0) // if there is only one parameter w epass then it will by defaul start value , here end is not given so end of this sliced array is end of orginal array (means end  == arraylength)
-// console.log(slice2)
-
-
-// var slice3 = array.slice(3) // here 3 is start index
-// console.log('slice3', slice3)
-
-
-// var slice4 = array.slice(3, 8) // here start index is 3  , slice will return the array starting 3 index and till 7(8-1) index
-// console.log('slice4', slice4)
-
-// // [1,2,3,4,5,6,7,8,9,10,11,12,13,14]; // indexes => [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
-
-// //Negative Value will always start form  the end
-
-// var slice5 = array.slice(-8 , -3); // start  = -8
-
-
-// [1,2,3,4,5,6,7,8,9,10,11,12,13,14];  //=>index , [-14 ,-13 ,-12, -11, -10,-9,-8,-7,-6,-5,-4 ,-3 , -2 , -1]
-
-// console.log('slice5', slice5)
-// console.log('original array' ,array ) //
-
-
-// Note-> slice method does effect the original array
-
-//  ######################################## Splice() ############################
-
-//Note => Splice Method  are used to removed the element from array or add element into the array
-//Note => This method change the data of original array
-
-// Syntax => Splice(start , deletecount(how many element you want to delete ) ,  items(items which you want to add))
-// start are index 
+// // var slice1 = array.slice() //
+// // console.log(slice1)
 
 
 
-// Adding the element into the array 
+// // var slice2 = array.slice(0) // if there is only one parameter w epass then it will by defaul start value , here end is not given so end of this sliced array is end of orginal array (means end  == arraylength)
+// // console.log(slice2)
 
 
-// var employeeName = ['A', 'B','C','D','E','F','G','H','I','J','K'];
-
-// var splicedData =  employeeName.splice(4 , 0 , 'chipa' , 'ripa' , 'dipa');
-
-// // what exactly the splice method return  => this will return the array of deleted item
-
-// console.log('splicedData: ', splicedData, 'original array: ' ,employeeName)
-
-// // Note => First parameter is from which index you want to do delete or addition operation
-// // Note  => Second paramaetetr(delete count) is how many element you want to delete from first parameteter given value
-// // After second parameter  you can add multiple parameter this all will be added in original from starting index which is given in first parameter
+// // var slice3 = array.slice(3) // here 3 is start index
+// // console.log('slice3', slice3)
 
 
+// // var slice4 = array.slice(3, 8) // here start index is 3  , slice will return the array starting 3 index and till 7(8-1) index
+// // console.log('slice4', slice4)
 
-// // Delete using Splice  
+// // // [1,2,3,4,5,6,7,8,9,10,11,12,13,14]; // indexes => [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
 
+// // //Negative Value will always start form  the end
 
-
-// var subject = ['E' ,'H', 'C', 'M', 'S','CSE'];
-
-// // here 2 element is deleted from the array  starting from 1 index .
-// var res = subject.splice(1, 2 , 'rererer');
-
-// console.log('deleted value:' , res , 'original modified  array:' ,subject )
+// // var slice5 = array.slice(-8 , -3); // start  = -8
 
 
+// // [1,2,3,4,5,6,7,8,9,10,11,12,13,14];  //=>index , [-14 ,-13 ,-12, -11, -10,-9,-8,-7,-6,-5,-4 ,-3 , -2 , -1]
+
+// // console.log('slice5', slice5)
+// // console.log('original array' ,array ) //
 
 
-// higher order function  
+// // Note-> slice method does effect the original array
+
+// //  ######################################## Splice() ############################
+
+// //Note => Splice Method  are used to removed the element from array or add element into the array
+// //Note => This method change the data of original array
+
+// // Syntax => Splice(start , deletecount(how many element you want to delete ) ,  items(items which you want to add))
+// // start are index 
 
 
 
-// function hof (func) {
+// // Adding the element into the array 
 
 
-//     func()
-// }
+// // var employeeName = ['A', 'B','C','D','E','F','G','H','I','J','K'];
+
+// // var splicedData =  employeeName.splice(4 , 0 , 'chipa' , 'ripa' , 'dipa');
+
+// // // what exactly the splice method return  => this will return the array of deleted item
+
+// // console.log('splicedData: ', splicedData, 'original array: ' ,employeeName)
+
+// // // Note => First parameter is from which index you want to do delete or addition operation
+// // // Note  => Second paramaetetr(delete count) is how many element you want to delete from first parameteter given value
+// // // After second parameter  you can add multiple parameter this all will be added in original from starting index which is given in first parameter
 
 
-// const call = ()=>{
-//     console.log('Hi')
-// };
 
-// // var func = call;
+// // // Delete using Splice  
 
 
-// hof(call)
 
-// hof(()=>{
-//     console.log('Hi')
-// })
+// // var subject = ['E' ,'H', 'C', 'M', 'S','CSE'];
+
+// // // here 2 element is deleted from the array  starting from 1 index .
+// // var res = subject.splice(1, 2 , 'rererer');
+
+// // console.log('deleted value:' , res , 'original modified  array:' ,subject )
 
 
 
 
-// // function call (a) {
-// //     // a = r => 100
-// //     console.log(a)
+// // higher order function  
+
+
+
+// // function hof (func) {
+
+
+// //     func()
 // // }
 
-// // var r = 100;
 
-// // call(r)
+// // const call = ()=>{
+// //     console.log('Hi')
+// // };
 
-
-
-// #################################### forEach() ######################################
-
-// this is declrative iteration
-// in this iteration you can get both index and value
-// this is higher order method which is given by the javascript 
-// we cann apply this function only one array not  in any another data type or (prototyp TODO)
-// this is use for iteration of array 
-// this hof means it will accept one callback function 
-// forEach Function return undefined
-
-var interger = [1,2,3,4,5,6,7,89];
+// // // var func = call;
 
 
-function callback (element , index , originalArray) {
-      originalArray[index]= {element:  element , index: index}
-}
+// // hof(call)
 
-// forEach is coming from array prototype
-const forEachReturn = interger.forEach(callback);
+// // hof(()=>{
+// //     console.log('Hi')
+// // })
 
-console.log(interger , 'forEachReturn', forEachReturn)
+
+
+
+// // // function call (a) {
+// // //     // a = r => 100
+// // //     console.log(a)
+// // // }
+
+// // // var r = 100;
+
+// // // call(r)
+
+
+
+// // #################################### forEach() ######################################
+
+// // this is declrative iteration
+// // in this iteration you can get both index and value
+// // this is higher order method which is given by the javascript 
+// // we cann apply this function only one array not  in any another data type or (prototyp TODO)
+// // this is use for iteration of array 
+// // this hof means it will accept one callback function 
+// // forEach Function return undefined
+
+// var interger = [1,2,3,4,5,6,7,89];
+
+
+// function callback (element , index , originalArray) {
+//       originalArray[index]= {element:  element , index: index}
+// }
+
+// // forEach is coming from array prototype
+// const forEachReturn = interger.forEach(callback);
+
+// console.log(interger , 'forEachReturn', forEachReturn)
 
 // myForEach(interger , callback)
 
@@ -430,3 +430,38 @@ console.log(interger , 'forEachReturn', forEachReturn)
 // array.forEach((elem , index , array)=>{
 //     console.log(elem)
 // })
+
+
+// ############################# map ############################
+
+// this is higher order functions 
+// this is use for iteration of the array 
+// map method are declarative (pre declared , we cannote changes flow of it)
+// unlike forEach, map will return a new array 
+// this map method can be apply only in array like forEach
+// it will accept one callback functions
+
+
+var array  = [4,9, 10, 14, 13 , 19 , 30 , 33, 21];
+
+const callback = (element , index , originalArray) => {
+     if(element%2 ==0) {
+        return 'even'
+     }
+}
+
+const newArray  = array.map(callback);
+
+
+const newArray2  = array.map((elem , index)=>{
+    if(elem%2 ==0) {
+        return 'even'
+     } else {
+        return 'odd'
+     }
+});
+
+const newArray3 =  array.map((elem)=> elem%2 ==0)
+console.log(newArray , newArray2 , newArray3)
+
+
