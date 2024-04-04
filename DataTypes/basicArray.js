@@ -499,3 +499,31 @@ console.log(studentsResult)
 
 
 
+
+
+// ################################ filter ######################
+
+// It is higher order method 
+// it can be apply on  array
+// it is declrative
+// it  will accept call back functions
+// this is use for filteration of array
+// this will return the filter array 
+
+
+const listOfStudents  = [{ name: 'Chapri' ,hindi: 40 , english: 60,math: 50, chemistry:90}, { name: 'Chaprayin' ,hindi: 50 , english: 50,math: 30, chemistry:60},{ name: 'Legend' ,hindi:33 , english: 33,math: 33, chemistry:33} , { name: 'Ultra Legend' ,hindi: 0 , english: 0,math: 0, chemistry:0} , { name: 'Thanos' ,hindi: 100 , english: 100,math: 100, chemistry:100}]
+
+const numbers = [1,2,3,4,100, 200, 56, 77, 33 , 53];
+
+// give me the odd number in given array
+
+const result  =  numbers.filter((elem , index, array)=>{
+        return elem%2!=0;
+})
+
+
+const result2  =  numbers.filter((elem , index, array)=>{
+    return false
+})
+
+console.log(result , 'result')
