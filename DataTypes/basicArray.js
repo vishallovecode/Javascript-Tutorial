@@ -562,7 +562,6 @@ console.log(result , 'result')
                      break;
               }
          } 
-    
         }
         obj.result  = value
         return obj
@@ -571,3 +570,42 @@ console.log(result , 'result')
   })
 
   console.log(dataResult)
+
+
+  const marks = [33 , 88 , 90 , 50 , 70 , 23 , 43 , 12]
+
+// [{
+//     value: 88 ,
+//     passingMarks : 'Yes',
+//     grade:'A'
+// } ,
+// {
+//     value: 33 ,
+//     passingMarks : 'Yes',
+//     grade:'C'
+// },
+// {
+//     value: 90 ,
+//     passingMarks : 'Yes',
+//     grade:'A'
+// } ,{
+//     value: 70 ,
+//     passingMarks : 'Yes',
+//     grade:'B'
+// }
+// ]
+//   all passing number 
+
+// {
+//     value: 50 ,
+//     passingMarks : 'Yes',
+//     grade:'B'
+// }
+
+// 33 > passing 
+// 33< Failed
+
+// >33 => D
+// 33-49 => c
+// 50 -79 =>b
+// 80-100 =>a
