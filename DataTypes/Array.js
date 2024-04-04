@@ -585,6 +585,7 @@ console.log(result , 'result')
       return 'A'
     }
   }
+
   const marksResult =  marks.map((elem , index ,  array)=>{
       return {
         value : elem ,
@@ -596,6 +597,14 @@ console.log(result , 'result')
     // return passingMarks === 'yes'
   })
 
+  
+
+  // const resula = marksResult.filter((obj)=>{
+  //   return   obj.value >=33
+  //   // return passingMarks === 'yes'
+  // })
+
+  
   console.log(marksResult)
 
 // [{
@@ -635,3 +644,32 @@ console.log(result , 'result')
 // 80-100 =>a
 
 
+
+
+// ############################### find #######################
+
+// it is highe order method 
+// it will take callback function as parameter
+// it is decklrative
+// it will use for finding the single element which match condition
+// it will return the elem
+// this will return the value of first element which match the condition
+// this will execute in all elem
+// if there is not matching it will return undefined
+// it will not change original array
+
+var array   = [34 ,89 , 100 , 37];
+
+var elem =  array.find((elem , index , array)=>{
+    return elem == 100
+})
+console.log(elem)
+
+
+
+var array   = [34 ,89 , 100 , 37];
+
+var elem =  array.find((elem , index , array)=>{
+    return elem < 100
+})
+console.log(elem)
