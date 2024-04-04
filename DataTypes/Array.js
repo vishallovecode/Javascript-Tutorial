@@ -663,13 +663,40 @@ var array   = [34 ,89 , 100 , 37];
 var elem =  array.find((elem , index , array)=>{
     return elem == 100
 })
-console.log(elem)
+console.log(elem) // 100
 
 
 
 var array   = [34 ,89 , 100 , 37];
 
 var elem =  array.find((elem , index , array)=>{
-    return elem < 100
+    return index ===3
 })
-console.log(elem)
+console.log(elem) //  34
+
+
+
+
+//  ######################## some  ##########################
+
+// this method return true or false 
+// this will not modify original array 
+// this is again hof  functions 
+// it is declrative 
+// this will check if any array elements pass the condtion  if any of the element  pass the condition it will return true else false
+// it will return false if all the array element does not pass the contions
+
+
+ var results = [33 , 45 , 67 , 78 , 23] ;
+
+
+ const isAnyStudentsFailed = results.some((elem , index, array)=>{
+    return elem<33
+ })
+ const isAnyStudentsFailed1 = results.some((elem , index, array)=>{
+  return elem<22
+})
+
+console.log(isAnyStudentsFailed1) // false
+
+ console.log(isAnyStudentsFailed) // true
