@@ -509,9 +509,9 @@ console.log(studentsResult)
 // it  will accept call back functions
 // this is use for filteration of array
 // this will return the filter array 
+// it does not modify orginal array .
 
 
-const listOfStudents  = [{ name: 'Chapri' ,hindi: 40 , english: 60,math: 50, chemistry:90}, { name: 'Chaprayin' ,hindi: 50 , english: 50,math: 30, chemistry:60},{ name: 'Legend' ,hindi:33 , english: 33,math: 33, chemistry:33} , { name: 'Ultra Legend' ,hindi: 0 , english: 0,math: 0, chemistry:0} , { name: 'Thanos' ,hindi: 100 , english: 100,math: 100, chemistry:100}]
 
 const numbers = [1,2,3,4,100, 200, 56, 77, 33 , 53];
 
@@ -521,9 +521,53 @@ const result  =  numbers.filter((elem , index, array)=>{
         return elem%2!=0;
 })
 
-
 const result2  =  numbers.filter((elem , index, array)=>{
-    return false
+    return true
 })
 
 console.log(result , 'result')
+
+// find the students who are failed
+ const listOfStudents  = [{ name: 'Chapri' ,hindi: 40 , english: 60,math: 50, chemistry:90}, { name: 'Chaprayin' ,hindi: 50 , english: 50,math: 30, chemistry:60},{ name: 'Legend' ,hindi:33 , english: 33,math: 33, chemistry:33} , { name: 'Ultra Legend' ,hindi: 0 , english: 0,math: 0, chemistry:0} , { name: 'Thanos' ,hindi: 100 , english: 100,math: 100, chemistry:100}]
+
+
+
+
+ const listOfStudentsResult = listOfStudents.filter((obj , index , array)=>{
+   let value = 'Pass'
+    for(let key in obj) {
+        if(!isNaN(obj[key])) {
+             if(obj[key]< 33) {
+                value = 'Failed'
+                    break;
+             }
+        } 
+   
+       }
+       return value === 'Failed'
+ })
+
+ console.log(listOfStudentsResult)
+
+
+  // chaining filter map 
+
+
+  const dataResult = listOfStudents.map((obj , index , array)=>{
+    let value = 'Pass'
+     for(let key in obj) {
+         if(!isNaN(obj[key])) {
+              if(obj[key]< 33) {
+                 value = 'Failed'
+                     break;
+              }
+         } 
+    
+        }
+        obj.result  = value
+        return obj
+  }).filter((elem , index, array)=>{
+    return elem.result === 'Failed'
+  })
+
+  console.log(dataResult)
