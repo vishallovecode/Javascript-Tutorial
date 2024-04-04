@@ -574,6 +574,30 @@ console.log(result , 'result')
 
   const marks = [33 , 88 , 90 , 50 , 70 , 23 , 43 , 12]
 
+  function getGrade(elem) {
+    if(elem<33) {
+      return 'D'
+    } else if(elem>=33 && elem< 50) {
+      return 'C'
+    } else if(elem>=50 && elem< 80) {
+      return 'B'
+    } else {
+      return 'A'
+    }
+  }
+  const marksResult =  marks.map((elem , index ,  array)=>{
+      return {
+        value : elem ,
+        passingMarks: elem> 33 ?  'Yes' : 'No',
+        grade: getGrade(elem)
+      }
+  }).filter((obj)=>{
+    return   obj.value >=33
+    // return passingMarks === 'yes'
+  })
+
+  console.log(marksResult)
+
 // [{
 //     value: 88 ,
 //     passingMarks : 'Yes',
@@ -609,3 +633,5 @@ console.log(result , 'result')
 // 33-49 => c
 // 50 -79 =>b
 // 80-100 =>a
+
+
