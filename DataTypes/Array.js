@@ -402,301 +402,339 @@
 // }
 
 // // forEach is coming from array prototype
-// const forEachReturn = interger.forEach(callback);
+// // const forEachReturn = interger.forEach(callback);
 
-// console.log(interger , 'forEachReturn', forEachReturn)
+// // console.log(interger , 'forEachReturn', forEachReturn)
 
-// myForEach(interger , callback)
+// // myForEach(interger , callback)
 
 
-// How javascript implemented forEACH
-// Array.prototype.emyForEach = function (callback) {
-//     for (let i =0;i<this.length;i++) {
-//         callback(this[i] , i , this)
-//     }
+// // How javascript implemented forEACH
+// // Array.prototype.emyForEach = function (callback) {
+// //     for (let i =0;i<this.length;i++) {
+// //         callback(this[i] , i , this)
+// //     }
+// // }
+
+
+// // our function which behave like forEach
+// // function myForEach(array , callback) {
+// //         for (let i =0;i<array.length;i++) {
+// //             callback(array[i] , i , array)
+// //         }
+// // }
+
+
+// // var array  = [1,3,4];
+
+// // array.forEach((elem , index , array)=>{
+// //     console.log(elem)
+// // })
+
+
+// // ############################# map ############################
+
+// // this is higher order functions 
+// // this is use for iteration of the array 
+// // map method are declarative (pre declared , we cannote changes flow of it)
+// // unlike forEach, map will return a new array 
+// // this map method can be apply only in array like forEach
+// // it will accept one callback functions
+
+
+// var array  = [4,9, 10, 14, 13 , 19 , 30 , 33, 21];
+
+// const callback = (element , index , originalArray) => {
+//      if(element%2 ==0) {
+//         return 'even'
+//      }
 // }
 
-
-// our function which behave like forEach
-// function myForEach(array , callback) {
-//         for (let i =0;i<array.length;i++) {
-//             callback(array[i] , i , array)
-//         }
-// }
+// const newArray  = array.map(callback);
 
 
-// var array  = [1,3,4];
+// const newArray2  = array.map((elem , index)=>{
+//     if(elem%2 ==0) {
+//         return 'even'
+//      } else {
+//         return 'odd'
+//      }
+// });
 
-// array.forEach((elem , index , array)=>{
-//     console.log(elem)
+// const newArray3 =  array.map((elem)=> elem%2 ==0)
+// console.log(newArray , newArray2 , newArray3)
+
+
+
+
+
+// const students  = [{ name: 'Chapri' ,hindi: 40 , english: 60,math: 50, chemistry:90}, { name: 'Chaprayin' ,hindi: 50 , english: 50,math: 30, chemistry:60},{ name: 'Legend' ,hindi:33 , english: 33,math: 33, chemistry:33} , { name: 'Ultra Legend' ,hindi: 0 , english: 0,math: 0, chemistry:0} , { name: 'Thanos' ,hindi: 100 , english: 100,math: 100, chemistry:100}]
+
+// const studentsResult  =  students.map((elem , index, array)=>{
+//         let value  = 'Pass'
+//        for(let key in elem) {
+//         if(!isNaN(elem[key])) {
+//              if(elem[key]< 33) {
+//                 value = 'Failed'
+//                     break;
+//              }
+//         } 
+//         // if(isNaN(elem[key])) { 
+//         //     // string
+//         //  continue;
+//         // }  else {
+//         //     //number
+//         //     if(elem[key]< 33) {
+//         //         value = 'Failed'
+//         //             break;
+//         //      }
+//         // }
+//        }
+//        elem.result  = value
+//        return elem
+// });
+
+// console.log(studentsResult)
+// // studentsResult =  [{ name: 'Chapri' ,hindi: 40 , english: 60,math: 50, chemistry:90, result: 'PASS'}, { name: 'Chaprayin' ,hindi: 50 , english: 50,math: 30, result: 'Failed', chemistry:60},{ name: 'Legend' ,hindi:33 , english: 33,math: 33, chemistry:33, result: 'Pass'}  , { name: 'Ultra Legend' ,hindi: 0 , english: 0,math: 0, chemistry:0 , result: 'Failed'} , { name: 'Thanos' ,hindi: 100 , english: 100,math: 100, chemistry:100 ,result: 'Pass'}]
+
+
+
+
+
+// // ################################ filter ######################
+
+// // It is higher order method 
+// // it can be apply on  array
+// // it is declrative
+// // it  will accept call back functions
+// // this is use for filteration of array
+// // this will return the filter array 
+// // it does not modify orginal array .
+
+
+
+// const numbers = [1,2,3,4,100, 200, 56, 77, 33 , 53];
+
+// // give me the odd number in given array
+
+// const result  =  numbers.filter((elem , index, array)=>{
+//         return elem%2!=0;
 // })
 
+// const result2  =  numbers.filter((elem , index, array)=>{
+//     return true
+// })
 
-// ############################# map ############################
+// console.log(result , 'result')
 
-// this is higher order functions 
-// this is use for iteration of the array 
-// map method are declarative (pre declared , we cannote changes flow of it)
-// unlike forEach, map will return a new array 
-// this map method can be apply only in array like forEach
-// it will accept one callback functions
-
-
-var array  = [4,9, 10, 14, 13 , 19 , 30 , 33, 21];
-
-const callback = (element , index , originalArray) => {
-     if(element%2 ==0) {
-        return 'even'
-     }
-}
-
-const newArray  = array.map(callback);
-
-
-const newArray2  = array.map((elem , index)=>{
-    if(elem%2 ==0) {
-        return 'even'
-     } else {
-        return 'odd'
-     }
-});
-
-const newArray3 =  array.map((elem)=> elem%2 ==0)
-console.log(newArray , newArray2 , newArray3)
+// // find the students who are failed
+//  const listOfStudents  = [{ name: 'Chapri' ,hindi: 40 , english: 60,math: 50, chemistry:90}, { name: 'Chaprayin' ,hindi: 50 , english: 50,math: 30, chemistry:60},{ name: 'Legend' ,hindi:33 , english: 33,math: 33, chemistry:33} , { name: 'Ultra Legend' ,hindi: 0 , english: 0,math: 0, chemistry:0} , { name: 'Thanos' ,hindi: 100 , english: 100,math: 100, chemistry:100}]
 
 
 
 
-
-const students  = [{ name: 'Chapri' ,hindi: 40 , english: 60,math: 50, chemistry:90}, { name: 'Chaprayin' ,hindi: 50 , english: 50,math: 30, chemistry:60},{ name: 'Legend' ,hindi:33 , english: 33,math: 33, chemistry:33} , { name: 'Ultra Legend' ,hindi: 0 , english: 0,math: 0, chemistry:0} , { name: 'Thanos' ,hindi: 100 , english: 100,math: 100, chemistry:100}]
-
-const studentsResult  =  students.map((elem , index, array)=>{
-        let value  = 'Pass'
-       for(let key in elem) {
-        if(!isNaN(elem[key])) {
-             if(elem[key]< 33) {
-                value = 'Failed'
-                    break;
-             }
-        } 
-        // if(isNaN(elem[key])) { 
-        //     // string
-        //  continue;
-        // }  else {
-        //     //number
-        //     if(elem[key]< 33) {
-        //         value = 'Failed'
-        //             break;
-        //      }
-        // }
-       }
-       elem.result  = value
-       return elem
-});
-
-console.log(studentsResult)
-// studentsResult =  [{ name: 'Chapri' ,hindi: 40 , english: 60,math: 50, chemistry:90, result: 'PASS'}, { name: 'Chaprayin' ,hindi: 50 , english: 50,math: 30, result: 'Failed', chemistry:60},{ name: 'Legend' ,hindi:33 , english: 33,math: 33, chemistry:33, result: 'Pass'}  , { name: 'Ultra Legend' ,hindi: 0 , english: 0,math: 0, chemistry:0 , result: 'Failed'} , { name: 'Thanos' ,hindi: 100 , english: 100,math: 100, chemistry:100 ,result: 'Pass'}]
-
-
-
-
-
-// ################################ filter ######################
-
-// It is higher order method 
-// it can be apply on  array
-// it is declrative
-// it  will accept call back functions
-// this is use for filteration of array
-// this will return the filter array 
-// it does not modify orginal array .
-
-
-
-const numbers = [1,2,3,4,100, 200, 56, 77, 33 , 53];
-
-// give me the odd number in given array
-
-const result  =  numbers.filter((elem , index, array)=>{
-        return elem%2!=0;
-})
-
-const result2  =  numbers.filter((elem , index, array)=>{
-    return true
-})
-
-console.log(result , 'result')
-
-// find the students who are failed
- const listOfStudents  = [{ name: 'Chapri' ,hindi: 40 , english: 60,math: 50, chemistry:90}, { name: 'Chaprayin' ,hindi: 50 , english: 50,math: 30, chemistry:60},{ name: 'Legend' ,hindi:33 , english: 33,math: 33, chemistry:33} , { name: 'Ultra Legend' ,hindi: 0 , english: 0,math: 0, chemistry:0} , { name: 'Thanos' ,hindi: 100 , english: 100,math: 100, chemistry:100}]
-
-
-
-
- const listOfStudentsResult = listOfStudents.filter((obj , index , array)=>{
-   let value = 'Pass'
-    for(let key in obj) {
-        if(!isNaN(obj[key])) {
-             if(obj[key]< 33) {
-                value = 'Failed'
-                    break;
-             }
-        } 
+//  const listOfStudentsResult = listOfStudents.filter((obj , index , array)=>{
+//    let value = 'Pass'
+//     for(let key in obj) {
+//         if(!isNaN(obj[key])) {
+//              if(obj[key]< 33) {
+//                 value = 'Failed'
+//                     break;
+//              }
+//         } 
    
-       }
-       return value === 'Failed'
- })
+//        }
+//        return value === 'Failed'
+//  })
 
- console.log(listOfStudentsResult)
-
-
-  // chaining filter map 
+//  console.log(listOfStudentsResult)
 
 
-  const dataResult = listOfStudents.map((obj , index , array)=>{
-    let value = 'Pass'
-     for(let key in obj) {
-         if(!isNaN(obj[key])) {
-              if(obj[key]< 33) {
-                 value = 'Failed'
-                     break;
-              }
-         } 
-        }
-        obj.result  = value
-        return obj
-  }).filter((elem , index, array)=>{
-    return elem.result === 'Failed'
-  })
-
-  console.log(dataResult)
+//   // chaining filter map 
 
 
-  const marks = [33 , 88 , 90 , 50 , 70 , 23 , 43 , 12]
+//   const dataResult = listOfStudents.map((obj , index , array)=>{
+//     let value = 'Pass'
+//      for(let key in obj) {
+//          if(!isNaN(obj[key])) {
+//               if(obj[key]< 33) {
+//                  value = 'Failed'
+//                      break;
+//               }
+//          } 
+//         }
+//         obj.result  = value
+//         return obj
+//   }).filter((elem , index, array)=>{
+//     return elem.result === 'Failed'
+//   })
 
-  function getGrade(elem) {
-    if(elem<33) {
-      return 'D'
-    } else if(elem>=33 && elem< 50) {
-      return 'C'
-    } else if(elem>=50 && elem< 80) {
-      return 'B'
-    } else {
-      return 'A'
-    }
-  }
+//   console.log(dataResult)
 
-  const marksResult =  marks.map((elem , index ,  array)=>{
-      return {
-        value : elem ,
-        passingMarks: elem> 33 ?  'Yes' : 'No',
-        grade: getGrade(elem)
-      }
-  }).filter((obj)=>{
-    return   obj.value >=33
-    // return passingMarks === 'yes'
-  })
 
-  
+//   const marks = [33 , 88 , 90 , 50 , 70 , 23 , 43 , 12]
 
-  // const resula = marksResult.filter((obj)=>{
-  //   return   obj.value >=33
-  //   // return passingMarks === 'yes'
-  // })
+  // function getGrade(elem) {
+  //   if(elem<33) {
+  //     return 'D'
+  //   } else if(elem>=33 && elem< 50) {
+//       return 'C'
+//     } else if(elem>=50 && elem< 80) {
+//       return 'B'
+//     } else {
+//       return 'A'
+//     }
+//   }
+
+//   const marksResult =  marks.map((elem , index ,  array)=>{
+//       return {
+//         value : elem ,
+//         passingMarks: elem> 33 ?  'Yes' : 'No',
+//         grade: getGrade(elem)
+//       }
+//   }).filter((obj)=>{
+//     return   obj.value >=33
+//     // return passingMarks === 'yes'
+//   })
 
   
-  console.log(marksResult)
 
-// [{
-//     value: 88 ,
-//     passingMarks : 'Yes',
-//     grade:'A'
-// } ,
-// {
-//     value: 33 ,
-//     passingMarks : 'Yes',
-//     grade:'C'
-// },
-// {
-//     value: 90 ,
-//     passingMarks : 'Yes',
-//     grade:'A'
-// } ,{
-//     value: 70 ,
-//     passingMarks : 'Yes',
-//     grade:'B'
-// }
-// ]
-//   all passing number 
+//   // const resula = marksResult.filter((obj)=>{
+//   //   return   obj.value >=33
+//   //   // return passingMarks === 'yes'
+//   // })
 
-// {
-//     value: 50 ,
-//     passingMarks : 'Yes',
-//     grade:'B'
-// }
+  
+//   console.log(marksResult)
 
-// 33 > passing 
-// 33< Failed
+// // [{
+// //     value: 88 ,
+// //     passingMarks : 'Yes',
+// //     grade:'A'
+// // } ,
+// // {
+// //     value: 33 ,
+// //     passingMarks : 'Yes',
+// //     grade:'C'
+// // },
+// // {
+// //     value: 90 ,
+// //     passingMarks : 'Yes',
+// //     grade:'A'
+// // } ,{
+// //     value: 70 ,
+// //     passingMarks : 'Yes',
+// //     grade:'B'
+// // }
+// // ]
+// //   all passing number 
 
-// >33 => D
-// 33-49 => c
-// 50 -79 =>b
-// 80-100 =>a
+// // {
+// //     value: 50 ,
+// //     passingMarks : 'Yes',
+// //     grade:'B'
+// // }
 
+// // 33 > passing 
+// // 33< Failed
 
-
-
-// ############################### find #######################
-
-// it is highe order method 
-// it will take callback function as parameter
-// it is decklrative
-// it will use for finding the single element which match condition
-// it will return the elem
-// this will return the value of first element which match the condition
-// this will execute in all elem
-// if there is not matching it will return undefined
-// it will not change original array
-
-var array   = [34 ,89 , 100 , 37];
-
-var elem =  array.find((elem , index , array)=>{
-    return elem == 100
-})
-console.log(elem) // 100
-
-
-
-var array   = [34 ,89 , 100 , 37];
-
-var elem =  array.find((elem , index , array)=>{
-    return index ===3
-})
-console.log(elem) //  34
+// // >33 => D
+// // 33-49 => c
+// // 50 -79 =>b
+// // 80-100 =>a
 
 
 
 
-//  ######################## some  ##########################
+// // ############################### find #######################
 
-// this method return true or false 
-// this will not modify original array 
-// this is again hof  functions 
-// it is declrative 
-// this will check if any array elements pass the condtion  if any of the element  pass the condition it will return true else false
-// it will return false if all the array element does not pass the contions
+// // it is highe order method 
+// // it will take callback function as parameter
+// // it is decklrative
+// // it will use for finding the single element which match condition
+// // it will return the elem
+// // this will return the value of first element which match the condition
+// // this will execute in all elem
+// // if there is not matching it will return undefined
+// // it will not change original array
+
+// var array   = [34 ,89 , 100 , 37];
+
+// var elem =  array.find((elem , index , array)=>{
+//     return elem == 100
+// })
+// console.log(elem) // 100
 
 
- var results = [33 , 45 , 67 , 78 , 23] ;
+
+// var array   = [34 ,89 , 100 , 37];
+
+// var elem =  array.find((elem , index , array)=>{
+//     return index ===3
+// })
+// console.log(elem) //  34
 
 
- const isAnyStudentsFailed = results.some((elem , index, array)=>{
-    return elem<33
+
+
+// //  ######################## some  ##########################
+
+// // this method return true or false 
+// // this will not modify original array 
+// // this is again hof  functions 
+// // it is declrative 
+// // this will check if any array elements pass the condtion  if any of the element  pass the condition it will return true else false
+// // it will return false if all the array element does not pass the contions
+
+
+//  var results = [33 , 45 , 67 , 78 , 23] ;
+
+
+//  const isAnyStudentsFailed = results.some((elem , index, array)=>{
+//     return elem<33
+//  })
+//  const isAnyStudentsFailed1 = results.some((elem , index, array)=>{
+//   return elem<22
+// })
+
+// const isAnyStudentsFailed3 = results.some((elem , index, array)=>{
+//   return elem<22
+// })
+
+// console.log(isAnyStudentsFailed1) // false
+
+//  console.log(isAnyStudentsFailed) // true
+
+
+ //  ######################## Every  ##########################
+
+
+// // this method return true or false 
+// // this will not modify original array 
+// // this is again hof  functions 
+// // it is declrative 
+// // this will check if all array elements pass the condtion  if all elemnts  pass the condition it will return true else false
+// any of the element does not pass the condition it will return false
+// // it will return false if all the array element does not pass the contions
+
+ var results = [33 , 45 , 67 , 78 , 48] ;
+
+
+ const isaAllStundentPass = results.every((elem , index, array)=>{
+    return elem>=33
  })
- const isAnyStudentsFailed1 = results.some((elem , index, array)=>{
+
+ const isAllStudentBgrade = results.every((elem , index, array)=>{
+  return elem>70
+})
+
+const isaAllStundentPass2 = results.every((elem , index, array)=>{
   return elem<22
 })
 
-console.log(isAnyStudentsFailed1) // false
+ console.log(isaAllStundentPass) // true
 
- console.log(isAnyStudentsFailed) // true
+ console.log(isAllStudentBgrade) // true
+
+ console.log(isaAllStundentPass2) // true
+
