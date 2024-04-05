@@ -738,3 +738,41 @@ const isaAllStundentPass2 = results.every((elem , index, array)=>{
 
  console.log(isaAllStundentPass2) // true
 
+
+ const numbers = [1, 2, 3, 4, 5];
+
+// const a  = d => d;
+
+// const a = (d) => {
+//   return d
+// }
+
+// const result = numbers.filter(n => n % 2)
+
+
+
+
+
+// for in 
+// for of 
+// forEACH 
+// MAP
+// FILTER 
+// SOME
+// EVERY 
+// SHIFT 
+// UNSHIFT 
+// SLICE
+// SPLICE
+// INDEXOF
+// FIRSTIndexof
+// lastIndexOF
+// includes
+// join
+// split 
+// push  
+// pop
+// find 
+
+
+// A

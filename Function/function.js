@@ -375,115 +375,152 @@
 
 // Here this functions is returning the another function 
 // Thats why it is HOF
-function HOF () {
-    console.log('Hey Relax')
-    console.log('Chill Yar....')
-    return function () {
-        console.log('Hey');
-    }
-}
-
-// var res = HOF();
-// res();
-
-// Below code are shorthand of above code
-// var res1 =  HOF();
-
-// console.log('HEY', res1)
-
-
-// res1()
-
-//   Function Method 
-
-// call  , bind  , apply (Todo)
-// normal function
-var myFunc = function getName(a,b) {
-    return a+b;
-}
-
-
-console.log(myFunc.name) // getName
-
-var myFunc =  (a,b) =>{
-    return a+b;
-}
-
-
-console.log(myFunc.name) // myFunc
-
-
-function getCall (a,b,c,d) {
-    // we have one keyword (arguments) which accessible only inside the normal function
-    console.log(arguments) // THIS WILL GIVES US ARRAY OF ARGUMENTS
-}
- getCall(20,30, 40, 50)
-
- var   getCall1  = (a,b,c,d) =>{
-    // console.log(arguments) // this will throw the error  , because arguments are not defined inside
-    //the arrow functions
- }
-getCall1(20,30, 40, 50);
-
-
-
-// Rest and Spread Operator  TODO
-
-function getData(a,b,c,d) {
-    console.log(a,b,c,d)
-}
-
-
-var getData2 = (a,b,c,d,e)=>{
-    console.log(a,b,c,d,e)
-}
-// if we write anyFunctionname.length it will gives the total parameter , declare at the time 
-// of function declaration
-
-console.log('getData=>', getData.length, ':::' , 'getData2=>', getData2.length)
-// this toString method will convert the whole function in string format  => this return function as string
-console.log(getData2.toString())
-
-
-
-
-// Recursion 
-// function removeCharacter(s){
-//     var a = s.split(''); 
-//     a.pop();
-//     var s =  a.join('');
-//     if(s.length ==1) {
-//         return s;
-//     }
-//     else {
-//         return removeCharacter(s)
+// function HOF () {
+//     console.log('Hey Relax')
+//     console.log('Chill Yar....')
+//     return function () {
+//         console.log('Hey');
 //     }
 // }
 
+// // var res = HOF();
+// // res();
 
-// var res =removeCharacter('Hello')
-// console.log(res)
+// // Below code are shorthand of above code
+// // var res1 =  HOF();
 
-
-
-// flatten array 
-// Flatten object 
-// advanced curry 
-// deepEqual 
+// // console.log('HEY', res1)
 
 
+// // res1()
 
-const getValue = (num) => {
-    if(num<10){
-    return num;
-    }
-    var sum=0;
-    while(num>0){
-        var a=num%10;
-        num=(num-a)/10;
-        sum+=a;
-    }
-    return getValue(sum);
-    };
+// //   Function Method 
 
-    getValue(7893);
+// // call  , bind  , apply (Todo)
+// // normal function
+// var myFunc = function getName(a,b) {
+//     return a+b;
+// }
+
+
+// console.log(myFunc.name) // getName
+
+// var myFunc =  (a,b) =>{
+//     return a+b;
+// }
+
+
+// console.log(myFunc.name) // myFunc
+
+
+// function getCall (a,b,c,d) {
+//     // we have one keyword (arguments) which accessible only inside the normal function
+//     console.log(arguments) // THIS WILL GIVES US ARRAY OF ARGUMENTS
+// }
+//  getCall(20,30, 40, 50)
+
+//  var   getCall1  = (a,b,c,d) =>{
+//     // console.log(arguments) // this will throw the error  , because arguments are not defined inside
+//     //the arrow functions
+//  }
+// getCall1(20,30, 40, 50);
+
+
+
+// // Rest and Spread Operator  TODO
+
+// function getData(a,b,c,d) {
+//     console.log(a,b,c,d)
+// }
+
+
+// var getData2 = (a,b,c,d,e)=>{
+//     console.log(a,b,c,d,e)
+// }
+// // if we write anyFunctionname.length it will gives the total parameter , declare at the time 
+// // of function declaration
+
+// console.log('getData=>', getData.length, ':::' , 'getData2=>', getData2.length)
+// // this toString method will convert the whole function in string format  => this return function as string
+// console.log(getData2.toString())
+
+
+
+
+// // Recursion 
+// // function removeCharacter(s){
+// //     var a = s.split(''); 
+// //     a.pop();
+// //     var s =  a.join('');
+// //     if(s.length ==1) {
+// //         return s;
+// //     }
+// //     else {
+// //         return removeCharacter(s)
+// //     }
+// // }
+
+
+// // var res =removeCharacter('Hello')
+// // console.log(res)
+
+
+
+// // flatten array 
+// // Flatten object 
+// // advanced curry 
+// // deepEqual 
+
+
+
+// const getValue = (num) => {
+//     if(num<10){
+//     return num;
+//     }
+//     var sum=0;
+//     while(num>0){
+//         var a=num%10;
+//         num=(num-a)/10;
+//         sum+=a;
+//     }
+//     return getValue(sum);
+//     };
+
+//     getValue(7893);
+
+
+
+// explicit and implictt return type
+
+
+// implicit 
+const sum  = (a,b)=>  a+b
+
+
+const data  = () => {name: 'Visha'} // undefined
+
+const data1  = () => {
+    name: 'Vishal'
+} // undefined
+
+
+const data2  = () => (
+    'Vishal',
+    'Sharma',
+    123
+)
+
+const data3= () => ('Vishal')
+
+const data4= () => 'Vishal'
+
+console.log(data()) // undefined
+console.log(data1()) // undefined
+console.log(data2())// 123
+console.log(data3()) // Vishal
+console.log(data4()) // Vishal
+
+// normal function which does not use return keyword that is implict return type
+
+
+// function which return the value expliciutyly using return keyword that is explicit return type
