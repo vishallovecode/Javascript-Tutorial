@@ -748,9 +748,76 @@ const isaAllStundentPass2 = results.every((elem , index, array)=>{
 // }
 
 // const result = numbers.filter(n => n % 2)
+// here we are returning the remainder after dividing the value with 2 if any number which is odd  
+// and we will divide by 2  this will always give value 1 and in javascript except the 0 number all another number
+// are truthy  so here for odd number callback function inside filter will give truthy so filter will return all 
+// odd number
+
+
+ // result = [1,3,5]
 
 
 
+
+ // ######################################### reduce ###############################
+
+ //this function is apply in array , and as name suggest this function iterate through all the array and 
+ // reduce array into single value and return that value
+
+ // this is higher order function
+ // this will take once callback which we are calling action
+ // it is declarative 
+ // it does not modify original array 
+ //
+
+
+ var num1 = [1,3,4,5,6,7,8];
+
+ // want to find the sum of given array  
+
+ var sum = 0;
+ for(let elem of num1) {
+  sum+=elem
+ }
+
+ var sum1 = 0;
+ num1.forEach((elem , index)=>{
+  sum1+=elem
+ })
+
+
+
+
+ const reduceCallback = (previousValue , currentValue , currentIndex , originalArray) => {
+     return previousValue + currentValue
+ }
+ 
+const reduceRes = num1.reduce(reduceCallback , 0)
+console.log('reduceRes' , reduceRes)
+
+
+// this is the reduce code
+// Array.prototype.reduce = function (func , initialValue) {
+//  let array  = this;
+//  array.forEach((elem , index , array)=>{
+//   initialValue  = func(initialValue , elem , inde , array)
+//  })
+//  return  initialValue
+// }
+
+
+const add = (a,b) => {
+  return a+b;
+}
+
+function reduce (func ) {
+func(1,2)
+}
+
+
+reduce(add)
+
+//
 
 
 // for in 
@@ -773,6 +840,8 @@ const isaAllStundentPass2 = results.every((elem , index, array)=>{
 // push  
 // pop
 // find 
+// reduce
 
 
-// A
+
+

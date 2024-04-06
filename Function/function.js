@@ -522,5 +522,4 @@ console.log(data4()) // Vishal
 
 // normal function which does not use return keyword that is implict return type
 
-
 // function which return the value expliciutyly using return keyword that is explicit return type
