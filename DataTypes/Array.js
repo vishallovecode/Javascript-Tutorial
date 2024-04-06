@@ -800,7 +800,7 @@ console.log('reduceRes' , reduceRes)
 // Array.prototype.reduce = function (func , initialValue) {
 //  let array  = this;
 //  array.forEach((elem , index , array)=>{
-//   initialValue  = func(initialValue , elem , inde , array)
+//   initialValue  = inti func(initialValue , elem , inde , array)
 //  })
 //  return  initialValue
 // }
@@ -843,5 +843,41 @@ reduce(add)
 // reduce
 
 
+
+
+
+
+var num3 = [2,3,4,5,6];
+
+// find the multiplication of array
+
+var multi = num3.reduce((acc , currentItem)=>{
+     return acc * currentItem
+} , 1)
+
+console.log(multi);
+
+
+ // {count:5}
+
+ var count = num3.reduce((acc , currentItem)=>{
+  acc.count =  acc.count || 0 +1
+  return acc;
+} , {})
+
+console.log(count)
+
+
+
+
+
+
+// function call () {
+//   return 22;
+// }
+
+// console.log( call ())
+// var res = call ();
+// console.log(res)
 
 
