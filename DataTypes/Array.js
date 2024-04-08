@@ -939,8 +939,16 @@
 //and their value is the number of their occurrences.
 
 // reduce  
-function getOccurrence() {
-
+function getOccurrence(array) {
+const result  = array.reduce( function (initialValue , currentValue ){
+      if(initialValue[currentValue] ) {
+        initialValue[currentValue] += 1;
+      } else {
+        initialValue[currentValue] =1
+      }
+      return initialValue;
+},  {})
+console.log(result)
 }
 
 const input = ['a', 'b', 'c', 'c', 'd', 'f', 'd', 'f', 'g'];
