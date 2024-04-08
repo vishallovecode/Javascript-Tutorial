@@ -919,7 +919,12 @@
 // const  a = [1, 2, -3, -4, 5, -8, 8] //  ans => 16
 
 
-// The given input is a string of multiple words with a single space between each of them. 
-// Abbreviate the name and return the name initials.
+// Given a word of string , seperated with single space , you need to find return the first character of each words in single string
+// map , join  , split , toUpperCase
+const s =  'Hey I am Cool Dont worry';
 
-const s =  ''
+function firstCharacter() {
+
+}
+
+firstCharacter(s) // HIACDW
