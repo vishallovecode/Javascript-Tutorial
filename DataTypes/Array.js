@@ -920,11 +920,39 @@
 
 
 // Given a word of string , seperated with single space , you need to find return the first character of each words in single string
-// map , join  , split , toUpperCase
-const s =  'Hey I am Cool Dont worry';
+// split , map       , join  ,  , toUpperCase
+// const s =  'Hey I am Cool Dont worry';
 
-function firstCharacter() {
+// function firstCharacter(str) {
+// return  str.split(' ').map((elem)=>{
+//   return elem[0];
+// }).join('').toUpperCase()
+// }
+
+// console.log(firstCharacter(s)) // HIACDW
+
+
+
+//Count the occurrences of distinct elements in the given 2D array. 
+//The given input is an array, the elements of which are arrays of strings. 
+//The result is an object whose property names are the values from the arrays 
+//and their value is the number of their occurrences.
+
+// reduce  
+function getOccurrence() {
 
 }
 
-firstCharacter(s) // HIACDW
+const input = ['a', 'b', 'c', 'c', 'd', 'f', 'd', 'f', 'g'];
+
+
+getOccurrence(input) // 
+
+// {
+//   a: 1,
+//   b: 1,
+//   c: 2,
+//   d: 2,
+//   f: 2,
+//   g: 1,
+// }
