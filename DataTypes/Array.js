@@ -860,15 +860,15 @@
 
  // {count:5}
 
-  // var count = num3.reduce((acc , currentItem)=>{
-  //   if(acc.count) {
-  //     acc.count =  acc.count +1
-  //   } else {
-  //     acc.count = 1;
-  //   }
-  //   // acc.count =  (acc.count || 0) + 1
-  //   return acc;
-  // } , {})
+  var count = num3.reduce((acc , currentItem)=>{
+    if(acc.count) {
+      acc.count =  acc.count + 1
+    } else {
+      acc.count = 1;
+    }
+    // acc.count =  (acc.count || 0) + 1
+    return acc;
+  } , {})
 
 // // console.log(count) // {count: 5}
 
@@ -939,23 +939,9 @@
 //and their value is the number of their occurrences.
 
 // reduce  
-function getOccurrence(array) {
-const result  = array.reduce( function (initialValue , currentValue ){
-      if(initialValue[currentValue] ) {
-        initialValue[currentValue] += 1;
-      } else {
-        initialValue[currentValue] =1
-      }
-      return initialValue;
-},  {})
-console.log(result)
-}
-
-const input = ['a', 'b', 'c', 'c', 'd', 'f', 'd', 'f', 'g'];
 
 
-getOccurrence(input) // 
-
+  
 // {
 //   a: 1,
 //   b: 1,
@@ -964,3 +950,76 @@ getOccurrence(input) //
 //   f: 2,
 //   g: 1,
 // }
+
+
+const numbers = [1,2,3,4,5] //  {count}
+
+var count = num3.reduce((acc , currentItem)=>{
+  if(acc.count) {
+    acc.count =  acc.count + 1
+  } else {
+    acc.count = 1;
+  }
+  // acc.count =  (acc.count || 0) + 1
+  return acc;
+} , {}) 
+
+Array.prototype.reduce = function (callback , initialValue) {
+  // this  => array
+  const array  = this;
+  array.forEach((elem , index,array)=>{
+    if(initialValue !=undefined) {
+      initialValue =  callback(initialValue , elem , index , array)
+    } else {
+      initialValue = callback(elem , elem , index , array)
+    }
+  })
+  return initialValue;
+}
+
+// reduce  
+function getOccurrence(array) {
+  const result  = array.reduce( function (initialValue , currentValue ){
+        if(initialValue[currentValue] ) {
+          initialValue[currentValue] += 1;
+        } else {
+          initialValue[currentValue] =1
+        }
+        return initialValue;
+  },  {})
+  console.log(result)
+  }
+  
+  const input = ['a', 'b', 'c', 'c', 'd', 'f', 'd', 'f', 'g'];
+
+  getOccurrence(input)
+
+
+
+  // You are given an array of objects representing a collection of employees, 
+  // each with a name, salary, and department. 
+  // Your task is to use map, filter, and reduce 
+  // to calculate the average salary for each department
+  //  and then return an array of objects 
+  //  containing only the departments that have an average salary above 65000.
+
+  const employees = [
+    { name: "John", salary: 50000, department: "IT" },
+    { name: "Jane", salary: 60000, department: "HR" },
+    { name: "Bob", salary: 55000, department: "IT" },
+    { name: "Sophie", salary: 75000, department: "HR" },
+    { name: "Mike", salary: 65000, department: "IT" },
+    { name: "Emily", salary: 80000, department: "HR" },
+    { name: "David", salary: 70000, department: "IT" },
+  ];
+
+  // for  in 
+  // reduce 
+  // push 
+  // map 
+  // filter
+  
+  //result 
+//    [
+//   { department: 'HR', average: 71666 }
+// ]
