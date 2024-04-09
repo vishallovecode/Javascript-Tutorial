@@ -764,262 +764,302 @@
  //this function is apply in array , and as name suggest this function iterate through all the array and 
  // reduce array into single value and return that value
 
- // this is higher order function
- // this will take once callback which we are calling action
- // it is declarative 
- // it does not modify original array 
- //
+//  // this is higher order function
+//  // this will take once callback which we are calling action
+//  // it is declarative 
+//  // it does not modify original array 
+//  //
 
 
-//  var num1 = [1,3,4,5,6,7,8];
+// //  var num1 = [1,3,4,5,6,7,8];
 
-//  // want to find the sum of given array  
+// //  // want to find the sum of given array  
 
-//  var sum = 0;
-//  for(let elem of num1) {
-//   sum+=elem
-//  }
+// //  var sum = 0;
+// //  for(let elem of num1) {
+// //   sum+=elem
+// //  }
 
-//  var sum1 = 0;
-//  num1.forEach((elem , index)=>{
-//   sum1+=elem
-//  })
-
-
+// //  var sum1 = 0;
+// //  num1.forEach((elem , index)=>{
+// //   sum1+=elem
+// //  })
 
 
-//  const reduceCallback = (previousValue , currentValue , currentIndex , originalArray) => {
-//      return previousValue + currentValue
-//  }
+
+
+// //  const reduceCallback = (previousValue , currentValue , currentIndex , originalArray) => {
+// //      return previousValue + currentValue
+// //  }
  
-// const reduceRes = num1.reduce(reduceCallback , 0)
-// console.log('reduceRes' , reduceRes)
+// // const reduceRes = num1.reduce(reduceCallback , 0)
+// // console.log('reduceRes' , reduceRes)
 
 
-// this is the reduce code
-// Array.prototype.reduce = function (func , initialValue) {
-//  let array  = this;
-//  array.forEach((elem , index , array)=>{
-//   initialValue  = inti func(initialValue , elem , inde , array)
-//  })
-//  return  initialValue
-// }
+// // this is the reduce code
+// // Array.prototype.reduce = function (func , initialValue) {
+// //  let array  = this;
+// //  array.forEach((elem , index , array)=>{
+// //   initialValue  = inti func(initialValue , elem , inde , array)
+// //  })
+// //  return  initialValue
+// // }
 
 
-// const add = (a,b) => {
-//   return a+b;
-// }
+// // const add = (a,b) => {
+// //   return a+b;
+// // }
 
-// function reduce (func ) {
-// func(1,2)
-// }
-
-
-// reduce(add)
+// // function reduce (func ) {
+// // func(1,2)
+// // }
 
 
-
-
-// for in 
-// for of 
-// forEACH 
-// MAP
-// FILTER 
-// SOME
-// EVERY 
-// SHIFT 
-// UNSHIFT 
-// SLICE
-// SPLICE
-// INDEXOF
-// FIRSTIndexof
-// lastIndexOF
-// includes
-// join
-// split 
-// push  
-// pop
-// find 
-// reduce
+// // reduce(add)
 
 
 
 
-
-
-// var num3 = [2,3,4,5,6];
-
-// // find the multiplication of array
-
-// var multi = num3.reduce((acc , currentItem)=>{
-//      return acc * currentItem
-// } , 1)
-
-// console.log(multi);
-
-
- // {count:5}
-
-  var count = num3.reduce((acc , currentItem)=>{
-    if(acc.count) {
-      acc.count =  acc.count + 1
-    } else {
-      acc.count = 1;
-    }
-    // acc.count =  (acc.count || 0) + 1
-    return acc;
-  } , {})
-
-// // console.log(count) // {count: 5}
+// // for in 
+// // for of 
+// // forEACH 
+// // MAP
+// // FILTER 
+// // SOME
+// // EVERY 
+// // SHIFT 
+// // UNSHIFT 
+// // SLICE
+// // SPLICE
+// // INDEXOF
+// // FIRSTIndexof
+// // lastIndexOF
+// // includes
+// // join
+// // split 
+// // push  
+// // pop
+// // find 
+// // reduce
 
 
 
-// Array.prototype.reduce = function (func , initialValue) {
-//  let array  = this;
-//  array.forEach((elem , index , array)=>{
+
+
+
+// // var num3 = [2,3,4,5,6];
+
+// // // find the multiplication of array
+
+// // var multi = num3.reduce((acc , currentItem)=>{
+// //      return acc * currentItem
+// // } , 1)
+
+// // console.log(multi);
+
+
+//  // {count:5}
+
+//   // var count = num3.reduce((acc , currentItem)=>{
+//   //   if(acc.count) {
+//   //     acc.count =  acc.count + 1
+//   //   } else {
+//   //     acc.count = 1;
+//   //   }
+//   //   // acc.count =  (acc.count || 0) + 1
+//   //   return acc;
+//   // } , {})
+
+// // // console.log(count) // {count: 5}
+
+
+
+// // Array.prototype.reduce = function (func , initialValue) {
+// //  let array  = this;
+// //  array.forEach((elem , index , array)=>{
  
-// const callback = (element  , index)=>{
-//   console.log('=>' , element ,  'index=>' , index)
-// }
+// // const callback = (element  , index)=>{
+// //   console.log('=>' , element ,  'index=>' , index)
+// // }
 
-// function highPerformers (student) {
-//     const resultStudents = student.map(
-//       function (elem , index, array) {
-//           console.log(elem) // {name: 'Mohan', scores: [80, 95, 60] , average:}
-//           const sum = elem.scores.reduce((acc , elem)=>{
-//             return acc+elem
-//           } , 0)
+// // function highPerformers (student) {
+// //     const resultStudents = student.map(
+// //       function (elem , index, array) {
+// //           console.log(elem) // {name: 'Mohan', scores: [80, 95, 60] , average:}
+// //           const sum = elem.scores.reduce((acc , elem)=>{
+// //             return acc+elem
+// //           } , 0)
 
-//           elem.average = sum / elem.scores.length
-//           return elem;
-//       }
-//     ).filter((elem , index)=>{
-//       return elem.average > 90
-//     })
-//    console.log(resultStudents)
+// //           elem.average = sum / elem.scores.length
+// //           return elem;
+// //       }
+// //     ).filter((elem , index)=>{
+// //       return elem.average > 90
+// //     })
+// //    console.log(resultStudents)
 
-// }
-
-
-// const students = [
-//   {"name":"Ram","scores":[80,95,60]}, //  => 0
-//   {"name":"Mohan","scores":[85,70,90]}, //  => 1
-//   {"name":"Sai","scores":[60,70,80]},  // =>2 
-//   {"name":"Hemang","scores":[95,90,94]}  // => 3
-
-//   ]
+// // }
 
 
-// highPerformers(students)
+// // const students = [
+// //   {"name":"Ram","scores":[80,95,60]}, //  => 0
+// //   {"name":"Mohan","scores":[85,70,90]}, //  => 1
+// //   {"name":"Sai","scores":[60,70,80]},  // =>2 
+// //   {"name":"Hemang","scores":[95,90,94]}  // => 3
+
+// //   ]
 
 
-// Find the sum of  all positive  numbers in given array
-// you have to use filter and reduced\
-
-// const  a = [1, 2, -3, -4, 5, -8, 8] //  ans => 16
+// // highPerformers(students)
 
 
-// Given a word of string , seperated with single space , you need to find return the first character of each words in single string
-// split , map       , join  ,  , toUpperCase
-// const s =  'Hey I am Cool Dont worry';
+// // Find the sum of  all positive  numbers in given array
+// // you have to use filter and reduced\
 
-// function firstCharacter(str) {
-// return  str.split(' ').map((elem)=>{
-//   return elem[0];
-// }).join('').toUpperCase()
-// }
-
-// console.log(firstCharacter(s)) // HIACDW
+// // const  a = [1, 2, -3, -4, 5, -8, 8] //  ans => 16
 
 
+// // Given a word of string , seperated with single space , you need to find return the first character of each words in single string
+// // split , map       , join  ,  , toUpperCase
+// // const s =  'Hey I am Cool Dont worry';
 
-//Count the occurrences of distinct elements in the given 2D array. 
-//The given input is an array, the elements of which are arrays of strings. 
-//The result is an object whose property names are the values from the arrays 
-//and their value is the number of their occurrences.
+// // function firstCharacter(str) {
+// // return  str.split(' ').map((elem)=>{
+// //   return elem[0];
+// // }).join('').toUpperCase()
+// // }
 
-// reduce  
+// // console.log(firstCharacter(s)) // HIACDW
+
+
+
+// //Count the occurrences of distinct elements in the given 2D array. 
+// //The given input is an array, the elements of which are arrays of strings. 
+// //The result is an object whose property names are the values from the arrays 
+// //and their value is the number of their occurrences.
+
+// // reduce  
 
 
   
-// {
-//   a: 1,
-//   b: 1,
-//   c: 2,
-//   d: 2,
-//   f: 2,
-//   g: 1,
+// // {
+// //   a: 1,
+// //   b: 1,
+// //   c: 2,
+// //   d: 2,
+// //   f: 2,
+// //   g: 1,
+// // }
+
+
+// const numbers = [1,2,3,4,5] //  {count}
+
+// var count = num3.reduce((acc , currentItem)=>{
+//   if(acc.count) {
+//     acc.count =  acc.count + 1
+//   } else {
+//     acc.count = 1;
+//   }
+//   // acc.count =  (acc.count || 0) + 1
+//   return acc;
+// } , {}) 
+
+// Array.prototype.reduce = function (callback , initialValue) {
+//   // this  => array
+//   const array  = this;
+//   array.forEach((elem , index,array)=>{
+//     if(initialValue !=undefined) {
+//       initialValue =  callback(initialValue , elem , index , array)
+//     } else {
+//       initialValue = callback(elem , elem , index , array)
+//     }
+//   })
+//   return initialValue;
 // }
 
-
-const numbers = [1,2,3,4,5] //  {count}
-
-var count = num3.reduce((acc , currentItem)=>{
-  if(acc.count) {
-    acc.count =  acc.count + 1
-  } else {
-    acc.count = 1;
-  }
-  // acc.count =  (acc.count || 0) + 1
-  return acc;
-} , {}) 
-
-Array.prototype.reduce = function (callback , initialValue) {
-  // this  => array
-  const array  = this;
-  array.forEach((elem , index,array)=>{
-    if(initialValue !=undefined) {
-      initialValue =  callback(initialValue , elem , index , array)
-    } else {
-      initialValue = callback(elem , elem , index , array)
-    }
-  })
-  return initialValue;
-}
-
-// reduce  
-function getOccurrence(array) {
-  const result  = array.reduce( function (initialValue , currentValue ){
-        if(initialValue[currentValue] ) {
-          initialValue[currentValue] += 1;
-        } else {
-          initialValue[currentValue] =1
-        }
-        return initialValue;
-  },  {})
-  console.log(result)
-  }
+// // reduce  
+// function getOccurrence(array) {
+//   const result  = array.reduce( function (initialValue , currentValue ){
+//         if(initialValue[currentValue] ) {
+//           initialValue[currentValue] += 1;
+//         } else {
+//           initialValue[currentValue] =1
+//         }
+//         return initialValue;
+//   },  {})
+//   console.log(result)
+//   }
   
-  const input = ['a', 'b', 'c', 'c', 'd', 'f', 'd', 'f', 'g'];
+//   const input = ['a', 'b', 'c', 'c', 'd', 'f', 'd', 'f', 'g'];
 
-  getOccurrence(input)
+//   getOccurrence(input)
 
 
 
-  // You are given an array of objects representing a collection of employees, 
-  // each with a name, salary, and department. 
-  // Your task is to use map, filter, and reduce 
-  // to calculate the average salary for each department
-  //  and then return an array of objects 
-  //  containing only the departments that have an average salary above 65000.
+//   // You are given an array of objects representing a collection of employees, 
+//   // each with a name, salary, and department. 
+//   // Your task is to use map, filter, and reduce 
+//   // to calculate the average salary for each department
+//   //  and then return an array of objects 
+//   //  containing only the departments that have an average salary above 65000.
 
-  const employees = [
-    { name: "John", salary: 50000, department: "IT" },
-    { name: "Jane", salary: 60000, department: "HR" },
-    { name: "Bob", salary: 55000, department: "IT" },
-    { name: "Sophie", salary: 75000, department: "HR" },
-    { name: "Mike", salary: 65000, department: "IT" },
-    { name: "Emily", salary: 80000, department: "HR" },
-    { name: "David", salary: 70000, department: "IT" },
-  ];
+//   const employees = [
+//     { name: "John", salary: 50000, department: "IT" },
+//     { name: "Jane", salary: 60000, department: "HR" },
+//     { name: "Bob", salary: 55000, department: "IT" },
+//     { name: "Sophie", salary: 75000, department: "HR" },
+//     { name: "Mike", salary: 65000, department: "IT" },
+//     { name: "Emily", salary: 80000, department: "HR" },
+//     { name: "David", salary: 70000, department: "IT" },
+//   ];
 
-  // for  in 
-  // reduce 
-  // push 
-  // map 
-  // filter
-  
-  //result 
-//    [
-//   { department: 'HR', average: 71666 }
-// ]
+//   // for  in 
+//   // reduce 
+//   // push 
+//   // map 
+//   // filter
+
+//   //result 
+// //    [
+// //   { department: 'HR', average: 71666 }
+// // ]
+
+
+
+// Sorting a given array
+
+var numb2 = [1,2,3,-2,-3, 4,5,-10, 10];
+
+var sortedArray = numb2.sort();
+
+console.log('sortedArray' , sortedArray)
+
+
+
+var s12 =  [ 'd','z','c', 'd', 'a' , 'b' ,'c'];
+
+var sortedArray = s12.sort();
+
+console.log('sortedArray String' , sortedArray)
+
+// array sort default behaviour is sort it by unicode character code
+
+// so array sort method is sort the string perfectly but it will not able to sort array of number
+// sort method is hof  , it can accept the callback function as well 
+
+
+var numb2 = [1,2,3,-2,-3, 4,5,-10, 10];
+
+// ascending order 
+
+var sortedArray = numb2.sort((a,b)=>{
+  console.log(a,b)
+  return a-b
+});
+
+var sortedArray = numb2.sort((a,b)=>{
+  return b-a
+});
+
+// desceinding order
+console.log('sortedArray' , sortedArray)
