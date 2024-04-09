@@ -95,7 +95,7 @@
 
  
 
-// // // Todo:  Map , filter , forEach , reduce , find , findIndex , some  , every  , splice  , slice , shift , unshift , pop , push
+// // //  Map , filter , forEach , reduce , find , findIndex , some  , every  , splice  , slice , shift , unshift , pop , push
 
 
 // // // toString()
@@ -389,7 +389,7 @@
 // // // // this is declrative iteration
 // // // // in this iteration you can get both index and value
 // // // // this is higher order method which is given by the javascript 
-// // // // we cann apply this function only one array not  in any another data type or (prototyp TODO)
+// // // // we cann apply this function only one array not  in any another data type or (prototype TODO)
 // // // // this is use for iteration of array 
 // // // // this hof means it will accept one callback function 
 // // // // forEach Function return undefined
@@ -1057,9 +1057,16 @@ var sortedArray = numb2.sort((a,b)=>{
   return a-b
 });
 
+console.log('sortedArray ascending' , sortedArray)
+
+// sort is behaving like a hof , and we are passing callabck function , which is comparing the value and returning the ans
+// descending order
 var sortedArray = numb2.sort((a,b)=>{
   return b-a
 });
 
-// desceinding order
-console.log('sortedArray' , sortedArray)
+console.log('sortedArray descending' , sortedArray)
+
+
+
+// flat ??  i will try to solve this in i2 session  Todo

@@ -158,7 +158,7 @@
 // a() // hey
 
 
-// // TODO: functoon statement(declration) vs function expression in details
+// //  functoon statement(declration) vs function expression in details
 // // function expression  => If we  assign the  function in variable that is called function expression
 //  var b = function getFullName() {
 //     console.log('Surprise !!!!');

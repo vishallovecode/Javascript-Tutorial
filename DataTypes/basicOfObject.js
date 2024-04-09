@@ -52,8 +52,7 @@
 //  employe[key] =  'India'
 
 
-//  // Todo : string templating
-
+//  //  : string templating
 
 
 //  const student = {

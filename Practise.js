@@ -43,7 +43,6 @@
 
 // //  console.log("a">"2"); //   // 
 
-// // Todo
 
 
 // // // number zero is consider as a falys value string zero is not na falsy value
@@ -330,7 +329,6 @@
 //  //relation comarsion me null will coresed (automatic conversion)
 //  // thats why null>=0  true
 
-// // Todo
 
 // //  (function(){var a = b = 3;})();
 //  var b =3;

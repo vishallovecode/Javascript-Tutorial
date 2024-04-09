@@ -9,7 +9,7 @@
 // var a =  new Number(40);
 //  var aa =  a+40 ; //  80
 // // TODO:1
-// // This will be cleare at the time when constructor function and object data type is completed
+// // This will be clear at the time when constructor function and object data type is completed
 // console.log('a=', a , 'type=', typeof a) // object
 
 // // technically n2 is decimal number i want to get number from  decimal value??
@@ -97,7 +97,7 @@
 // // Math.random()*(90-50);
 // // Math.random()*40  + 50 // => 0-40
 
-//  // TODO:3
+//  //
 // function generateNumber (min , max) {
 //     return Math.floor(Math.random()*(max-min+1)+min);
 // }

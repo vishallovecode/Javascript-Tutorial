@@ -60,10 +60,9 @@ const cc = 30;
 //  Var is fucntional scope 
 // let and const are block scope
 
-// Todo
 // 5. Hoisting
 //  variable created using let const and  var are hoisted
-// Todo
+
 // 6. TDZ Zone (temporal dead zone)
 // let and const will be there is tdz before assigning any value but var variable will be not
 
