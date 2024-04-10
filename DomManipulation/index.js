@@ -1,15 +1,47 @@
-main();
 
+
+main(); 
 function main () {
-     //createElement
-     const divNode =  document.createElement('h2'); // creating the h2 element
-     divNode.innerText = 'Creted using createElement method' // putting text b/w the element
-     divNode.textContent = 'Using createElement method' 
-     document.body.appendChild(divNode); // adding divNode which we have created as child into the body element
-     //every node have append and appendChild function
+    //  //createElement
+    //  const h2Node =  document.createElement('h2'); // creating the h2 element
+    //  h2Node.innerText = 'Creted using createElement method' // putting text b/w the element
+    //  h2Node.textContent = 'Using createElement method' 
+    //  document.body.appendChild(h2Node); // adding divNode which we have created as child into the body element
+    //  //every node have append and appendChild function
+    createBox()
 }
 
+// calling
 
+function createBox () {
+    const divNode  =  document.createElement('div');
+    divNode.style.height = '300px'
+    divNode.style.width = '400px'
+    divNode.style.padding = '40px';
+    divNode.style.margin = 'auto'
+    divNode.style.backgroundColor = 'Black';
+    divNode.style.color = 'white'
+    divNode.style.border= '3px solid red'
+    divNode.style.textAlign = 'center'
+    divNode.style.fontSize = '24px'
+    const node =  createSmallBox(); 
+    divNode.appendChild(node)
+    document.body.appendChild(divNode)
+}
+
+function createSmallBox () {
+    const divNode  =  document.createElement('div');
+    divNode.style.height = '50px'
+    divNode.style.width = '200px'
+    divNode.style.padding = '20px';
+    divNode.style.margin = 'auto'
+    divNode.style.backgroundColor = 'green';
+    divNode.style.color = 'white'
+    divNode.style.border= '3px solid yellow'
+    divNode.style.textAlign = 'center'
+    divNode.style.fontSize = '24px'
+    return divNode;
+}
 
 function changeColor  () {
     const header = document.getElementById('heading');
