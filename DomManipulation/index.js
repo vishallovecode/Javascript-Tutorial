@@ -1,5 +1,17 @@
+main();
+
+function main () {
+     //createElement
+     const divNode =  document.createElement('h2'); // creating the h2 element
+     divNode.innerText = 'Creted using createElement method' // putting text b/w the element
+     divNode.textContent = 'Using createElement method' 
+     document.body.appendChild(divNode); // adding divNode which we have created as child into the body element
+     //every node have append and appendChild function
+}
+
+
+
 function changeColor  () {
-    
     const header = document.getElementById('heading');
     header.style.background = 'red';
     header.style.color= 'Black'
@@ -24,3 +36,15 @@ function changeColor  () {
 // Document object model is use for dynamically changing the content of web page
 
 // The document object model is a platform or language neutral interface  that allows (any programming language) javacript to dynamicalyy  , add , delete , update ,edit the web page or html element
+
+
+// Insert element
+// delete element
+// update element
+// add css 
+// remove css
+// add style remove style
+// adding events  (action)
+
+
+// This javascript file we will use for intearaction with web page 
