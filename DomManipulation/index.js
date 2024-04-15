@@ -1,5 +1,14 @@
 
 
+// createElement
+// Node 
+// Adding node inside specific node  
+// innerHtml 
+// textContent 
+// innerText
+// adding css dynamically
+
+
 // main(); 
 // function main () {
 //     //  //createElement
