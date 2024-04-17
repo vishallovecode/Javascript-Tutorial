@@ -42,3 +42,54 @@ function createSmallCircle () {
     medCircle.appendChild(divNode)
 
 }
+
+
+// contextmenu
+
+// function disableRightClick (event) {
+//     event.preventDefault();
+//     console.log('Hye')
+// }
+
+// document.body.addEventListener("contextmenu", (e) => {e.preventDefault()});
+
+
+function  changeBg() {
+    document.body.style.background ='red'
+
+}
+
+
+function changeBg1 () {
+    document.body.style.background ='white'
+}
+
+
+// document.body.addEventListener('click', ()=>{
+//     console.log('body is clicked')
+// })
+
+
+// document.body.addEventListener('mouseover', ()=>{
+//     console.log('body is hover')
+// })
+
+
+
+
+const button  = document.getElementById('submit');
+
+button.addEventListener('click' , ()=>{
+    console.log('Button is clicked')
+})
+
+
+// How we have added events ??  one directly attaching event into html elements
+// One we can use addEventListener method
+
+// onmousehover
+// onmouseleave
+// onmousemove
+// onmouseout
+// onmouseup
+// keyword => keydown , keyup => input
