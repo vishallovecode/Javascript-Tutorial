@@ -9,7 +9,7 @@
     <link rel="stylesheet" href ='index.css'/>
     </head>
     <body >
-        <!-- <div id="clickme1" style='border: 2px solid red;' onclick="clickMe1()"> -->
+        <!-- <div id="clickme1" style='border: 2px solid red;' onclick="clickMe1()">
             <!-- Click me 1
         </div>
 
@@ -21,7 +21,7 @@
         <div style="border: 3px solid red; padding: 30px; background-color: blue;" onclick="logger()">
             click me but something will happen
         </div> -->
-        <button onclick="createBigCircle()">
+        <!-- <button onclick="createBigCircle()">
             Add Big Circle
         </button>
 
@@ -35,8 +35,32 @@
 
         <div  style = 'padding:20px;background-color: blue; width: 100px;' id ='hoverme' onmouseover="changeBg()" onmouseout="changeBg1()">Hover me to see som jaaddue</div>
 
-        <button id="submit" >Submit</button>
+        <button id="submit" >Submit</button> -->
+
+        <!-- 18Th april -->
+        <input id="input1" oninput="handleInputChange(event)" placeholder="Type Something" class="input"/>
+        <input id='input2' oninput="handleInputChang2(event)" placeholder="Type Something2" class="input" />
+        
+        <div style="display: flex;">
+        <div id="div1" class="medium circle">
+            Type in input 1 to change my bg color
+        </div>
+
+        <div id="div2" class="medium circle">
+            Type in input 2 to change my bg color
+        </div>
+    </div>
 
         <script src="index.js"></script>
     </body>
 </html>
+
+
+<!-- First step we have added on input in dom -->
+<!-- we have atatched on event listener which "oninput" into the input element -->
+<!-- We have defined one function in javascript file which is "handleInputChange" 
+    which we have passed the value for onpinput events -->
+<!--  whenever input event triggered  
+    oninput function will triggered the passed value in 
+    our case we have pass the "handleInputChange" , so this 
+    function will call everytime we give some input to the in put box -->
