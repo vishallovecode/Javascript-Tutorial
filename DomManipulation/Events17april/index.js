@@ -122,3 +122,43 @@ function handleInputChang2 (e) {
     const div2 = document.getElementById('div2')
     div2.style.background = e.target.value
 }
+
+
+
+// 
+const input3 =  document.getElementById('input3');
+// input3 => is one dom node which is the html element with id input3 
+
+
+// input3.addEventListener('input' , (e)=>{
+//     const div3 = document.getElementById('div3')
+//     div3.style.background = e.target.value
+// })
+
+
+function handleInputChang3 (e){
+    const div3 = document.getElementById('div3')
+    div3.style.background = e.target.value
+}
+
+input3.addEventListener('input' , handleInputChang3)
+
+// function addEventListener (type , callback) {
+//     if(signal === type) {
+//         callback(event) //
+//     }
+// }
+
+// focusing input box
+
+function focused (e) {
+    e.target.style.width= '20%';
+    e.target.style.borderRadius= '40px'
+    e.target.style.border =  "2px solid brown";
+
+}
+
+
+function focusOut (e) {
+    e.target.style =''
+}

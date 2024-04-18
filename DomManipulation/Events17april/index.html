@@ -38,8 +38,27 @@
         <button id="submit" >Submit</button> -->
 
         <!-- 18Th april -->
-        <input id="input1" oninput="handleInputChange(event)" placeholder="Type Something" class="input"/>
-        <input id='input2' oninput="handleInputChang2(event)" placeholder="Type Something2" class="input" />
+        <input id="input1" 
+        oninput="handleInputChange(event)" 
+        placeholder="Type Something" 
+        class="input"
+        onfocus="focused(event)"
+        onfocusout="focusOut(event)"
+        />
+        <input id='input2' 
+        oninput="handleInputChang2(event)" 
+        placeholder="Type Something2" 
+        class="input"
+        onfocus="focused(event)"
+        onfocusout="focusOut(event)"
+         />
+
+        <input id='input3'  
+        placeholder="Type Something3" 
+        class="input" 
+        onfocus="focused(event)"
+        onfocusout="focusOut(event)"
+        />
         
         <div style="display: flex;">
         <div id="div1" class="medium circle">
@@ -49,8 +68,11 @@
         <div id="div2" class="medium circle">
             Type in input 2 to change my bg color
         </div>
-    </div>
 
+        <div id="div3" class="medium circle">
+            Type in input 3 to change my bg color
+        </div>
+    </div>
         <script src="index.js"></script>
     </body>
 </html>
