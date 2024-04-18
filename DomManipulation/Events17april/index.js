@@ -162,3 +162,24 @@ function focused (e) {
 function focusOut (e) {
     e.target.style =''
 }
+
+
+function handleInputChange(e) {
+    const div4 = document.getElementById('div4')
+    div4.style.background = e.target.value
+}
+
+
+function onMouseHover (event) {
+        event.target.style= 'background-color:red;height:400px; width:400px'
+}
+
+function mouseOut(event) {
+    event.target.style= ''
+}
+
+
+
+function onSCroll () {
+    console.log('hey')
+}

@@ -59,18 +59,21 @@
         onfocus="focused(event)"
         onfocusout="focusOut(event)"
         />
-        <select style="
+        <select 
+        onchange="handleInputChange(event)"
+        style="
         width: 200px;
         padding: 10px;
         border-radius: 20px;
     ">
+            <option>Select Color</option>
             <option>Red</option>
             <option>Black</option>
             <option>Yellow</option>
             <option>Pink</option>
         </select>
         
-        <div style="display: flex;">
+        <div style="display: flex; height: 3000px;" onscroll="onSCroll()">
         <div id="div1" class="medium circle">
             Type in input 1 to change my bg color
         </div>
@@ -86,6 +89,10 @@
         <div id="div4" class="medium circle">
            Select BG color from dropdown to change bg color of me
         </div>
+
+        <div id="div4" class="small circle" onmouseover="onMouseHover(event)" onmouseout="mouseOut(event)">
+            Select BG color from dropdown to change bg color of me
+         </div>
     </div>
         <script src="index.js"></script>
     </body>
