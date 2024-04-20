@@ -183,3 +183,13 @@ function mouseOut(event) {
 function onSCroll () {
     console.log('hey')
 }
+
+
+
+
+// Saturday 20th april
+
+
+// Event Bubbling 
+// Event Capturing
+// Event delegation

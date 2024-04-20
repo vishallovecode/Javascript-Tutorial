@@ -163,3 +163,18 @@ function inlineStyling () {
 // This javascript file we will use for intearaction with web page 
 
 //
+
+
+// Important Questions
+
+
+// What is Dom ?? 
+
+// getElementById 
+
+// Focusing input box
+
+// querySelector and querySelectorAll
+
+
+
