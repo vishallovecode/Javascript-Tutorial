@@ -4,7 +4,7 @@ console.log('What is rest operator and what is spread operator')
 // rest and spread operator is  defined by three dots (...)
 
 
-// this is the rest operator 
+// this is the rest operator  (rest parameterts)
 
 function multiply (...params) {
         console.log(params) // this will give you the array of param
@@ -16,10 +16,35 @@ function multiply (...params) {
     //    console.log(multiply)
 }
 
-
 multiply(1,2,3,4,5,6,7,8,9);
 
 multiply(1 , 10);
 
 
 multiply(1 , 10 , 10, 10);
+
+
+function exampleRest(a,b , ...d) {
+        console.log(a ,b,d)
+}
+exampleRest(1,2 , 4,5,6,7,8,9)
+
+
+
+// spread opeartor is just opposite to the rest
+
+const array  = [1,2,3,4,5];
+
+console.log(...array) // spread
+
+
+
+
+function callme(a,b) {
+console.log(a,b)
+}
+
+
+const data  = ['name' , 'lastName']
+
+callme(...data)
