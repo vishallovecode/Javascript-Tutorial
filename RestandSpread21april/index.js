@@ -40,11 +40,27 @@ console.log(...array) // spread
 
 
 
-function callme(a,b) {
+function callme(a,b ,c) {
 console.log(a,b)
 }
 
 
-const data  = ['name' , 'lastName']
+const data  = ['name' , 'lastName' , 'raj']
 
-callme(...data)
+callme(...data) // this will just do opposite to the rest operator
+callme('name' , 'lastName', 'raj') ;
+
+
+
+
+
+function sum (...numbers) {
+        console.log(numbers)
+        console.log(...numbers) // 1 2 3 4 5 6 7 8
+}
+
+
+
+sum(1,2,3,4,5,6,7,8);
+
+
