@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="style.css" rel="stylesheet"/></head>
-    </head>
-    <body onclick="alert('body')" >
 
-        <!-- <div class="grandparent flex" onclick="alert('grandparent')">
+<head>
+    <link href="style.css" rel="stylesheet" />
+</head>
+</head>
+
+<body onclick="alert('body')">
+
+    <!-- <div class="grandparent flex" onclick="alert('grandparent')">
             <div class="parent flex" onclick="alert('parent')">
                 <div class="child  flex" onclick="alert('child')">
                     <div class="grandchild flex " onclick="alert('grandchild')">
@@ -16,7 +19,7 @@
                 </div>
             </div>
         </div> -->
-        <div class="grandparent flex" onclick="grandparent(event)">
+    <!-- <div class="grandparent flex" onclick="grandparent(event)">
             <div class="parent flex" >
                 <div class="child  flex"  onclick="child(event)">
                     <div class="grandchild flex "  >
@@ -26,7 +29,16 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+
+
+    <div class="grandparent flex" id="grandparent">
+        <div class="smallgrandchild flex" id="smallgrandchild">
+            <div class="smallgrandchild2 " id="smallgrandchild2"> </div>
         </div>
-        <script src="index.js"/>
-    </body>
+    </div>
+
+    <script src="index.js" />
+</body>
+
 </html>
