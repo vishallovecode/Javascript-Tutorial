@@ -168,3 +168,94 @@ function exampleSpread(a,b,c) {
 
 
 exampleSpread(...data1); //  exampleSpread(1,2,3,4,5);
+
+
+// Spread Operator Example   
+
+// Finding the maximum value in given array
+
+const data123 = [2,3,4,12,3,4,5,34,34,12,56,76,45,34];
+
+
+const data1234 = [12,3,4,5,34 , 12,3]
+
+
+const result  = Math.max(1,2,3,4,4,5);
+
+
+const result2 =  Math.max(...data123);  // spreading the element (spread operator);
+
+
+const result3 =Math.max(...data1234 , ...data123);
+
+
+// Given a two array merge into single array
+
+const mergeArray  = [...data123 , ...data1234] // [2,3,4,12,3,4,5,34,34,12,56,76,45,34 , 12,3,4,5,34 , 12,3]
+
+// Reference Array
+
+
+
+// const ns = [];
+// let bs =  ns;
+// bs.push(1,2,3);
+
+// console.log('bs, ns' , bs , ns)
+
+
+// const ns1 = [];
+// let bs1 =   ns1; // here bs1 have a reference of ns1 
+// bs1 = [1,2,3,4] //  here we have reassigned the reference of bs1
+// console.log('bs, ns' , bs1 , ns1)
+
+
+
+
+// var bb = [1,2,3] // bb  reference
+ 
+// bb = 2;  // => 
+
+
+// I want to copy the one array to another but that should not point to the same ref ;
+
+
+
+// const s = [1,2,34,54];
+
+// const d1 =  s; // reference copy
+// d1.push(100)
+// const d =   [...s]//  [1,2,34,54]; deep copy // here d is pointing to new reference
+
+// d.push(200);
+
+// console.log(s)
+
+
+
+// Spreading the string
+
+ 
+
+const ss = 'ChillSbHojayega'
+
+console.log(...ss)
+
+
+
+// Todo , spreading the object
+
+
+ // spreading the array
+
+
+
+ const [p,q,r,s,t] = [1,2,3,4,5];
+
+ console.log(p,q,r,s,t)
+
+
+
+
+
+
