@@ -234,9 +234,6 @@ const mergeArray  = [...data123 , ...data1234] // [2,3,4,12,3,4,5,34,34,12,56,76
 
 
 // Spreading the string
-
- 
-
 const ss = 'ChillSbHojayega'
 
 console.log(...ss)
