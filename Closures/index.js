@@ -19,7 +19,7 @@ function Outer() {
 }
 
 
-Outer();
+Outer(); // FEC REMOVE
 
 
 // lexical environment (scope) = >  // it the place where  variable and function declaration 
@@ -30,3 +30,39 @@ Outer();
                                 // where each lexical scope  have reference to it parent lexical scope;
 
 // Closures => It is the combination of function and its lexical environment is called the closures
+
+
+function increment() {
+    let count = 0;
+//     function addOne(){
+//         count ++;
+//         return count;
+//     }
+//    return   addOne;
+
+   return function(){
+            count ++;
+            return count;
+        }
+}
+
+
+const func = increment(); //  FEC ?? 
+
+const res =  func(); // 
+const res1 =  func(); // 
+const res2 =  func();// 
+const re3 =  func();// 
+
+console.log(res , res1 , res2 , re3)
+
+// all functions form the closures  // means all functions are closures , there is exception
+
+
+
+function call () {
+     var a =60;
+}
+
+
+call();
