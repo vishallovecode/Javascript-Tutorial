@@ -47,22 +47,60 @@ function increment() {
 }
 
 
-const func = increment(); //  FEC ?? 
+// const func = increment(); //  FEC ?? 
 
-const res =  func(); // 
-const res1 =  func(); // 
-const res2 =  func();// 
-const re3 =  func();// 
+// const res =  func(); // 
+// const res1 =  func(); // 
+// const res2 =  func();// 
+// const re3 =  func();// 
 
-console.log(res , res1 , res2 , re3)
+// console.log(res , res1 , res2 , re3)
 
-// all functions form the closures  // means all functions are closures , there is exception
+// // all functions form the closures  // means all functions are closures , there is exception
+
+
+// function callParent() {
+//     var name =1200;
+//     function call () {
+//         var a =30;
+//         var d= 40;
+//         var c= 60;
+//         function inner () {
+//       // clousress ?? 
+//                 console.log('hey', a , name)
+//         } 
+//         return inner;
+//     }
+
+//     return call;
+    
+// }
 
 
 
-function call () {
-     var a =60;
+
+// const func2 = callParent()();
+
+// func2()
+// func2()
+// func2()
+
+
+
+
+function sum (a) {
+ // write the code here
+ return (b)=>{
+    return  (c)=>{
+        return (d)=>{
+            return a+b+c+d;
+        }
+    }
+ }
+
+
 }
 
 
-call();
+const result  = sum(1)(2)(3)(4) // 10
+console.log(result)
