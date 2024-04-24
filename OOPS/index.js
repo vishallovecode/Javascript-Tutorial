@@ -96,6 +96,8 @@ console.log(`%c How to get all  the value of object`,'color: yellow; font-size: 
 
 
    // ##############################  Object.entries() #######################
+   // this method will be give the array of array where the nested array will have two values first index is key and second index is value
+    //  [[key , value], [key, value]]
 
 var entries  = Object.entries(employee); 
 console.log('entries' , entries)
