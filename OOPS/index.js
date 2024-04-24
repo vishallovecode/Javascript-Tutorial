@@ -107,8 +107,56 @@ entries.forEach((elem , index)=>{
 })
 
 
+//##################### How to add the keys and values into the  object  or  Updating the objects ##################### 
 
 
+var emp = {
+
+}
+emp.name = 'Vishal Sharma';
+// appending the dynamic key 
+var key  ='age';
+ emp[key] = 26; //  emp['age']= 26
+ emp['Bank Balance'] = 1000;
+ console.log('Before:',emp)
 
 
+ //##################### How to  delete the key of object ##################### 
 
+ delete emp.name;
+
+ console.log('After:',emp)
+
+ delete emp.age;
+
+ console.log('After age delete:',emp)
+
+ delete emp["Bank Balance"];
+
+ console.log('After bank balance  delete:',emp)
+
+
+// ############################### for......in #############################
+
+
+var employee = {
+    name: 'Vishal Sharma',
+    orgName: 'Newton School',
+    address: 'Kanpur',
+    email:'785vishal443@gmail.com',
+    'Bank Balance': 100,
+ }
+
+ for(let key in employee) {
+    console.log(key , employee[key])
+ }
+
+// In javascript almost everything is object
+ // All except primitives datatypes are object
+ // In Javascript functions are also object
+ // Arrays are Object
+ // Objects are Objects
+ // Number , String , Boolean can be object if created with new Keyword  ex:  new Number() , new String() , new Boolean()
+
+
+//  ################## creating object using create method
