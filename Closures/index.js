@@ -78,6 +78,8 @@ function increment() {
 
 
 
+// const parentCall = callParent();
+// const callChild  = parentCall();
 
 // const func2 = callParent()();
 
@@ -97,8 +99,6 @@ function sum (a) {
         }
     }
  }
-
-
 }
 
 
