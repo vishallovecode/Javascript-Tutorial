@@ -228,3 +228,85 @@ console.log(keysData)
 const arrayIndex = Object.keys([1,2,3]); //  [1,2,3] =>0, 1,2 => ['0', '1' , '2']
 
 console.log(arrayIndex)
+
+
+//       ################### Spread Operator in Object ################
+
+
+const a = [1,2,3]
+const bb = [...a];
+
+var employee = {
+    name: 'Vishal Sharma',
+    orgName: 'Newton School',
+    address: 'Kanpur',
+    email:'785vishal443@gmail.com',
+    'Bank Balance': 100,
+ }
+
+ var spreadExample  = {...employee}; // deep copy of object  , if object is not nested
+
+ spreadExample.city= 'Kanpur'
+ console.log(spreadExample ,  'employee', employee);
+
+
+ //  ################## Nested Object Example In Javascript ##############
+
+
+ var student = {
+    name: "Vishal",
+    address: {
+        country:{
+            state:{
+                city: {
+                    district: {
+                        name: 'Kanpur'
+                    }
+                }
+            }
+        }
+    }
+ }
+
+
+ var employee = {
+    name: 'XYZ',
+    address: {
+        value: 'AAO Kabhi haveli par.......'
+    }
+ }
+ employee.address.value= 'Thakur ki haveli....'
+ console.log(employee)
+
+
+
+const updatedEmployye = {
+    ...employee,
+    gender: 'Male'
+}
+
+console.log(updatedEmployye);
+
+
+
+var student = {
+        name: 'XYZ',
+        rollNo:'11607932',
+        college: 'Newton',
+        adress: {
+            country: {
+                city: {
+                    name: 'chirkoot'
+                }
+            }
+        }
+}
+
+
+var cseStudent= { branch: 'CSE', relationship: 'Bio'};
+
+
+const mergeoBject = {...student ,  ...cseStudent};
+
+console.log(mergeoBject);
+
