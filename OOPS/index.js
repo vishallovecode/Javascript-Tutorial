@@ -245,13 +245,14 @@ var employee = {
  }
 
  var spreadExample  = {...employee}; // deep copy of object  , if object is not nested
+ //In this case for single level of object will be deep copy , else if you try to update the nested level  , 
+ //this will change original obj as well.
 
  spreadExample.city= 'Kanpur'
  console.log(spreadExample ,  'employee', employee);
 
 
  //  ################## Nested Object Example In Javascript ##############
-
 
  var student = {
     name: "Vishal",
@@ -309,4 +310,30 @@ var cseStudent= { branch: 'CSE', relationship: 'Bio'};
 const mergeoBject = {...student ,  ...cseStudent};
 
 console.log(mergeoBject);
+
+
+
+
+
+const obj1 = {
+    a: {
+        b:{
+            c: {
+                d: {
+                    e:{
+                        value:3
+                    }
+                }
+            }
+        }
+    }
+}
+
+const obj2 = {...obj1};
+
+obj2.a.b.c.d.e.value = 'dddd'
+
+obj2.z = '20';
+
+console.log(obj1 , obj2)
 
