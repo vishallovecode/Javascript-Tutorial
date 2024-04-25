@@ -147,11 +147,26 @@ var employee = {
     'Bank Balance': 100,
  }
 
+ employee['name'] // 'Vishal Sharma'
+
+var array =   [ 1,2,3,4,5]; 
+
+// for...of   // gives the value can apply in array
+// for ..in // gives  the index can apply in arary and object
+// for(let i=0;i<n;i++)
+// forEach()
+
+
+
+for(let index in array) {
+    console.log(index) //  0,1,2,3,4; array[0] , array[1] array[2] array[3] array[4]
+}
+
  for(let key in employee) {
-    console.log(key , employee[key])
+    console.log(key , employee[key]) //  employee['name'] employee['orgName'] employee['address'] so on....
  }
 
-// In javascript almost everything is object
+ // In javascript almost everything is object
  // All except primitives datatypes are object
  // In Javascript functions are also object
  // Arrays are Object
@@ -159,4 +174,57 @@ var employee = {
  // Number , String , Boolean can be object if created with new Keyword  ex:  new Number() , new String() , new Boolean()
 
 
-//  ################## creating object using create method
+
+
+function example() {
+    console.log('hey')
+}
+console.log('func example=>', typeof example) //  function
+
+const array2 = [1,2,3];
+
+console.log('arra2=> ',typeof array2) //  object
+
+const num = new Number(1)
+console.log('num=>', typeof num) //  object
+const s = new String('Hey') 
+console.log('string=>s ',typeof s) //  object
+const b = new Boolean(true)
+console.log('boolean b=>' ,typeof b) //  object
+
+
+const object1  = {
+
+}
+
+object1.name = 'Hello';
+
+function exampleObject() {
+        const country = 'India';
+        console.log('I love India ')
+}
+
+
+exampleObject.city = 'Kanpur'
+
+console.log(exampleObject.city)
+
+delete exampleObject['city'];
+
+console.log('after', exampleObject.city) // 
+
+
+exampleObject.cityNames = ['Kanpur', 'Lucknow', 'Bangalore', 'Gurgaon', 'Rishikesh', 'Gujrat', 'Kolkata', 'Manali']
+
+
+console.log(exampleObject)
+
+console.log(exampleObject.cityNames)
+
+const keysData = Object.keys(exampleObject);
+console.log(keysData)
+
+
+const arrayIndex = Object.keys([1,2,3]); //  [1,2,3] =>0, 1,2 => ['0', '1' , '2']
+
+console.log(arrayIndex)
