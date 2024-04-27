@@ -361,10 +361,10 @@ var employee = { Id: 123456 , orgName: 'Newton', name: 'Xyz' };
 var {Id ,orgName , name , school} = employee;
 
 
-console.log(Id , orgName , name  , school)
-var aa = {key: 1234};  //  
-aa.key2 =  aa[key]
-delete['key']
+// console.log(Id , orgName , name  , school)
+// var aa = {key: 1234};  //  
+// aa.key2 =  aa[key]
+// delete['key']
 
 
 
@@ -391,7 +391,6 @@ function calculateTax(employee) {
 
 calculateTax(employee);
 
-
 // I want to give different name to the variable
 
 
@@ -405,10 +404,93 @@ var employee = {
     donation:  500000,
     investmnent: 50000,
     hra: 300000
-
 }
 
-const  {salary: employeeSalary , adress: employeeAdress } = employee;
+const country1 =  employee.country !== 'undefined' ?  employee.country : 'India';
+
+// alias name
+const  {salary: employeeSalary , adress: employeeAdress, country= 'India' } = employee;
+
+
 // const employeeSalary =  employee.salary;
 
-console.log(employeeSalary ,employeeAdress  )
+console.log(employeeSalary ,employeeAdress , country)
+
+
+
+
+
+// Nested Object Destruturing 
+
+
+var employee = {
+    name: 'XYZ',
+    adress: {
+        pincode: '209002',
+        street: 'HSR layout',
+        city: 'Bnagalore'
+    },
+    department: {
+        admin:{
+            sales: {
+                role: {
+                    chindi: {
+                        mujheAccessKaro: 'Finally you did it.'
+                    }
+                }
+            }
+        }
+    },
+    salary: {
+        basePay: 1200000,
+        hra: 1200000,
+        FBP: 800000,
+        
+    }
+}
+
+
+// const  {basePay}=  {
+//     basePay: 1200000,
+//     hra: 1200000,
+//     FBP: 800000,
+    
+// }
+
+
+// const basePay =  employee.salary.basePay;
+
+const {salary: {basePay}} =  employee;
+
+const {
+    department: 
+    {
+        admin:
+        {
+            sales:
+            {
+                role:
+                {
+                    chindi:
+                    {
+                        mujheAccessKaro: Maine_Name_Change_Kar_Dia  // VARIABLE NAME ALIAS
+                    }
+                }
+            }
+        }
+    }
+} = employee;
+
+console.log(basePay , Maine_Name_Change_Kar_Dia)
+
+
+
+
+
+
+
+
+
+
+
+
