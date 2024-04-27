@@ -361,11 +361,54 @@ var employee = { Id: 123456 , orgName: 'Newton', name: 'Xyz' };
 var {Id ,orgName , name , school} = employee;
 
 
-
 console.log(Id , orgName , name  , school)
+var aa = {key: 1234};  //  
+aa.key2 =  aa[key]
+delete['key']
+
+
+
+var employee = {
+    salary: 3000000,
+    taxRegime: 'New',
+    name: 'XYZ',
+    adress: 'XYZ PRS',
+    donation:  500000,
+    investmnent: 50000,
+    hra: 300000
+
+}
+
+function calculateTax(employee) {
+        // const salary = employee.salary;
+        // const regime =  employee.taxRegime;
+        // const donation =  employee.donation;
+        // const investmnent = employee.investmnent
+        // React Props (todo)
+        const  {salary , hra , donation , investmnent, taxRegime} = employee 
+}
+
+
+calculateTax(employee);
+
+
+// I want to give different name to the variable
 
 
 
 
+var employee = {
+    salary: 3000000,
+    taxRegime: 'New',
+    name: 'XYZ',
+    adress: 'XYZ PRS',
+    donation:  500000,
+    investmnent: 50000,
+    hra: 300000
 
+}
 
+const  {salary: employeeSalary , adress: employeeAdress } = employee;
+// const employeeSalary =  employee.salary;
+
+console.log(employeeSalary ,employeeAdress  )
