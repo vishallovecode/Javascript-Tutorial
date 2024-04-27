@@ -149,3 +149,9 @@ console.log('Hey Just relax...')
 
 
 // {i =5}
+
+function handleChange(e){
+    console.log('hey')
+ // if you want to stop default behaviour of element then use preventDefault()
+ e.preventDefault()
+}
