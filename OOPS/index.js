@@ -559,8 +559,31 @@ employee[dynamicSalary]  // ??  employee['salary']
 const  {[dynamicSalary]: userSalary} = employee;
 console.log(userSalary)
 
+// example 
+ // Todo 
+
+const person  = {
+    name: 'Hey',
+    lastName: 'Hey2',
+    case: '1234'
+}
+
+// Accessingn the object key using dynamic value
+
+var key = 'name';
 
 
+// in indexing  format if you put things inside the string  , that is key , if you put value without string this will behave like variable
+console.log(person[key]) // =>  person['name'] 
 
 
+console.log(person['case']) // =>  person['name']  => []
 
+console.log(person.case)
+console.log(person.key)  //=> person['key']
+
+const zz= [1,32,34,5,5]
+
+for(let i =0;i<n;i++) {
+    console.log(zz[i]) // zz[0] // [zz[1]]
+}
