@@ -486,8 +486,78 @@ console.log(basePay , Maine_Name_Change_Kar_Dia)
 
 
 
+function getSalaryInfo () {
+    return {
+        bpay: 1200000,
+        HRA: 1200000,
+        fbp: 800000
+    }
+}
 
 
+
+
+const {bpay: Base_Pay , HRA , fbp} =  getSalaryInfo()
+
+console.log(Base_Pay , HRA , fbp);
+
+
+var employee = {
+    salary: 3000000,
+    taxRegime: 'New',
+    name: 'XYZ',
+    adress: 'XYZ PRS',
+    donation:  500000,
+    investmnent: 50000,
+    hra: 300000
+}
+
+// Here we are destructuring the passed employee object  , in function parameter /
+
+// That means you can do destructuring in function parameter as well.
+
+function setTax({salary , taxRegime , donation , hra , investmnent}) {
+    console.log(salary , 'salary')
+}
+setTax(employee)
+
+var students = [{id:123 , name:'xyz', percentage: '78%', stream: 'science', district: 'Kanpur'},{id:12345 , name:'PQR', percentage: '98%', stream: 'BIO', district: 'Unnao'}]
+
+for(let value of  students) {
+    console.log(value.percentage ,value.district ,value.stream )
+}
+ // Here in above example  value is object  , in below example we are destructuring value object and getting required key and value as needed
+for(let {percentage , stream , district} of  students) {
+        console.log(percentage ,district ,stream )
+}
+
+// Array Destructuring  
+
+const array123 = ['Raj', 'Mehta', 'Chintu', 'Chintayin' , 'Jethalal'];
+
+ // if there is no value found  , extraa variable that will give undefined value
+const[a11,b11,c11,d11,e11 , p11] = array123;
+console.log(a11,b11,c11,d11,e11 , p11)
+
+
+// Dynamic Name Propery
+
+var employee = {
+    salary: 3000000,
+    taxRegime: 'New',
+    name: 'XYZ',
+    adress: 'XYZ PRS',
+    donation:  500000,
+    investmnent: 50000,
+    hra: 300000
+}
+
+var dynamicSalary  = 'salary'
+
+employee[dynamicSalary]  // ??  employee['salary']
+
+const  {[dynamicSalary]: userSalary} = employee;
+console.log(userSalary)
 
 
 
