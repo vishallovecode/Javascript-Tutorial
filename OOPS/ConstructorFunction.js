@@ -1,6 +1,6 @@
 // console.log('Hey We are learning , Construtor Function here');
 
-// // Constructor Function can be created only in normal function 
+// // Constructor Function can be created only in normal function not in arrow functions
 // // why ?? because normal function have it own context (this)
 // // best practise to create constructor function always start with capital letter
 
@@ -85,6 +85,59 @@ function Student () {
 const st = new Student();
 console.log(st) //  {}
 
+function BIO () {
+    console.log(new.target)
+  if(new.target) {
+    // constructor function call
+  } else {
+    // normal function call
+  }
+}
 
 
+// const b = new BIO();
+const a = BIO()
 
+
+// JSON.stringify()
+
+
+const bb = {
+    a:{
+        b:{
+            c:{
+                d:{
+                    e:{
+                        f:{
+                           value: 2
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+const bb2 = {
+    a:{
+        b:{
+            c:{
+                d:{
+                    e:{
+                        f:{
+                          value:   2
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// converting the object into string we use JSON.stringify()
+
+
+console.log(JSON.stringify({}))
+console.log(JSON.stringify(bb))
+
+console.log(JSON.stringify(bb) == JSON.stringify(bb2))
