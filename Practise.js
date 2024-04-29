@@ -403,27 +403,139 @@
 //         }
 //         data()
 //     }
-// )(900)
+// // )(900)
 
 
-function callMe() {
-    var data =900;
-    var data = 600;
-    var data = 800;//  error here data is already declared you cannot redeclared it using let and const
-    console.log(data)
-}
+// function callMe() {
+//     var data =900;
+//     var data = 600;
+//     var data = 800;//  error here data is already declared you cannot redeclared it using let and const
+//     console.log(data)
+// }
 
-callMe()
+// callMe()
 
-function callMe() {
-    var data =900;
-    var data = 600;
-    let data = 800;//  error here data is already declared you cannot redeclared it using let and const
-    console.log(data)
-}
+// function callMe() {
+//     var data =900;
+//     var data = 600;
+//     let data = 800;//  error here data is already declared you cannot redeclared it using let and const
+//     console.log(data)
+// }
 
-callMe()
-
-
+// callMe()
 
 
+
+
+// // 
+
+// var trees = ["pine","apple","oak","maple","cherry"];
+// delete trees[3]; //  it will delete the thir index
+// console.log(trees.length); // 4
+
+
+
+// var a = [1, 2, 3];
+// a[10] = 99; //  [1,2,3 , undefined , undefined , undefined , undefined , undefined, undefined , undefined , undefined , undefined , 99]
+// console.log(a[6]); //   undefined
+
+
+// function call(b,...array) {
+
+// }
+// console.log(call.length) //  1 / function.length give you the count of paramater
+
+
+
+
+
+// var Employee = {
+// company: 'Acme'
+// }
+// var employee1 = Object.create(Employee); // Todo   
+// delete employee1.company
+// console.log(employee1.company);  // 'Acme'
+
+
+// var z = 1, y = z = typeof y;
+// console.log(y); // 'undefined'
+
+
+
+//  console.log(typeof amnvshsvcbnsshgvxghsbdcvs); // "undefined"
+
+
+//  // Hoisting
+//  var foo = 1;
+// (function () {
+//   console.log(foo); // 
+//   foo = 2;
+//   console.log(window.foo); // 
+//   console.log(foo); // 
+//   var foo = 3;
+//   console.log(foo); // 
+//   console.log(window.foo) // 
+// })()
+
+
+// let dev = 'Newton'
+
+// function a() {
+//   let dev = 'CHECKER'
+//   return function() {
+//     console.log(dev) //  'Checker'
+//     // lexical + parent lexical  dev: 'Checker'
+//   }
+// }
+
+// dev = 'Lets learn'
+
+// const check12 = a()();
+// console.log(check12());
+
+
+// var obj = {
+//     a: "Vishal",
+//     b: ("Sharma" ,  'Raj'), //  Raj 
+//     func: (function foo(){ return this.a; }, function bar(){ return this.b; }) //  function bar(){ return this.b;}
+//   }
+
+//   console.log(obj.func()) 
+
+//   const likeMe = ('Hey' , "I am cool");
+//   console.log(likeMe) // I am cool
+
+
+
+// var a = 'Vishal'
+// let b = 'Sharma'
+// console.log(this.a)  //  'Vishal' // 
+// console.log(this.b) //  UNDEFINED  here this means global; scope and let and const variable are not the part of global object in GEC
+
+
+
+
+
+// const object = {};
+// object.b  // ??   undefined
+
+
+// function foo(a, b, undefined, undefined) {
+//     console.log('Vishal Sharma')
+//   }
+//   console.log(foo.length) //  4
+ 
+// 10 Minutes
+
+console.log([] + [])  // [] + [] => '' + '' => '' // here the plus operator try to convert the  [] array into string emptyarray to string is ''
+console.log([] + 1) // "" + 1 => '1'
+console.log([[]] + 1) //  '' + 1 => '1'
+ console.log([[1]] + 1) //  "1"+ '1'  => 11
+console.log([[[[2]]]] + 1) // '21'
+console.log([] - 1) //  -1
+console.log([[]] - 1) // -1
+console.log([[1]] - 1)  // '1'-1 //  0
+console.log([[[[2]]]] - 1) //  '2' -1 //  1
+console.log([] + {}) //    ?? 
+console.log({} + {}) //  NaN ?? 
+console.log({} - {})  // ?? 

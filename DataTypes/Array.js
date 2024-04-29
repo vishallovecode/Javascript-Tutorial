@@ -115,7 +115,7 @@
 
 // //  var array  = [1,2,3];
 
-// //  console.log(array.toString())
+// //  console.log(array.toString()) // 
 
 
 // //  var result  = [] + 'Hello'; // type coercion => ''+'Hello' => 'Hello'

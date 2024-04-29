@@ -135,9 +135,8 @@ const bb2 = {
 }
 
 // converting the object into string we use JSON.stringify()
-
-
 console.log(JSON.stringify({}))
 console.log(JSON.stringify(bb))
 
 console.log(JSON.stringify(bb) == JSON.stringify(bb2))
+
