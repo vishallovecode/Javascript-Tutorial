@@ -88,5 +88,49 @@ const st1 = {
 student.fullName.call(st1);
 
 
+const students123 = {
+    name: "Vishal",
+    lastName: "Sharma",
+    college: "Newton",
+    printCollegeName: () => {
+      console.log("0=>", this.college);    // => window
+    },
+    printName: function () {
+      console.log("1==>", this.name, this.lastName); //   => this=> students123
+      function Func1() {
+        console.log("2==>", this.name);  // => window 
+        function func2() {
+          console.log("3==>", this.name);   // this  => students123
+          const fun3 = () => {
+            console.log("4=>", this.name);   // this=>students123
+          };
+          fun3.apply(students123);
+        }
+        func2.call(students123);  
+      
+      }
+      Func1(); 
+    },
+  };
+  students123.printName(); // method invocation
+  students123.printCollegeName();  
 
+
+// Bind  function , this function is also use for binding this with function  , this will behave like call , but 
+// it return the new function
+
+
+
+function exampleBind(p1 ,p2 ,p3) {
+    console.log('this bind' , this , p1 ,p2 ,p3)
+}
+
+
+const func =  exampleBind.bind({name: '1234', text:'bind'} , 'First' , 'SecondFirsr') // 
+
+func('Second') 
+func()
+func()
+func()
+// this => {name: '1234', text:'bind'}
 
