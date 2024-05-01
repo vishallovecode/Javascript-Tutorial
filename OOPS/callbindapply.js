@@ -134,3 +134,11 @@ func()
 func()
 // this => {name: '1234', text:'bind'}
 
+// Enumerating properties of object 
+// Js abstraction 
+// JS private propeties and methods 
+// JS setters and getters
+// Prototype  (vvvvvimp)
+
+
+
