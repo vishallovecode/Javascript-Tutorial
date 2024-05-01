@@ -63,10 +63,30 @@ printData.call({name: 'a' ,lstName: 'b'}) // explitiley you are telling that wha
 function exampleApply(p1,p2,p3,p4) {
             console.log('Apply', this , p1,p2,p3,p4)
         }
-        
         function exampleCall(p1,p2,p3,p4) {
             console.log('call', this , p1,p2,p3,p4 )
         }
-        
-        exampleApply.apply({id:1234} , [1]);
-        exampleCall.call({id:1234} , 1)
+exampleApply.apply({id:1234} , [1]);
+exampleCall.call({id:1234} , 1)
+
+// Borrwing the method of object
+
+const student = {
+    name: 'Jalebi',
+    lastName: 'Bai',
+    fullName: function () {
+        console.log(this.name , ' ' + this.lastName)
+    }
+}
+student.fullName(); // Jalebi Bai
+
+const st1 = {
+    name: 'Raja',
+    lastName: 'Babu'
+}
+
+student.fullName.call(st1);
+
+
+
+
