@@ -148,9 +148,10 @@ const students123 = {
     },
   };
   students123.printName();  
-  students123.printCollegeName();
+  students123.printCollegeName(); 
 
   // function borrowing  => todo
 
 
   // Javascript factory function  => the function which return the object
+
