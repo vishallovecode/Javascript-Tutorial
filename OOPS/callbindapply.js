@@ -34,5 +34,39 @@ printData.call({name: 'a' ,lstName: 'b'}) // explitiley you are telling that wha
 // aaa.call({},2,3,4,5)
 
 
-// 
+// apply is bahave like a call exactly but there one difference b/w call and apply is  
+// in call argument are pass as comma seperated but in the case of apply it is pass as a array 
 
+// function exampleApply(p1,p2,p3,p4 , p5,p6) {
+//     console.log('Apply', this , p1,p2,p3,p4  , p5 , p6)
+// }
+
+// function exampleCall(p1,p2,p3,p4) {
+//     console.log('call', this , p1,p2,p3,p4 )
+// }
+
+// exampleApply.apply({id:1234} , [1,2,3,4]);
+// exampleCall.call({id:1234} , 1,2,3,4)
+
+
+// function exampleApply(p1,p2,p3,p4) {
+//         console.log('Apply', this , p1,p2,p3,p4)
+//     }
+    
+//     function exampleCall(p1,p2,p3,p4) {
+//         console.log('call', this , p1,p2,p3,p4 )
+//     }
+    
+//     exampleApply.apply({id:1234} , [1,2,3,4 ,6,7,8]);
+//     exampleCall.call({id:1234} , 1,2,3,4 ,6,7,8)
+
+function exampleApply(p1,p2,p3,p4) {
+            console.log('Apply', this , p1,p2,p3,p4)
+        }
+        
+        function exampleCall(p1,p2,p3,p4) {
+            console.log('call', this , p1,p2,p3,p4 )
+        }
+        
+        exampleApply.apply({id:1234} , [1]);
+        exampleCall.call({id:1234} , 1)
