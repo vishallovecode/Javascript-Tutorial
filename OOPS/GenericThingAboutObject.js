@@ -34,12 +34,9 @@ Object.defineProperty(object ,  'a', {
 object.a ='235' //  not writable 
 console.log(object) // {a: 45677 , b:  234}
  
-console.log('Last=>' ,Object.keys(object))
-
-
+console.log('Last=>' ,Object.keys(object)) //  ['b'] // because here property a is not enumerable , not iterable
 
 // Configurable 
-
 
 var employee = {
     name: 'Raj Dutta',
@@ -48,12 +45,9 @@ var employee = {
     city: 'Kolkata',
     behaviour: 'Meetha'
 }
-
-
 Object.defineProperty(employee , 'behaviour', {
     configurable: false // now behaviour is non-configurable
 })
-
 
 Object.defineProperty(employee , 'behaviour', {
     writable: false  
