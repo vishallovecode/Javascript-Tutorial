@@ -34,3 +34,5 @@ console.log('Month' ,  date.getMonth()) //
 date.setFullYear('2023');
 date.setDate('04')
 
+//  git checkout .
+//  git  pull

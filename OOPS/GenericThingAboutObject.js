@@ -66,3 +66,7 @@ employee.behaviour = 'Natkhat';
 console.log()
 console.log(Object.keys(employee))
 
+
+// modify ?? hatana  => delete , and enumerable property set nahi kar sakkte 
+
+

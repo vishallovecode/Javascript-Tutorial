@@ -23,6 +23,7 @@
 // function Employee () {
 //     // here this is empty object we are setting the key value pair here  ,
 //     // constructor function return this by default
+// this = {} //  by default
 //   this.firstName = 'Vishal',
 //   this.lastName= 'Sharma';
 //   this.salary = 200000;
@@ -34,7 +35,7 @@
 // const empl3  = new Employee();
 
 // empl3.adress ='Delhi Gurgaon'
-// console.log(empl , empl1 ,empl2 , empl3);;
+// console.log(empl , empl1 ,empl2 , empl3);
 
 
 
@@ -86,7 +87,7 @@ const st = new Student();
 console.log(st) //  {}
 
 function BIO () {
-    console.log(new.target)
+    console.log(new.target) // fUNCTION ITSELF
   if(new.target) {
     // constructor function call
   } else {
@@ -139,4 +140,101 @@ console.log(JSON.stringify({}))
 console.log(JSON.stringify(bb))
 
 console.log(JSON.stringify(bb) == JSON.stringify(bb2))
+
+
+// /* 
+// function Person (type) {
+//     console.log(this , type)
+// }
+
+// Person('Normal call')
+
+// const per = new Person('Constructor')
+
+//  */
+
+// /* const Person1  = (type) =>  {
+//     console.log(this , type)
+// }
+
+// Person1('Arrow=> Normal call')
+
+// const per1 = new Person1(' Arrow normal Constructor') */
+
+
+// /* function Employee () {
+    
+// }
+
+// const data = new Employee() // data. = > Employee {} 
+
+// const data1 =  Employee() // data1 => undefined
+//  */
+
+
+// /* 
+
+// function Employee () {
+//     this.name = '123'; 
+// }
+
+// const data = new Employee() // data. = > Employee {name: '123'} 
+
+// const data1 =  Employee() // data1 => undefined
+//  */
+
+// // Array , function. ,Object
+// // Primitive data
+
+// function Employee () {
+//     this.name = '123'; 
+// return 'Hello'
+// }
+
+// const data = new Employee() // data. = > Employee {name: '123'} 
+
+// const data1 =  Employee() // data1 => Hello
+
+
+
+// function Employee () {
+//     this.name = '123'; 
+// return 123
+// }
+
+// const data = new Employee() // data. = > Employee {name: '123'} 
+
+// const data1 =  Employee() // data1 => 123
+
+
+// function Employee () {
+//     this.name = '123'; 
+// return {}
+// }
+
+// const data = new Employee() // data. = >{}
+
+// const data1 =  Employee() //  {}
+
+
+// function Employee () {
+//     this.name = '123'; 
+// return []
+// }
+
+// const data = new Employee() // data. = >[]
+
+// const data1 =  Employee() //[]
+
+
+// function Employee () {
+//     this.name = '123'; 
+// return ()=>{
+// console.log('hey')
+// }
+// }
+
+// const data = new Employee() // data. = >[]
+
+// const data1 =  Employee() //[]
 
