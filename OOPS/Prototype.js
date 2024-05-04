@@ -17,6 +17,40 @@ String.prototype.danceKar = function () {
     console.log('maine dance kia');
 }
 
-
 const raja  = 'Babu';
 raja.danceKar();
+
+
+
+// How to know the Prototype of any Object
+
+//  __proto__
+
+// Setting the prototype 
+
+
+let Animal = {
+    eat: true ,
+    walk: true
+}
+
+const cow = {
+    legs: 4 ,
+    eyes: 2
+}
+
+console.log(cow.legs)
+
+cow.__proto__ = Animal;
+
+console.log(cow.eat)
+
+console.log(cow.__proto__) //  Animal.__proto__ => Object.__proto__ => NULL
+
+
+
+const number = 2;
+cons
+
+
+
