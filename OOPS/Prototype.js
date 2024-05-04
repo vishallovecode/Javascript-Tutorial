@@ -50,7 +50,40 @@ console.log(cow.__proto__) //  Animal.__proto__ => Object.__proto__ => NULL
 
 
 const number = 2;
-cons
+// cons
 
 
+Array
+const array  = [1,2,3,4];
+const array1  = [1,2,3,4];
+const array2  = [1,2,3,4];
+const array3  = [1,2,3,4];
 
+console.log(array.length);
+console.log(array1.length);
+console.log(array2.length);
+console.log(array3.length);
+
+const chill = new String('Chilla');
+const array33 = new Array(10);
+const num = new Number(33);
+const obj = new Object({})
+
+
+// const aa = [1,2,43];  // = > Array
+// aa.map(()=>{
+
+// })
+
+
+// 
+
+// if i am able to add that function insdie Array than that will be apply to all array variable
+
+
+Array.prototype.seperatedByHyphen = function() {
+        return this.join('-')
+}
+
+
+console.log(array.seperatedByHyphen())
