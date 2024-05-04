@@ -87,3 +87,36 @@ Array.prototype.seperatedByHyphen = function() {
 
 
 console.log(array.seperatedByHyphen())
+
+
+
+// create five object  
+
+// A -> B ->C ->D ->E
+
+const a = {a:123}
+
+const b = {bbb:1234}
+
+const c = {ccc:'c'}
+
+const d = {ddd: 'e'}
+
+const e = {ee:'enter thr world of protoype'}
+
+a.__proto__=b;
+
+b.__proto__=c;
+
+c.__proto__= d;
+
+d.__proto__= e;
+// e.__proto__ = You cannot ste the cyclic prototype
+
+console.log('A=>' ,a.__proto__, 'B=>',b.__proto__, "C=>",c.__proto__, 'd=>',d.__proto__ );
+
+console.log(a) // 
+
+// Prottypical inheritance
+
+
