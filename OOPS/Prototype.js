@@ -179,3 +179,33 @@ console.log(monthsObj.constructor) // Month
 console.log(monthsObj.__proto__)
 console.log( 'Prototype', Month.prototype) // C
 console.log( 'Prototype', String.prototype) // C
+
+
+
+const arrayExample = [1,2,3,4];  //  by default array will inherited all the properties from Array.prototype  object
+
+ // array.constructor = > Array (constuctor function)
+
+ // IF I want add one properties to all the array = > Array.prototype 
+
+
+ Array.prototype.mid = function () {
+    return this/2;
+ }
+
+
+ // array.__proto === Array.prototype
+
+ console.log(array.__proto__ == Array.prototype)
+
+
+ // Every constructor have a protoype property , which will become the instances [[prototype]]
+ // when called view new operator (when we create instanced using new keyword then hidden property of 
+//  new instanced(x) will point to the constructor property protoype)
+const m1 = new Month();
+// m1[[protoype]] => Month.prototype
+const sahana = 90;
+console.log(sahana.__proto__ ==  Number.prototype) // true 
+
+
+ 
