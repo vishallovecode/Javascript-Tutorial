@@ -31,7 +31,8 @@ raja.danceKar();
 
 let Animal = {
     eat: true ,
-    walk: true
+    walk: true,
+
 }
 
 const cow = {
@@ -46,7 +47,6 @@ cow.__proto__ = Animal;
 console.log(cow.eat)
 
 console.log(cow.__proto__) //  Animal.__proto__ => Object.__proto__ => NULL
-
 
 
 const number = 2;
@@ -118,5 +118,8 @@ console.log('A=>' ,a.__proto__, 'B=>',b.__proto__, "C=>",c.__proto__, 'd=>',d.__
 console.log(a) // 
 
 // Prottypical inheritance
+
+
+
 
 

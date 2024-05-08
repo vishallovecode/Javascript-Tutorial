@@ -142,3 +142,54 @@ func()
 
 
 
+
+
+
+// function justLookAtMe (param1 , param2 , param3) {
+//   console.log(this , param1 , param2 , param3)
+// }
+
+
+// justLookAtMe.call({name: 'Vishal'} , 1,2,3)
+
+// justLookAtMe.apply({name: 'Vishal'} , [1,2,3])
+
+
+// const newFunc = justLookAtMe.bin
+
+
+
+
+const object1234 = {
+  name: 'Hey Relax buddy',
+  getName: function () {
+    console.log(this.name)
+  }
+}
+const newFunc =  object1234.getName;
+newFunc(); //  ?? Hey relax buddy
+
+
+
+const newFunc2 =  object1234.getName.bind(object1234);
+newFunc2(); // ??  Hey relax buddy
+
+
+
+
+
+// var newFunc3 =  object1234.getName.bind();
+// newFunc2(); //  this=> window
+
+
+
+var newFunc3 =  object1234.getName.bind(undefined);
+newFunc3();  // this => window 
+
+
+var newFunc3 =  object1234.getName.bind(null);
+newFunc3();  // this => window 
+
+
+var newFunc3 =  object1234.getName.bind("");
+newFunc3();  // this => "" 
