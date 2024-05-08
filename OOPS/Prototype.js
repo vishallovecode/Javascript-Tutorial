@@ -121,5 +121,61 @@ console.log(a) //
 
 
 
+function CallMe ()  {
+
+}
 
 
+// console.log(CallMe.constructor === Function)
+console.log(CallMe.__proto__ === CallMe.prototype)
+console.log(CallMe.prototype) // this include constuctor
+// console.log(CallMe.__proto__) // this will give you only prototype
+
+
+
+// Function
+function AprilFool  (){
+    this.name = 'Fufa',
+    this.lastName= 'Mausa'
+}
+
+const aprilFoolObject  =  new AprilFool(); 
+
+
+
+console.log(aprilFoolObject.constructor === AprilFool)
+console.log(aprilFoolObject.constructor.constructor =  Function)
+
+
+
+var  tararampa  = 'tararampam';
+console.log(tararampa.constructor.constructor)
+
+// var tararampa =  new String('tararampam')
+// var boolean  =  true; boolean.constructor === Boolean
+
+
+
+
+// Contructor  => This is the property of every object in javascript except the null object, which returns the 
+// instance of the constructor function that created the instance object
+
+function Month () {
+    this.firstMonth = 'Jan'
+    this.getAllMonths = function() {
+        return  ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    },
+    this.lastMonth = 'Dec'
+}
+
+var  monthsObj =  new Month();
+console.log('================ Month ======================')
+
+Month.prototype.getWinnerOfIPL2024 =  function  () {
+    return 'CSK'
+}
+console.log(monthsObj.constructor) // Month
+
+console.log(monthsObj.__proto__)
+console.log( 'Prototype', Month.prototype) // C
+console.log( 'Prototype', String.prototype) // C
