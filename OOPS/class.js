@@ -15,7 +15,7 @@
 
 class A {
   constructor(name) {
-      this.message = 'Hey This is message'
+this.message = 'Hey This is message'
   }
   print(data) {
     console.log(data)
@@ -31,6 +31,9 @@ const a =  new A('Hey');
 a.printMessage()
 
 class B extends A {
+    print() {
+      console.log('Hye')
+    }
 
 }
 const b = new B();
@@ -38,6 +41,27 @@ const b = new B();
   console.log(B.prototype)
 
 
+// console.log(b.nikalJaye());// error
 
 
+// b = {
+//   print: function(), 
+//   printMessage: function, 
+
+// }
+
+
+
+
+
+// class D extends String , Number {
+
+// }
+
+const d =  new D();
+console.log(d.constructor)
+
+// multilevel minheritnace is possible 
+// in js one instance cannot inherited from multiple object
+// so multiple inheritance are not allowed
 
