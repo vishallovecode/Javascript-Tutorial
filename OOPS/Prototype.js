@@ -206,7 +206,4 @@ const m1 = new Month();
 // m1[[protoype]] => Month.prototype
 const sahana = 90;
 console.log(sahana.__proto__ ==  Number.prototype) // true 
-
-
- 
 // // Jo variable or(instance) ham create karte han using any constructor with new keywrod uss instance ke pass constructor property ha jo ki point out karti us constructor function jisse ye variable(instance create hua ha)
