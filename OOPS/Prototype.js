@@ -189,9 +189,9 @@ const arrayExample = [1,2,3,4];  //  by default array will inherited all the pro
  // IF I want add one properties to all the array = > Array.prototype 
 
 
- Array.prototype.mid = function () {
-    return this/2;
- }
+//  Array.prototype.mid = function () {
+//     return this/2;
+//  }
 
 
  // array.__proto === Array.prototype
@@ -209,3 +209,4 @@ console.log(sahana.__proto__ ==  Number.prototype) // true
 
 
  
+// // Jo variable or(instance) ham create karte han using any constructor with new keywrod uss instance ke pass constructor property ha jo ki point out karti us constructor function jisse ye variable(instance create hua ha)
