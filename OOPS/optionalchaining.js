@@ -1,3 +1,5 @@
+ // Optinal Chaining
+
 // const data = undefined;
 // let length =0;
 // if(data)  {
@@ -98,4 +100,22 @@ const  employee = {
 // flatten object
 
 
+// Nullish Coalescing  ?? 
+ 
 
+let pp ;
+const gg  = null;
+
+// const res  = (pp!=null && pp!=undefined) ? pp : gg
+const data  =  pp ??  gg ?? 'Raj'; // if pp is defined then pp else gg
+console.log(data)
+// Note => This operator returns the  first arguments  if its not null/ undefined  , otherwise the second one
+//  ||  => This will return the first truthy value
+//   ?? => This will return the first defined value
+console.log('' || 'pp') //  pp
+console.log('==>' , null ?? 'pp') //  pp 
+console.log('' ?? 'pp') //  ''
+
+
+
+// Javascript Object Shortahnd property 
