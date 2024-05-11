@@ -114,21 +114,29 @@
 
 
 
-class SmajaJao  {
-  __phoneNumber = 0;
-  get phoneNumber() {
-    return this.__phoneNumber;
-  }
-  set phoneNumber(value) {
-    // validation
-    console.log('chakar')
-    this.__phoneNumber =value
-  }
-}
+// class SmajaJao  {
+//   __phoneNumber = 0;
+//   get phoneNumber() {
+//     return this.__phoneNumber;
+//   }
+//   set phoneNumber(value) {
+//     // validation
+//     console.log('chakar')
+//     this.__phoneNumber =value
+//   }
+// }
 
-const atmaa = new SmajaJao();
+// const atmaa = new SmajaJao();
 
-atmaa.phoneNumber = '9915378881'
+// atmaa.phoneNumber = '9915378881'
 
 
-console.log(atmaa.phoneNumber)
+// console.log(atmaa.phoneNumber)
+
+
+
+// default key  {name} 
+// optinal chaining
+
+
+//
