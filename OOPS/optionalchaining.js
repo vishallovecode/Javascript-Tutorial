@@ -89,3 +89,13 @@ const  employee = {
 // })
 
 // ??
+
+
+//  Currying 
+//  Deep Copy  custom function  
+//  compare two object 
+//  flatten array 
+// flatten object
+
+
+
