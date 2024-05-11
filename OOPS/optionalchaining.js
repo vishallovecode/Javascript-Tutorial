@@ -52,14 +52,14 @@ const  employee = {
 
 
 
-// const person = {
-//   name: 'Raja Ji',
-//   lastName: 'Babu',
-//   printName() {
-//     console.log(this.name , this.lastName)
-//   }
+const person = {
+  name: 'Raja Ji',
+  lastName: 'Babu',
+  printName() {
+    console.log(this.name , this.lastName)
+  }
  
-// }
+}
 
 // console.log(person?.printName)
 // console.log(person?.printName?.())  // ?.
@@ -119,3 +119,18 @@ console.log('' ?? 'pp') //  ''
 
 
 // Javascript Object Shortahnd property 
+
+
+const employeeId = 12345;
+const employeeName = 'Raja Ji'
+const employeeDesignation = 'Pada Ji';
+
+
+// Apty  => 1 yeears
+const object = {
+  employeeId ,
+  employeeName,
+  employeeDesignation
+}
+
+console.log(object)
