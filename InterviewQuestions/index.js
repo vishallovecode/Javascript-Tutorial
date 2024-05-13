@@ -95,8 +95,27 @@ const obj = {
     g: {r: 10}
   }
 }
-
-function flatObject() {
-
+function isObject(arary) {
+  return obj && !Array.isArray(obj) && typeof obj =='object'
 }
+function flatObject(obj) {
+  const result  = {};
+    if(isObject(obj)){
+        for(let key in obj) {
+          if(isObject(obj[key])) {
+              const obj1 = flatObject(obj[key])
+              return {...result , ...obj1}
+          } else {
+            result[key] = obj[key]
+          }
+        }
+    }  else {
+      throw new Error (`${obj}, is not an object`)
+    }
+    return result
+}
+
+const resultObj  = flatObject(obj); // {e:123 ,r:10}
+
+console.log('resultObj' , resultObj)
 
