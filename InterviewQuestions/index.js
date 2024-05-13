@@ -53,27 +53,50 @@ console.log(array12.flat(Infinity)) // [50]
 // Write you own function which will accept aray(which is nested ) and return the flat array
 
  // 
-function flatten(arr) {
+function flatten(arr , res) {
   // write your code here
-  const result  = []
+  const result  = []  // 
+  if(!Array.isArray(res)) {
+    res= [];
+  }
   if(!Array.isArray(arr)) {
     throw new Error (`${arr}, is not an array`)
   }
   for(let value of arr) {
     if(Array.isArray(value)){
       // repeat
-      flatten(value)
+      const updatedArray =  flatten(value);
+      return result.concat(updatedArray)
+      // return result.concat(flatten(value));
+      // flatten(value , res)
     } else {
-      console.log()
         result.push(value)
+        // res.push(value)
+        console.log('tm yeha aa rahe ho??', value ,result)
     }
   }
   return result;
+  // return res
 }
-
-
 const customFlat = flatten(array);
 console.log('customFlat' , customFlat)
 
 
+
+const obj = {
+  a:{
+    b:{
+      c:{
+        d:{
+          e:123
+        }
+      }
+    },
+    g: {r: 10}
+  }
+}
+
+function flatObject() {
+
+}
 
