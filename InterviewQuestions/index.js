@@ -128,3 +128,13 @@ console.log('resultObj' , resultObj)
 const resultObj1  = flatObject(obj); // {'a.b.c.d.e':123 ,a.g.r:10 , rr: 20}
 
 console.log('resultObj' , resultObj1)
+
+
+
+// Friday 
+
+// advanced curry
+// getElementsByClassName
+// compareTwo Object
+// clone object
+
