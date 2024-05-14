@@ -138,3 +138,20 @@ console.log('resultObj' , resultObj1)
 // compareTwo Object
 // clone object
 
+
+// this  ?? context maintain  / this  => normal function , arrow function todo= > react
+
+// __proto__  equivalte to the getPrototypeOf 
+// its give you the protottype of any object
+//if create any function starting with new keyword that function have constructor or every function have constructor
+//
+
+
+
+// A special function that creates or intialize the new instance of particular class or Cinstructor function
+
+
+const data  = new Array([1,2,3,4])
+data.constructor //  => Array
+
+ 
