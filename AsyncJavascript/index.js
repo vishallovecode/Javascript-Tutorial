@@ -10,20 +10,69 @@ console.log('Async Programming.....');
 //the value of delay (second parameter is in ms)
 // 1sec = 1/1000
 // 1000ms = 1sec
-// it will executt the callback  function only once
-setTimeout(()=>{
-  console.log('I will call after given delay , here delay is 2 sec')
-})
+// // it will executt the callback  function only once
+// setTimeout(()=>{
+//   console.log('I will call after given delay , here delay is 2 sec')
+// })
 
 
-// synchronous 
-for(let  i=0 ;i<100000;i++){
-  console.log(i);
+// // synchronous 
+// for(let  i=0 ;i<100000;i++){
+//   console.log(i);
+// }
+
+
+
+// // lift...=> 3 sec , `10 minutes
+// // stairs => 1->2->3->4->5
+
+console.log('Chaparayin...')
+
+// setTimeout(()=>{
+//   console.log('Back benchers...')
+// }, 1000)
+
+// console.log('Chapri')
+// setTimeout(()=>{
+//   console.log('kuch pta chala')
+// },0)
+// setTimeout(()=>{
+//   console.log('hey')
+// })
+// setTimeout(()=>{
+//   console.log('hey2')
+// }, 10)
+// console.log('Chapri2')
+// var count  =0;
+// setInterval(()=>{
+//       console.log('HEY' , count++)
+// }, 1000)
+
+
+function startTimerClosure () {
+  let count = 0;
+  return function (){
+      setInterval(()=>{
+        document.getElementById('timer').textContent = ++count;
+      }, 1000)
+  }
+}
+let counter = 0;
+function startTimer() {
+      setInterval(()=>{
+        document.getElementById('timer').textContent = ++counter;
+      }, 1000)
 }
 
 
+function main() {
+  // first we need two button reference
+const btnStart =  document.getElementById('start-btn')
+const btnEnd =  document.getElementById('stop-btn');
 
-// lift...=> 3 sec , `10 minutes
-// stairs => 1->2->3->4->5
+const closureTimer =  startTimerClosure();
+// btnStart.addEventListener('click', closureTimer)
+btnStart.addEventListener('click', startTimer)
+}
 
-
+main()
