@@ -49,30 +49,4 @@ console.log('Chaparayin...')
 // }, 1000)
 
 
-function startTimerClosure () {
-  let count = 0;
-  return function (){
-      setInterval(()=>{
-        document.getElementById('timer').textContent = ++count;
-      }, 1000)
-  }
-}
-let counter = 0;
-function startTimer() {
-      setInterval(()=>{
-        document.getElementById('timer').textContent = ++counter;
-      }, 1000)
-}
-
-
-function main() {
-  // first we need two button reference
-const btnStart =  document.getElementById('start-btn')
-const btnEnd =  document.getElementById('stop-btn');
-
-const closureTimer =  startTimerClosure();
-// btnStart.addEventListener('click', closureTimer)
-btnStart.addEventListener('click', startTimer)
-}
-
-main()
+//setTimeout and setInterval return id
