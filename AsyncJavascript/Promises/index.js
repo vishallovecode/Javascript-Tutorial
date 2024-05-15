@@ -86,3 +86,14 @@ function error (error) {
   console.log(error)
 }
 promise2.then(success).catch(error)
+
+
+const neverEndingPromise = new Promise((resolved , rejected)=>{
+
+})
+
+neverEndingPromise.then(()=>{
+  console.log('come here with success')
+}).catch(()=>{
+  console.log('come here with error')
+})
