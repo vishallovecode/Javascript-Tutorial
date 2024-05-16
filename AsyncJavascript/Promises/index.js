@@ -153,11 +153,11 @@ function  getAllProducts() {
   // and method type = > Get , Post Put , delete , Patch
   // default method fetch accept is  Get
   // fetch return the promise
-  fetch('https://dummyjson.com/product123').then((res)=>{
+  fetch('https://dummyjson.com/products').then((res)=>{
       // fetch will not return the Json data
       //json method also return the promise
       res.json().then((jsonData)=>{
-        console.log(jsonData)
+        displayName(jsonData.products)
       }).catch((err)=>{
         console.log('error')
       })
@@ -168,3 +168,30 @@ function  getAllProducts() {
 
 getAllProducts()
 
+
+
+
+function displayName (productList) {
+    const div = document.createElement('div');
+    div.style.display = 'flex'
+    div.style.gap= '10px';
+    div.style.padding = '20px';
+    div.style.border = '2px solid green'
+    div.style.flexWrap = 'wrap'
+    productList.forEach((elem , index)=>{
+        const div2 =  document.createElement('div');
+        div2.style.display = 'flex'
+        div2.style.gap= '10px';
+        div2.style.padding = '20px';
+        div2.style.background = 'blue'
+        div2.style.color= 'white'
+        div2.style.width = '300px'
+        div2.style.height = '100px'
+        div2.style.fontSize = '25px';
+        div2.style.fontWeight = '600'
+      
+        div2.textContent = elem.title;
+        div.appendChild(div2);
+    })  
+    document.body.appendChild(div)
+}
