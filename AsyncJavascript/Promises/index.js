@@ -116,17 +116,17 @@
 // //   function(error) { /* handle an error */ }
 // // );
 
-function fetchProduct() {
-  // fetch will return the promise
-  fetch('https://dummyjson.com/products').then((response)=>{
-    response.json().then((res)=>{
-      console.log(res)
-    })
-  }).catch((error)=>{
-    console.log('Error')
-  })
-}
-fetchProduct()
+// function fetchProduct() {
+//   // fetch will return the promise
+//   fetch('https://dummyjson.com/products').then((response)=>{
+//     response.json().then((res)=>{
+//       console.log(res)
+//     })
+//   }).catch((error)=>{
+//     console.log('Error')
+//   })
+// }
+// fetchProduct()
 
 
 // fetch(){
@@ -138,3 +138,33 @@ fetchProduct()
 //     }
 //   }
 // }
+
+
+
+// Applications Programming Interface   , it is the way for two or more than two com putesr to cummincate with each other
+
+
+// this api => https://dummyjson.com/products
+
+
+function  getAllProducts() {
+  // fetch accept the multiple parameter 
+  // first will be the api url
+  // and method type = > Get , Post Put , delete , Patch
+  // default method fetch accept is  Get
+  // fetch return the promise
+  fetch('https://dummyjson.com/product123').then((res)=>{
+      // fetch will not return the Json data
+      //json method also return the promise
+      res.json().then((jsonData)=>{
+        console.log(jsonData)
+      }).catch((err)=>{
+        console.log('error')
+      })
+  }).catch((err)=>{
+      console.log(err)
+  })
+}
+
+getAllProducts()
+
