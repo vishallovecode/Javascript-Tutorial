@@ -169,12 +169,10 @@ function  getAllProducts() {
 getAllProducts()
 
 
-
-
 function displayName (productList) {
     const div = document.createElement('div');
     div.style.display = 'flex'
-    div.style.gap= '10px';
+    div.style.gap= '10px'
     div.style.padding = '20px';
     div.style.border = '2px solid green'
     div.style.flexWrap = 'wrap'
