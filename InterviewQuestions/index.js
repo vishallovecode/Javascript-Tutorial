@@ -56,59 +56,124 @@
 // // function flatten(arr , res) {
 // //   // write your code here
 // //   const result  = []  // 
-// //   if(!Array.isArray(res)) {
-// //     res= [];
-// //   }
-// //   if(!Array.isArray(arr)) {
-// //     throw new Error (`${arr}, is not an array`)
-// //   }
-// //   for(let value of arr) {
-// //     if(Array.isArray(value)){
-// //       // repeat
-// //       const updatedArray =  flatten(value);
-// //       return result.concat(updatedArray)
-// //       // return result.concat(flatten(value));
-// //       // flatten(value , res)
-// //     } else {
-// //         result.push(value)
-// //         // res.push(value)
-// //         console.log('tm yeha aa rahe ho??', value ,result)
-// //     }
-// //   }
-// //   return result;
-// //   // return res
+// // //   if(!Array.isArray(res)) {
+// // //     res= [];
+// // //   }
+// // //   if(!Array.isArray(arr)) {
+// // //     throw new Error (`${arr}, is not an array`)
+// // //   }
+// // //   for(let value of arr) {
+// // //     if(Array.isArray(value)){
+// // //       // repeat
+// // //       const updatedArray =  flatten(value);
+// // //       return result.concat(updatedArray)
+// // //       // return result.concat(flatten(value));
+// // //       // flatten(value , res)
+// // //     } else {
+// // //         result.push(value)
+// // //         // res.push(value)
+// // //         console.log('tm yeha aa rahe ho??', value ,result)
+// // //     }
+// // //   }
+// // //   return result;
+// // //   // return res
+// // // }
+// // // const customFlat = flatten(array);
+// // // console.log('customFlat' , customFlat)
+
+
+
+// // const obj = {
+// //   a:{
+// //     b:{
+// //       c:{
+// //         d:{
+// //           e:123
+// //         }
+// //       }
+// //     },
+// //     g: {r: 10}
+// //   },
+// //   rr: 20
 // // }
-// // const customFlat = flatten(array);
-// // console.log('customFlat' , customFlat)
+// // function isObject(obj) {
+// //   return obj && !Array.isArray(obj) && typeof obj =='object'
+// // }
+// // function flatObject(obj) {
+// //   let result  = {};
+// //     if(isObject(obj)){
+// //         for(let key in obj) {
+// //           console.log(key)
+// //           if(isObject(obj[key])) {
+// //               const updatedRes =   flatObject(obj[key])
+// //              result =  {...result , ...updatedRes};
+// //           } else {
+// //             result[key] = obj[key]
+// //             console.log('result' , result)
+// //           }
+// //         }
+// //     }  else {
+// //       throw new Error (`${obj}, is not an object`)
+// //     }
+// //     return result
+// // }
+
+// // const resultObj  = flatObject(obj); // {e:123 ,r:10}
+
+// // console.log('resultObj' , resultObj)
 
 
 
-// const obj = {
-//   a:{
-//     b:{
-//       c:{
-//         d:{
-//           e:123
-//         }
-//       }
-//     },
-//     g: {r: 10}
-//   },
-//   rr: 20
-// }
+// // const resultObj1  = flatObject(obj); // {'a.b.c.d.e':123 ,a.g.r:10 , rr: 20}
+
+// // console.log('resultObj' , resultObj1)
+
+
+
+// // // Friday 
+
+// // // advanced curry
+// // // getElementsByClassName
+// // // compareTwo Object
+// // // clone object
+
+
+// // // this  ?? context maintain  / this  => normal function , arrow function todo= > react
+
+// // // __proto__  equivalte to the getPrototypeOf 
+// // // its give you the protottype of any object
+// // //if create any function starting with new keyword that function have constructor or every function have constructor
+// // //
+
+
+
+// // // A special function that creates or intialize the new instance of particular class or Cinstructor function
+
+
+// // const data  = new Array([1,2,3,4])
+// // data.constructor //  => Array
+
+ 
+
 // function isObject(obj) {
 //   return obj && !Array.isArray(obj) && typeof obj =='object'
 // }
-// function flatObject(obj) {
-//   let result  = {};
+
+// function flatObject(obj , result , prevKey ) {
+//   if(!result ) {
+//     result = {}
+//   }
+//   if(!prevKey) {
+//     prevKey = ''
+//   }
 //     if(isObject(obj)){
 //         for(let key in obj) {
-//           console.log(key)
 //           if(isObject(obj[key])) {
-//               const updatedRes =   flatObject(obj[key])
-//              result =  {...result , ...updatedRes};
+//             prevKey = prevKey +  key + '.';
+//            flatObject(obj[key] , result , prevKey)
 //           } else {
-//             result[key] = obj[key]
+//             result[prevKey] = obj[key]
+//             prevKey = ''
 //             console.log('result' , result)
 //           }
 //         }
@@ -118,88 +183,23 @@
 //     return result
 // }
 
-// const resultObj  = flatObject(obj); // {e:123 ,r:10}
-
-// console.log('resultObj' , resultObj)
 
 
-
-// const resultObj1  = flatObject(obj); // {'a.b.c.d.e':123 ,a.g.r:10 , rr: 20}
-
-// console.log('resultObj' , resultObj1)
-
-
-
-// // Friday 
-
-// // advanced curry
-// // getElementsByClassName
-// // compareTwo Object
-// // clone object
-
-
-// // this  ?? context maintain  / this  => normal function , arrow function todo= > react
-
-// // __proto__  equivalte to the getPrototypeOf 
-// // its give you the protottype of any object
-// //if create any function starting with new keyword that function have constructor or every function have constructor
-// //
-
-
-
-// // A special function that creates or intialize the new instance of particular class or Cinstructor function
-
-
-// const data  = new Array([1,2,3,4])
-// data.constructor //  => Array
-
- 
-
-function isObject(obj) {
-  return obj && !Array.isArray(obj) && typeof obj =='object'
-}
-
-function flatObject(obj , result , prevKey ) {
-  if(!result ) {
-    result = {}
-  }
-  if(!prevKey) {
-    prevKey = ''
-  }
-    if(isObject(obj)){
-        for(let key in obj) {
-          if(isObject(obj[key])) {
-            prevKey = prevKey +  key + '.';
-           flatObject(obj[key] , result , prevKey)
-          } else {
-            result[prevKey] = obj[key]
-            prevKey = ''
-            console.log('result' , result)
-          }
-        }
-    }  else {
-      throw new Error (`${obj}, is not an object`)
-    }
-    return result
-}
-
-
-
-const employe = {
-    a: {
-      b: {
-        c:{
-          d: 123
-        }
-      },
-      a1:{
-        a2: {
-          a3:123
-        }
-      }
-    }
-}
-console.log('hey' ,flatObject(employe))
+// const employe = {
+//     a: {
+//       b: {
+//         c:{
+//           d: 123
+//         }
+//       },
+//       a1:{
+//         a2: {
+//           a3:123
+//         }
+//       }
+//     }
+// }
+// console.log('hey' ,flatObject(employe))
 
 
 
@@ -213,7 +213,7 @@ const aa=  {
     b:{
       c:{
         d:{
-          e:1234
+          e:1234 // n
         }
       }
     }
@@ -224,14 +224,44 @@ const bb=  {
     b:{
       c:{
         d:{
-          e:1234
+          e:1234 //  nth le
         }
       }
     }
   }
 }
+
 function deepEqual (obj1 , obj2 ) {
+  // getting the keys of obj1 
+
+  // getting the keys of obj2
+  const keys1 = Object.keys(obj1) // array of keys
+  const keys2 = Object.keys(obj2) // array of keys
+  if(keys1.length != keys2.length) {
+    return false
+  };
+
+  for(let key in obj1) {
+    // the object are nested ??  How you will solved
+    if(typeof obj1=== 'object' && typeof obj2 ==='object') {
+      if(Object.keys(obj1[key]).length === Object.keys(obj2[key]).length) {
+      //  if(!deepEqual(obj1[key] , obj2[key])) {
+      //   return true;
+      //  }
+
+       const check = deepEqual(obj1[key] , obj2[key]);  // ?? 
+       return check;
+
+      }
+    }
+    if(obj1[key] !==  obj2[key]) {
+      return false;
+    }
+
+  }
+  return true
 
 } 
 
-deepEqual(aa ,bb)
+console.log('Hey',deepEqual(aa ,bb))
+
