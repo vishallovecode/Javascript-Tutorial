@@ -200,3 +200,38 @@ const employe = {
     }
 }
 console.log('hey' ,flatObject(employe))
+
+
+
+
+
+// deepEqual 
+
+// both object can be nested 
+const aa=  {
+  a: {
+    b:{
+      c:{
+        d:{
+          e:1234
+        }
+      }
+    }
+  }
+}
+const bb=  {
+  a: {
+    b:{
+      c:{
+        d:{
+          e:1234
+        }
+      }
+    }
+  }
+}
+function deepEqual (obj1 , obj2 ) {
+
+} 
+
+deepEqual(aa ,bb)
