@@ -213,7 +213,7 @@ const aa=  {
     b:{
       c:{
         d:{
-          e:1234 // n
+          b:1234 // n  [a,b,c,d,b]
         }
       }
     }
@@ -224,7 +224,7 @@ const bb=  {
     b:{
       c:{
         d:{
-          e:1234 //  nth le
+          e:1234   //  [a,b,c,d,e]
         }
       }
     }
@@ -237,31 +237,28 @@ function deepEqual (obj1 , obj2 ) {
   // getting the keys of obj2
   const keys1 = Object.keys(obj1) // array of keys
   const keys2 = Object.keys(obj2) // array of keys
+  if(typeof obj1!== typeof obj2) {
+    return false
+  }
   if(keys1.length != keys2.length) {
     return false
   };
+if(typeof obj2 === 'object' && obj1!==null && obj2!==null && !Array.isArray(obj1) && !Array.isArray(obj2)) {
 
-  for(let key in obj1) {
+  for(let key of keys1) {
     // the object are nested ??  How you will solved
-    if(typeof obj1=== 'object' && typeof obj2 ==='object') {
-      if(Object.keys(obj1[key]).length === Object.keys(obj2[key]).length) {
-      //  if(!deepEqual(obj1[key] , obj2[key])) {
-      //   return true;
-      //  }
-
-       const check = deepEqual(obj1[key] , obj2[key]);  // ?? 
-       return check;
-
+    if(!keys2.includes(key)) {
+      return false
+    } else {
+      if(!deepEqual(obj1[key] ,  obj2[key])) {
+        return false
       }
     }
-    if(obj1[key] !==  obj2[key]) {
-      return false;
-    }
-
   }
+}
   return true
-
 } 
 
-console.log('Hey',deepEqual(aa ,bb))
+console.log('Hey',deepEqual(aa ,bb)) // 10%
+
 
