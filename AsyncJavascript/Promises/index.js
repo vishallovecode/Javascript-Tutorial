@@ -193,3 +193,34 @@ function displayName (productList) {
     })  
     document.body.appendChild(div)
 }
+
+
+
+
+// const object  = {
+
+// "id": 1,
+// "firstName": "Terry",
+// "lastName": "Medhurst",
+// "maidenName": "Smitham",
+// "age": 50,
+// "gender": " ",
+// "email": "atuny0@sohu.com",
+// "phone": "+63 791 675 8914",
+// "username": "atuny0",
+// "password": "9uQFF1Lh",
+// "birthDate": "2000-12-25"
+// }
+
+
+
+
+// id   firstName    lastName    maidenName  age  gender  email            phone            password  userName  birthDate
+//   ``
+// 1     Terry         Medhurst     Smitham    20    male  tuny0@sohu.com  63 791 675 8914  csdcd      assd       2000-12-25
+// 1     Terry         Medhurst     Smitham    20    male  tuny0@sohu.com  63 791 675 8914  csdcd      assd       2000-12-25
+// 1     Terry         Medhurst     Smitham    20    male  tuny0@sohu.com  63 791 675 8914  csdcd      assd       2000-12-25
+// 1     Terry         Medhurst     Smitham    20    male  tuny0@sohu.com  63 791 675 8914  csdcd      assd       2000-12-25
+// 1     Terry         Medhurst     Smitham    20    male  tuny0@sohu.com  63 791 675 8914  csdcd      assd       2000-12-25
+// 1     Terry         Medhurst     Smitham    20    male  tuny0@sohu.com  63 791 675 8914  csdcd      assd       2000-12-25
+// 1     Terry         Medhurst     Smitham    20    male  tuny0@sohu.com  63 791 675 8914  csdcd      assd       2000-12-25
