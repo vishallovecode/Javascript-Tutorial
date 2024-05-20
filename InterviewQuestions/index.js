@@ -285,32 +285,72 @@ const executeTaskPool = function (tasks , pool) {
 
 
 // funs => array of function which is returning promise /  [fun1 , func2 , func]
-function executePoolTask(funs , pool) {
+function executePoolTask(arrayOfFunction , pool) {
   return new Promise((resolved, rejected)=>{
-    let progressCount  =0;
+    let progressCount  = 0; //  this will maintain how many promise ar running
     let index = 0; // closures
     function callPromise() {
        // it will defined you that at a time how many promise we want to call
-       if(index>=funs.length) {
+       if(index>=arrayOfFunction.length) {
         if(progressCount ===0) {
           resolved();
         }
+        return;
        }
-        while(progressCount < pool && index< funs.length) {
+        while(progressCount < pool && index< arrayOfFunction.length) {
           progressCount++;
-          index++ ;
-          funs[index].then(()=>{
-            // the code will come here if task is resolved;
+      
+          arrayOfFunction[index].then((data)=>{
+            // the code will come here if task is resolved 
+            // resolved
+            console.log(data)
             progressCount --;
             callPromise()
           })
+          index++ ;
         }
     }
     callPromise()
   })
 }
 
+const pr1 = new Promise((resolved , rejected)=>{
+  setTimeout(()=>{
+    resolved('Promise1')
+  } , 1000)  // 1 sec
+})
 
+const pr2 = new Promise((resolved , rejected)=>{
+  setTimeout(()=>{
+    resolved('Promise2')
+  } , 1000) // 3 sec
+})
+
+
+const pr3 = new Promise((resolved , rejected)=>{
+  setTimeout(()=>{
+    resolved('Promise3')
+  } , 1000) // 2 sec
+})
+
+
+const pr4 = new Promise((resolved , rejected)=>{
+  setTimeout(()=>{
+    resolved('Promise4')
+  } , 1000) // 5 sec
+})
+
+const pr5 = new Promise((resolved , rejected)=>{
+  setTimeout(()=>{
+    resolved('Promise5')
+  } , 1000) // 4 sec
+})
+
+
+
+executePoolTask([pr1 , pr2 , pr3 , pr4 , pr5] ,  2)
+
+// 100ms 200ms 300ms 400ms 500ms 600ms
 
 
 // pool =2
