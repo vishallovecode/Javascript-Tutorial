@@ -262,3 +262,56 @@ if(typeof obj2 === 'object' && obj1!==null && obj2!==null && !Array.isArray(obj1
 console.log('Hey',deepEqual(aa ,bb)) // 10%
 
 
+// Recursion practise => I will teach recursion
+
+
+
+
+
+// Promises => Practise
+
+//  Interview Questions
+
+// 
+
+
+const executeTaskPool = function (tasks , pool) {
+ // write your code here
+}
+
+
+//create 5 promise and run this functions  
+// pool =3
+
+
+// funs => array of function which is returning promise /  [fun1 , func2 , func]
+function executePoolTask(funs , pool) {
+  return new Promise((resolved, rejected)=>{
+    let progressCount  =0;
+    let index = 0; // closures
+    function callPromise() {
+       // it will defined you that at a time how many promise we want to call
+       if(index>=funs.length) {
+        if(progressCount ===0) {
+          resolved();
+        }
+       }
+        while(progressCount < pool && index< funs.length) {
+          progressCount++;
+          index++ ;
+          funs[index].then(()=>{
+            // the code will come here if task is resolved;
+            progressCount --;
+            callPromise()
+          })
+        }
+    }
+    callPromise()
+  })
+}
+
+
+
+
+// pool =2
+// [func1 , func2 , func3 , fun4 , func5 , func6]
