@@ -334,7 +334,7 @@ function fetcApi1 () {
 return new Promise((resolved , rejeccted)=>{
     setTimeout(()=>{
       resolved('Api1')
-    }, 2000)
+    }, 10000)
 })
 }
 
@@ -387,7 +387,21 @@ function fetcApi6 () {
 const promises =  Promise.all([fetcApi1() , fetcApi2() , fetcApi3() , fetcApi4() , fetcApi5(), fetcApi6()])
 
 promises.then((res)=>{
-  console.log(res)
+  console.log('All Success' ,res)
 }).catch((err)=>{
-    console.log(err)
+    console.log('ALL ERROR' ,err)
 })
+
+
+
+// we are interested  in other promsie which are resolved , we want to neglect the part of rejection 
+
+
+const promises12 =  Promise.allSettled([fetcApi1() , fetcApi2() , fetcApi3() , fetcApi4() , fetcApi5(), fetcApi6()])
+
+promises12.then((res)=>{
+  console.log('ALLSETLLED success' ,res)
+}).catch((err)=>{
+    console.log('ALLSETLLED error',err)
+})
+
