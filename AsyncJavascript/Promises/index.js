@@ -224,3 +224,106 @@ function displayName (productList) {
 // 1     Terry         Medhurst     Smitham    20    male  tuny0@sohu.com  63 791 675 8914  csdcd      assd       2000-12-25
 // 1     Terry         Medhurst     Smitham    20    male  tuny0@sohu.com  63 791 675 8914  csdcd      assd       2000-12-25
 // 1     Terry         Medhurst     Smitham    20    male  tuny0@sohu.com  63 791 675 8914  csdcd      assd       2000-12-25
+
+
+
+// How  to create a Promise  ?? 
+// What is Promise ??
+// State of promise
+// Promise  => api call 99%
+
+
+// fetch()
+
+// // dummy code 
+// function myFetch(){
+//   return new Promise((resolved , rejected)=>{
+//     // request the server for connection
+//     // server give response connection established
+//     // requst the get  , update , insert  , delete
+//     // server response with success or error
+//     let  serverResponseSuccess = true
+//     let  serverResultSuccess = [{name: 'Vishal'}, {name: 'Vishal'} ,{name: 'Vishal'}]
+//     if(serverResponseSuccess) {
+//       resolved(serverResultSuccess)
+//     }
+//     let  serverResponse = false
+//     let  serverError= 'GiveN Path are not valid'
+//     if(!serverResponse) {
+//       rejected(serverError)
+//     }
+//   })
+// }
+
+
+
+// myFetch().then((res)=>{
+//   // if success pointer come here
+//   console.log(res)   // [{name: 'Vishal'}, {name: 'Vishal'} ,{name: 'Vishal'}]
+// }).catch((error)=>{
+//   // if error code pointer come here
+//   console.log(error) // 'GiveN Path are not valid'
+// })
+
+
+
+// Promise api => There are 6 methods provided by the Promise constructor or class or object
+
+
+// Promise.all() //  VVVVIMP
+
+// Promise.race()
+
+// Promise.allSetteled()
+
+// Promise.any()
+
+// Promise.resolve()
+
+// Promise.reject()
+
+
+
+
+// 1. Promise.resolve
+// var promiseExample =  new Promise((resolve) => resolve('Hey Cool Bilkul Relax'));
+
+
+// const data  = Promise.resolve('Hey Cool Bilkul Relax')
+
+// promiseExample.then((res)=>{
+//   console.log(res)
+// })
+
+// data.then((res)=>{
+//   console.log(res)
+// })
+
+
+// console.log(promiseExample)
+// console.log(data)
+
+
+
+// 2. Promise.reject
+
+var promiseExample =  new Promise((resolve , rejected) => rejected('Hey Rejection can be very good some times'));
+
+var promiseExample1 = Promise.reject('Hey Rejection can be very good some times')
+
+
+console.log(promiseExample1)
+console.log(promiseExample)
+
+
+promiseExample.then((res)=>{
+  console.log(res)
+}).catch((error)=>{
+  console.log(error)
+})
+
+promiseExample1.then((res)=>{
+  console.log(res)
+}).catch((error)=>{
+  console.log(error)
+})
