@@ -327,3 +327,67 @@ promiseExample1.then((res)=>{
 }).catch((error)=>{
   console.log(error)
 })
+
+
+// 
+function fetcApi1 () {
+return new Promise((resolved , rejeccted)=>{
+    setTimeout(()=>{
+      resolved('Api1')
+    }, 2000)
+})
+}
+
+function fetcApi2() {
+  return new Promise((resolved , rejeccted)=>{
+    setTimeout(()=>{
+      resolved('Api2')
+
+    }, 2000)
+})
+}
+
+function fetcApi3 () {
+  return new Promise((resolved , rejeccted)=>{
+    setTimeout(()=>{
+      resolved('Api3')
+    }, 3000)
+})
+}
+
+function fetcApi4 () {
+  return new Promise((resolved , rejeccted)=>{
+    setTimeout(()=>{
+      resolved('Api4')
+
+    }, 4000)
+})
+}
+
+function fetcApi5 () {
+  return new Promise((resolved , rejeccted)=>{
+    setTimeout(()=>{
+      // resolved('Api5')
+      rejeccted('ME REJECT HUA')
+
+    }, 5000)
+})
+}
+
+function fetcApi6 () {
+  return new Promise((resolved , rejeccted)=>{
+    setTimeout(()=>{
+      // resolved('Api6')
+      rejeccted('errro')
+
+    }, 6000)
+})
+}
+
+const promises =  Promise.all([fetcApi1() , fetcApi2() , fetcApi3() , fetcApi4() , fetcApi5(), fetcApi6()])
+
+promises.then((res)=>{
+  console.log(res)
+}).catch((err)=>{
+    console.log(err)
+})
