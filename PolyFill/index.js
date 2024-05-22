@@ -35,7 +35,7 @@ func(6,7,8,9)
 
 Function.prototype.mycall = function(context , ...args) {
   context.func =  this; // args coming as rest opeartor and it is in array
-  context.func(...args)
+  context.func(...args) //method invocation
 }
 
 // rest operator 
@@ -48,7 +48,7 @@ function getRaja() {
   console.log(this.myname)
 }
 
-getRaja.call({myname: 'Raja hu me'})
+getRaja.mycall({myname: 'Raja hu me'})
 
 
 const context = {
