@@ -546,5 +546,43 @@ async function exampleAsynAwait() {
 
 }
 
-exampleAsynAwait()
+// exampleAsynAwait()
 // await  => if you put this keyword before any async task it will wait there only unitl unless that async task not resolved
+
+async  function getData () {
+  return 'Hello How are You??'
+}
+
+// function getData () {
+//   return new Promise((resolved , rejected)=>{
+//     resolved('Hello How are You??')
+//   })
+// }
+
+// getData will return the promise
+  getData().then((res)=>{
+      console.log(res)
+ });
+
+ // creating arrow function as async 
+const getData1 = async ()=>{
+
+}
+
+console.log(getData1())
+
+
+
+const getUsers = async ()=>{
+try {
+  const data = await fetch('https://dummyjson.com/users')
+  const jsonData = await  data.json();
+  console.log(jsonData)
+} catch(error) {
+  console.log(error)
+ }
+}
+
+getUsers();
+
+// 
