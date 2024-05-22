@@ -403,39 +403,148 @@
 // promises12.then((res)=>{
 //   console.log('ALLSETLLED success' ,res)
 // }).catch((err)=>{
-//     console.log('ALLSETLLED error',err)
+// //     console.log('ALLSETLLED error',err)
+// // })
+
+
+
+
+// // Promie.race => this return once the any of the promise is settled (resolved , rejected)
+// // const prRace1 =  new Promise((resolved , rejected)=>{
+// //   setTimeout(()=>{
+// //     resolved('Hey I am Resolved after 5 second ')
+// //   }, 5000) // 5 SEC
+// // })
+
+// // const prRace2 =  new Promise((resolved , rejected)=>{
+// //   setTimeout(()=>{
+// //     rejected('Hey I am Rejected after 4 second ')
+// //   }, 4000) // 4 SEC
+// // })
+// // const prRace3 =  new Promise((resolved , rejected)=>{
+// //   setTimeout(()=>{
+// //     resolved('Hey I am resolved after 2 second ')
+// //   }, 2000) // 2 SEC
+// // })
+
+// // const prRace4 =  new Promise((resolved , rejected)=>{
+// //   setTimeout(()=>{
+// //     rejected('Hey I am resolved after 1 second ')
+// //   }, 1000) // 1 SEC
+// // })
+
+
+// // Promise.race([prRace1 , prRace2 , prRace3 , prRace4]).then((res)=>{
+// //   console.log('Race Success::' , res)
+// // }).catch((err)=>{
+// //   console.log('Race Error::' , err)
+// // })
+
+
+
+// // Promise.any  => it is similar to the Promise.race  , it will look for the any first promise to resolved, if any if the promise are not resolved
+// // then  it will gives the error AssertionError
+
+
+// const prany1 =  new Promise((resolved , rejected)=>{
+//   setTimeout(()=>{
+//     resolved('Hey I am Resolved after 5 second ')
+//   }, 5000) // 5 SEC
+// })
+
+// const prany2 =  new Promise((resolved , rejected)=>{
+//   setTimeout(()=>{
+//     rejected('Hey I am Rejected after 4 second ')
+//   }, 4000) // 4 SEC
+// })
+// const prany3 =  new Promise((resolved , rejected)=>{
+//   setTimeout(()=>{
+//     resolved('Hey I am resolved after 2 second ')
+//   }, 2000) // 2 SEC
+// })
+
+// const prany4 =  new Promise((resolved , rejected)=>{
+//   setTimeout(()=>{
+//     rejected('Hey I am resolved after 1 second ')
+//   }, 1000) // 1 SEC
+// })
+
+
+// const prany5 =  new Promise((resolved , rejected)=>{
+//   setTimeout(()=>{
+//     rejected('Hey I am resolved after 100 milliseocnd ')
+//   }, 100) // 1 SEC
+// })
+
+// Promise.any([prany5 , prany2  , prany4]).then((res)=>{
+//     console.log('Promise any:' , res)
+// }).catch((err)=>{
+//     console.log(err) // AggregateError: All promises were rejected
+// })
+
+// // settled  => either rejected  or resolved (race first settled promise)
+
+
+// Promise.any([prany5 , prany2 , prany3 , prany4 , prany5]).then((res)=>{
+//     console.log('Promise any:' , res)
+// }).catch((err)=>{
+//     console.log(err) //  
 // })
 
 
 
 
-// Promie.race => this return once the any of the promise is settled (resolved , rejected)
-const prRace1 =  new Promise((resolved , rejected)=>{
-  setTimeout(()=>{
-    resolved('Hey I am Resolved after 5 second ')
-  }, 5000) // 5 SEC
-})
-
-const prRace2 =  new Promise((resolved , rejected)=>{
-  setTimeout(()=>{
-    rejected('Hey I am Rejected after 4 second ')
-  }, 4000) // 4 SEC
-})
-const prRace3 =  new Promise((resolved , rejected)=>{
-  setTimeout(()=>{
-    resolved('Hey I am resolved after 2 second ')
-  }, 2000) // 2 SEC
-})
-
-const prRace4 =  new Promise((resolved , rejected)=>{
-  setTimeout(()=>{
-    rejected('Hey I am resolved after 1 second ')
-  }, 1000) // 1 SEC
-})
+// Promise.chaining  => I2 ()
+// Polyfill Promise.all , allSetled 
+// Event Loop  (full one lecture)
+// Polyfill 
+// currying
 
 
-Promise.race([prRace1 , prRace2 , prRace3 , prRace4]).then((res)=>{
-  console.log('Race Success::' , res)
-}).catch((err)=>{
-  console.log('Race Error::' , err)
-})
+// async and await 
+// ployfill ()
+// currying
+
+// Resolving
+
+
+async function exampleAsynAwait() {
+
+      // fetch('https://dummyjson.com/products').then((res)=>{
+      //   res.json().then((data)=>{
+      //     console.log('Data', data)
+      //   })
+      // }).catch((err)=>{
+      //   console.log(err)
+      // })
+
+      const promise =   new  Promise((resolved , rejected)=>{
+          setTimeout(()=>{
+            resolved('Han I love you to....')
+          }, 5000)
+      })
+
+      const promise2 =   new  Promise((resolved , rejected)=>{
+        setTimeout(()=>{
+          rejected('Nahi yar mera bf ha....')
+        }, 4000)
+    })
+
+      // promise.then((res)=>{
+      //     console.log('response' , res)
+      // }).catch((err)=>{
+      //     console.log('Error::' , err)
+      // })
+      try {
+        const dost1 = await promise; //  5 seconds thread => ruk gya
+        console.log(dost1)
+        await promise2; //  4 seconds thread => ruk gya // error
+        console.log('Hey Raja')
+      } catch(error) {
+        console.log('error::', error)
+      }
+
+}
+
+exampleAsynAwait()
+// await  => if you put this keyword before any async task it will wait there only unitl unless that async task not resolved
