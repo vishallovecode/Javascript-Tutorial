@@ -34,7 +34,7 @@ func(6,7,8,9)
 // folyfill for call ?? 
 
 Function.prototype.mycall = function(context , ...args) {
-  context.func =  this;
+  context.func =  this; // args coming as rest opeartor and it is in array
   context.func(...args)
 }
 
@@ -43,3 +43,26 @@ Function.prototype.mycall = function(context , ...args) {
 // map filter , reduce
 // race , all , allsettled , any
 // promise 
+
+function getRaja() {
+  console.log(this.myname)
+}
+
+getRaja.call({myname: 'Raja hu me'})
+
+
+const context = {
+  myname: 'Raja hu me',
+  func: function () {
+    console.log(this.myname) //  this?? => context
+  }
+}
+
+context.func()
+
+
+Function.prototype.myapply = function(context , args) {
+  // args is already in array 
+  context.func =  this;
+  context.func(...args) // here we are spreading array
+}
