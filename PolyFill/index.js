@@ -123,5 +123,34 @@ Array.prototype.myfilter = function (callback) {
   // Promisea.allSettled
   // Promise.race
   // Promise.any
-  
 
+  
+Array.prototype.myreduce = function (callback , initialValue) {
+const array  =  this;
+let acc = initialValue !== undefined ?  initialValue : array[0]
+let index =  initialValue !== undefined ?  0 : 1
+for(let i=index;i<array.length;i++){
+  acc = callback(acc , array[i], i , array)
+}
+return  acc;
+}  
+//
+const sum =[1,2,3,4,5].myreduce((acc , item, index , array)=>{
+  return acc+ item;
+
+}  , 0)
+
+console.log('sum=>' , sum)
+
+
+
+// Write a polyfill for Promise.all
+
+Promise.myall = function (array) {
+
+}
+
+const pr = new Promise();
+
+
+Promise.myall()
