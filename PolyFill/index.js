@@ -200,3 +200,41 @@ Promise.myall([prany1 ,prany2 ,prany3,prany4 ,prany5]).then((res)=>{
 })
 
 
+// If there is empty array 
+// if promise.all(['Hey' , 'Reyyy']) //  this is your hw
+
+
+// Promise.race
+
+
+Promise.myrace = function(promises) {
+ new Promise((resolved , rejected)=>{
+  promises.forEach((promise)=>{
+    Promise.resolve(promise).then((data)=>{
+      resolved(data)
+    }).catch((err)=>{
+        rejected(err)
+    })
+  })
+ })
+
+}
+
+
+Promise.myrace = function(promises) {
+  new Promise((resolved , rejected)=>{
+   promises.forEach((promise)=>{
+    promise.then((data)=>{
+       resolved(data)
+     }).catch((err)=>{
+         rejected(err)
+     })
+   })
+  })
+ 
+ }
+
+
+
+ // Promise.any ?? 
+ // Promise.allSettled ?? 
