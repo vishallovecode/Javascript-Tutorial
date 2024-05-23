@@ -71,29 +71,57 @@
 
 // // Polyfill of map 
 
-Array.prototype.mymap = function (callback) {
-//  ?? 
-// this =>  array ??
-const array = this ;
-const result  = [];
-for(let i=0;i<array.length;i++) {
-  // result.push(callback(array[i] , index , array))
-  result[i] = callback(array[i] , i , array)
-}
-return result;
-}
+// Array.prototype.mymap = function (callback) {
+// //  ?? 
+// // this =>  array ??
+// const array = this ;
+// const result  = [];
+// for(let i=0;i<array.length;i++) {
+//   // result.push(callback(array[i] , index , array))
+//   result[i] = callback(array[i] , i , array)
+// }
+// return result;
+// }
 
 
-const array  = [1,2,3,4,5,6];
+// const array  = [1,2,3,4,5,6];
 
-// const data = array.map((elem , index, array)=>{
-//   return elem*2
-//   });
+// // const data = array.map((elem , index, array)=>{
+// //   return elem*2
+// //   });
 
-  //data= [2,4,6,8,10,12]
+//   //data= [2,4,6,8,10,12]
 
-const data = array.mymap((elem , index, array)=>{
-return elem*2
-});
+// const data = array.mymap((elem , index, array)=>{
+// return elem*2
+// });
 
- console.log(data , 'data')
+//  console.log(data , 'data')
+
+
+
+// Filter Polyfill
+
+// Honesty Do this ?? 
+
+Array.prototype.myfilter = function (callback) {
+  const array = this ;
+  const result = [];
+  for(let i=0;i<array.length;i++) {
+    if(callback(array[i] , i, array)) {
+      result.push(array[i])
+    }
+  }
+  return result;
+  }
+  
+
+ 
+
+  // Reduce 
+  // Promise.all
+  // Promisea.allSettled
+  // Promise.race
+  // Promise.any
+  
+
