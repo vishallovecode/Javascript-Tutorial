@@ -147,20 +147,56 @@ console.log('sum=>' , sum)
 // Write a polyfill for Promise.all
 
 Promise.myall = function (promises) {
-  const result  = [];
-return new Promise((resolved , rejected)=>{
-  for(let i=0;i<promises;i++) {
-    promises[i].then((data)=>{
-        result[i] =  data;
-        if(result.length === promises.length) {
+  const result  = new Array(promises.length);
+  let promiseCount =0;
+  return new Promise((resolved , rejected)=>{
+  promises.forEach((promise , index) => {
+    promise.then((data)=>{
+        result[index] = data;
+        promiseCount++;
+        if(promiseCount === promises.length) {
           resolved(result)
         }
     }).catch((err)=>{
       rejected(err)
     })
-  
-  }
+  });
 })
 }
 
-Promise.myall()
+const prany1 =  new Promise((resolved , rejected)=>{
+  setTimeout(()=>{
+    resolved('Hey I am Resolved after 5 second ')
+  }, 5000) // 5 SEC
+})
+
+const prany2 =  new Promise((resolved , rejected)=>{
+  setTimeout(()=>{
+    resolved('Hey I am Rejected after 4 second ')
+  }, 4000) // 4 SEC
+})
+const prany3 =  new Promise((resolved , rejected)=>{
+  setTimeout(()=>{
+    resolved('Hey I am resolved after 2 second ')
+  }, 2000) // 2 SEC
+})
+
+const prany4 =  new Promise((resolved , rejected)=>{
+  setTimeout(()=>{
+    resolved('Hey I am resolved after 1 second ')
+  }, 1000) // 1 SEC
+})
+
+
+const prany5 =  new Promise((resolved , rejected)=>{
+  setTimeout(()=>{
+    rejected('Hey I am resolved after 100 milliseocnd ')
+  }, 100) // 1 SEC
+})
+Promise.myall([prany1 ,prany2 ,prany3,prany4 ,prany5]).then((res)=>{
+  console.log(res);
+}).catch((error)=>{
+  console.log(error)
+})
+
+
