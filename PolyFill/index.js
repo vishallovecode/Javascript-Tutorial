@@ -146,11 +146,21 @@ console.log('sum=>' , sum)
 
 // Write a polyfill for Promise.all
 
-Promise.myall = function (array) {
-
+Promise.myall = function (promises) {
+  const result  = [];
+return new Promise((resolved , rejected)=>{
+  for(let i=0;i<promises;i++) {
+    promises[i].then((data)=>{
+        result[i] =  data;
+        if(result.length === promises.length) {
+          resolved(result)
+        }
+    }).catch((err)=>{
+      rejected(err)
+    })
+  
+  }
+})
 }
-
-const pr = new Promise();
-
 
 Promise.myall()
