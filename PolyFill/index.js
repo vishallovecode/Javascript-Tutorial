@@ -238,3 +238,23 @@ Promise.myrace = function(promises) {
 
  // Promise.any ?? 
  // Promise.allSettled ?? 
+
+
+
+ // Finding the missing number from given range 
+ // start 2 end  8
+
+
+ // very easy
+ //[2,4,5,6,8] // 
+
+ // given sorted array
+ // binary search
+ // 
+
+ // [ ]
+
+
+
+
+ 
