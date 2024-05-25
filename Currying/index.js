@@ -56,8 +56,11 @@
 
 
 // Infinit curry 
-
+// 5-10
 function sum(a) {
+  if(a===undefined || a===null) {
+    return new Error('something went worng')
+  }
   return (b)=>{
     if(b) {
       return sum(a+b)
@@ -71,4 +74,55 @@ sum(1)(2)();
 sum(1)(2)(3)();
 sum(1)(2)(3)(4)();
 sum(1)(2)(3)(4)(5)();
+// sum(1)()
 // sum(1)(2)(3)(4)(5)....(n)();
+
+
+
+
+// 
+
+// currying  
+// event loop (how async code runs )
+// debouncing  and throttling
+
+
+
+
+// Complete a below functions  (JP Morgan , Razorpay , Rippling, Intui , avis budget group , zepto, dehaat, mosaic welness )
+// 
+ // 20-25
+ // 10 
+function multiply(a,b,c) {
+    return a*b*c; //  1*2*3
+}
+
+function curry (func) {
+  // write your code here
+
+  // func.length ?/  // 3
+  return  function curried(...args) {
+      if(args.length >= func.length) {
+        func(...args)
+      } else {
+        return  (...arg2) =>{
+          const mergeArg =  [...args  , ...arg2]  // => [1,2]
+            return curried(...mergeArg) // currid(1,2 ,3)
+        }
+      }
+  }
+}
+
+const curried = curry(multiply); // returning new function .... 
+
+function curried (a) {
+  return (b)=>{
+    return (c)=>{
+        return a+b+c
+    }
+  }
+}
+curried(1)(2)(3) // 6 
+curried(1,2)(3); // 6
+curried(1,2,3); // 6
+curried(1)(2,3); // 6
