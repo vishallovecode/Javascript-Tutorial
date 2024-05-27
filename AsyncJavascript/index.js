@@ -55,56 +55,65 @@ console.log('Chaparayin...')
 // setTimeout , setInterval
 // Promises
 
-const promise = new Promise((resolved, rejected)=>{
-  console.log('Hey')
-    resolved('I am good...');
-})
-console.log(promise) // synchronous
+// const promise = new Promise((resolved, rejected)=>{
+//   console.log('Hey')
+//     resolved('I am good...');
+// })
+// console.log(promise) // synchronous
 
-// async 
-promise.then((data)=>{
-  console.log(data)
-})
+// // async 
+// promise.then((data)=>{
+//   console.log(data)
+// })
 
-// synchronous
-const starTime = new Date();
-console.log('StartTime',starTime)
-for(let i=0;i<50000;i++) {
-    console.log(i)
-}
-const endTime = new Date();
-console.log('EndTime',endTime)
-
-
-console.log('start')
-
-setTimeout(() => {
-  console.log('setTimeout')
-},0)
-
-Promise.resolve().then(() => {
-  console.log('resolve')
-})
-
-console.log('end')
+// // synchronous
+// const starTime = new Date();
+// console.log('StartTime',starTime)
+// for(let i=0;i<50000;i++) {
+//     console.log(i)
+// }
+// const endTime = new Date();
+// console.log('EndTime',endTime)
 
 
-const promise = new Promise((resolve, reject) => {
-    console.log(1);
-    setTimeout(() => {
-      console.log("timerStart");
-      resolve("success"); //
-      console.log("timerEnd");
-    }, 0);
-    console.log(2);
-  });
+// console.log('start')
 
-  promise.then((res) => {
-    console.log(res);
-  });
+// setTimeout(() => {
+//   console.log('setTimeout')
+// },0)
 
-  setTimeout(()=>{
-    console.log("Are!!")
-  } ,0)
+// Promise.resolve().then(() => {
+//   console.log('resolve')
+// })
 
-  console.log(4);
+// console.log('end')
+
+
+// const promise = new Promise((resolve, reject) => {
+//     console.log(1);
+//     setTimeout(() => {
+//       console.log("timerStart");
+//       resolve("success"); //
+//       console.log("timerEnd");
+//     }, 0);
+//     console.log(2);
+//   });
+
+//   promise.then((res) => {
+//     console.log(res);
+//   });
+
+//   setTimeout(()=>{
+//     console.log("Are!!")
+//   } ,0)
+
+//   console.log(4);
+
+
+  // How javascript handle the asynchronous code 
+  // How web apis like setTimeout and setInterval get executed
+  // what is the priority of promise over the web apis
+  // WHAT EVENT LOOP ??
+  // What is microtask(Priority) and macro task queque
+  // How callstack get executed ?? 
+  
