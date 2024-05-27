@@ -116,4 +116,9 @@ console.log('Chaparayin...')
   // WHAT EVENT LOOP ??
   // What is microtask(Priority) and macro task queque
   // How callstack get executed ?? 
-  
+
+
+
+  // Promise  chaining 
+  // Memization
+  // Generator funciton 
