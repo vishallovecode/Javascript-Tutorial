@@ -50,3 +50,27 @@ console.log('Chaparayin...')
 
 
 //setTimeout and setInterval return id
+
+
+// setTimeout , setInterval
+// Promises
+
+const promise = new Promise((resolved, rejected)=>{
+  console.log('Hey')
+    resolved('I am good...');
+})
+console.log(promise) // synchronous
+
+// async 
+promise.then((data)=>{
+  console.log(data)
+})
+
+// synchronous
+const starTime = new Date();
+console.log('StartTime',starTime)
+for(let i=0;i<50000;i++) {
+    console.log(i)
+}
+const endTime = new Date();
+console.log('EndTime',endTime)

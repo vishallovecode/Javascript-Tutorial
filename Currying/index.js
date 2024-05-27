@@ -122,7 +122,48 @@ function curried (a) {
     }
   }
 }
-curried(1)(2)(3) // 6 
+const func = curried(1)
+const func2 = func(2)
+func2(3) 
+// 6 
 curried(1,2)(3); // 6
 curried(1,2,3); // 6
 curried(1)(2,3); // 6
+
+
+// Axios  => I will be going to teach you guys at the time of react.. 
+
+
+// Ajax => reading data from server  => fetch  (it work on the promises), ajax worked on the callback
+// // aYNCHRONOUS jAVSCRIPT AND XML
+// // ajx USE THE xmlhttpRequest
+
+
+// function SE (SSE , lead , manager, DOE,VPE , CTO , CEO){
+//   if(year>2) {
+//     const data = SSE()
+//     if(data>4) {
+//       const data2 = lead()
+//       if(data2>6) {
+//         const data2  = manager()
+//         if(data2>10) {
+//          const d =  DOE()
+//          if(d>15){
+//           const p =  VPE();
+//           if(exceptionalworkforggrowingcomnap and good techincal skills and year>15){
+//             const p =  CTO();
+//             if(boaodrofdirectiomeetingwinner) {
+//               CEO()
+//             }
+//           }
+//          }
+         
+//         }
+//       }
+    
+//     }
+
+//   }
+// }
+
+// SE()
