@@ -230,360 +230,360 @@
 // // How  to create a Promise  ?? 
 // // What is Promise ??
 // // State of promise
-// // Promise  => api call 99%
+// // // Promise  => api call 99%
 
 
-// // fetch()
+// // // fetch()
 
-// // // dummy code 
-// // function myFetch(){
-// //   return new Promise((resolved , rejected)=>{
-// //     // request the server for connection
-// //     // server give response connection established
-// //     // requst the get  , update , insert  , delete
-// //     // server response with success or error
-// //     let  serverResponseSuccess = true
-// //     let  serverResultSuccess = [{name: 'Vishal'}, {name: 'Vishal'} ,{name: 'Vishal'}]
-// //     if(serverResponseSuccess) {
-// //       resolved(serverResultSuccess)
-// //     }
-// //     let  serverResponse = false
-// //     let  serverError= 'GiveN Path are not valid'
-// //     if(!serverResponse) {
-// //       rejected(serverError)
-// //     }
-// //   })
-// // }
-
-
-
-// // myFetch().then((res)=>{
-// //   // if success pointer come here
-// //   console.log(res)   // [{name: 'Vishal'}, {name: 'Vishal'} ,{name: 'Vishal'}]
-// // }).catch((error)=>{
-// //   // if error code pointer come here
-// //   console.log(error) // 'GiveN Path are not valid'
-// // })
+// // // // dummy code 
+// // // function myFetch(){
+// // //   return new Promise((resolved , rejected)=>{
+// // //     // request the server for connection
+// // //     // server give response connection established
+// // //     // requst the get  , update , insert  , delete
+// // //     // server response with success or error
+// // //     let  serverResponseSuccess = true
+// // //     let  serverResultSuccess = [{name: 'Vishal'}, {name: 'Vishal'} ,{name: 'Vishal'}]
+// // //     if(serverResponseSuccess) {
+// // //       resolved(serverResultSuccess)
+// // //     }
+// // //     let  serverResponse = false
+// // //     let  serverError= 'GiveN Path are not valid'
+// // //     if(!serverResponse) {
+// // //       rejected(serverError)
+// // //     }
+// // //   })
+// // // }
 
 
 
-// // Promise api => There are 6 methods provided by the Promise constructor or class or object
-
-
-// // Promise.all() //  VVVVIMP
-
-// // Promise.race()
-
-// // Promise.allSetteled()
-
-// // Promise.any()
-
-// // Promise.resolve()
-
-// // Promise.reject()
+// // // myFetch().then((res)=>{
+// // //   // if success pointer come here
+// // //   console.log(res)   // [{name: 'Vishal'}, {name: 'Vishal'} ,{name: 'Vishal'}]
+// // // }).catch((error)=>{
+// // //   // if error code pointer come here
+// // //   console.log(error) // 'GiveN Path are not valid'
+// // // })
 
 
 
-
-// // 1. Promise.resolve
-// // var promiseExample =  new Promise((resolve) => resolve('Hey Cool Bilkul Relax'));
+// // // Promise api => There are 6 methods provided by the Promise constructor or class or object
 
 
-// // const data  = Promise.resolve('Hey Cool Bilkul Relax')
+// // // Promise.all() //  VVVVIMP
+
+// // // Promise.race()
+
+// // // Promise.allSetteled()
+
+// // // Promise.any()
+
+// // // Promise.resolve()
+
+// // // Promise.reject()
+
+
+
+
+// // // 1. Promise.resolve
+// // // var promiseExample =  new Promise((resolve) => resolve('Hey Cool Bilkul Relax'));
+
+
+// // // const data  = Promise.resolve('Hey Cool Bilkul Relax')
+
+// // // promiseExample.then((res)=>{
+// // //   console.log(res)
+// // // })
+
+// // // data.then((res)=>{
+// // //   console.log(res)
+// // // })
+
+
+// // // console.log(promiseExample)
+// // // console.log(data)
+
+
+
+// // // 2. Promise.reject
+
+// // var promiseExample =  new Promise((resolve , rejected) => rejected('Hey Rejection can be very good some times'));
+
+// // var promiseExample1 = Promise.reject('Hey Rejection can be very good some times')
+
+
+// // console.log(promiseExample1)
+// // console.log(promiseExample)
+
 
 // // promiseExample.then((res)=>{
 // //   console.log(res)
+// // }).catch((error)=>{
+// //   console.log(error)
 // // })
 
-// // data.then((res)=>{
+// // promiseExample1.then((res)=>{
 // //   console.log(res)
+// // }).catch((error)=>{
+// //   console.log(error)
 // // })
 
 
-// // console.log(promiseExample)
-// // console.log(data)
+// // //  Promise.all
+// // function fetcApi1 () {
+// // return new Promise((resolved , rejeccted)=>{
+// //     setTimeout(()=>{
+// //       resolved('Api1')
+// //     }, 10000)
+// // })
+// // }
 
+// // function fetcApi2() {
+// //   return new Promise((resolved , rejeccted)=>{
+// //     setTimeout(()=>{
+// //       resolved('Api2')
 
+// //     }, 2000)
+// // })
+// // }
 
-// // 2. Promise.reject
+// // function fetcApi3 () {
+// //   return new Promise((resolved , rejeccted)=>{
+// //     setTimeout(()=>{
+// //       resolved('Api3')
+// //     }, 3000)
+// // })
+// // }
 
-// var promiseExample =  new Promise((resolve , rejected) => rejected('Hey Rejection can be very good some times'));
+// // function fetcApi4 () {
+// //   return new Promise((resolved , rejeccted)=>{
+// //     setTimeout(()=>{
+// //       resolved('Api4')
 
-// var promiseExample1 = Promise.reject('Hey Rejection can be very good some times')
+// //     }, 4000)
+// // })
+// // }
 
+// // function fetcApi5 () {
+// //   return new Promise((resolved , rejeccted)=>{
+// //     setTimeout(()=>{
+// //       // resolved('Api5')
+// //       rejeccted('ME REJECT HUA')
 
-// console.log(promiseExample1)
-// console.log(promiseExample)
+// //     }, 5000)
+// // })
+// // }
 
+// // function fetcApi6 () {
+// //   return new Promise((resolved , rejeccted)=>{
+// //     setTimeout(()=>{
+// //       // resolved('Api6')
+// //       rejeccted('errro')
 
-// promiseExample.then((res)=>{
-//   console.log(res)
-// }).catch((error)=>{
-//   console.log(error)
-// })
+// //     }, 6000)
+// // })
+// // }
 
-// promiseExample1.then((res)=>{
-//   console.log(res)
-// }).catch((error)=>{
-//   console.log(error)
-// })
+// // const promises =  Promise.all([fetcApi1() , fetcApi2() , fetcApi3() , fetcApi4() , fetcApi5(), fetcApi6()])
 
-
-// //  Promise.all
-// function fetcApi1 () {
-// return new Promise((resolved , rejeccted)=>{
-//     setTimeout(()=>{
-//       resolved('Api1')
-//     }, 10000)
-// })
-// }
-
-// function fetcApi2() {
-//   return new Promise((resolved , rejeccted)=>{
-//     setTimeout(()=>{
-//       resolved('Api2')
-
-//     }, 2000)
-// })
-// }
-
-// function fetcApi3 () {
-//   return new Promise((resolved , rejeccted)=>{
-//     setTimeout(()=>{
-//       resolved('Api3')
-//     }, 3000)
-// })
-// }
-
-// function fetcApi4 () {
-//   return new Promise((resolved , rejeccted)=>{
-//     setTimeout(()=>{
-//       resolved('Api4')
-
-//     }, 4000)
-// })
-// }
-
-// function fetcApi5 () {
-//   return new Promise((resolved , rejeccted)=>{
-//     setTimeout(()=>{
-//       // resolved('Api5')
-//       rejeccted('ME REJECT HUA')
-
-//     }, 5000)
-// })
-// }
-
-// function fetcApi6 () {
-//   return new Promise((resolved , rejeccted)=>{
-//     setTimeout(()=>{
-//       // resolved('Api6')
-//       rejeccted('errro')
-
-//     }, 6000)
-// })
-// }
-
-// const promises =  Promise.all([fetcApi1() , fetcApi2() , fetcApi3() , fetcApi4() , fetcApi5(), fetcApi6()])
-
-// promises.then((res)=>{
-//   console.log('All Success' ,res)
-// }).catch((err)=>{
-//     console.log('ALL ERROR' ,err)
-// })
-
-
-
-// // we are interested  in other promsie which are resolved , we want to neglect the part of rejection 
-
-
-// // Promise.allSettled
-// const promises12 =  Promise.allSettled([fetcApi1() , fetcApi2() , fetcApi3() , fetcApi4() , fetcApi5(), fetcApi6()])
-
-// promises12.then((res)=>{
-//   console.log('ALLSETLLED success' ,res)
-// }).catch((err)=>{
-// //     console.log('ALLSETLLED error',err)
+// // promises.then((res)=>{
+// //   console.log('All Success' ,res)
+// // }).catch((err)=>{
+// //     console.log('ALL ERROR' ,err)
 // // })
 
 
 
+// // // we are interested  in other promsie which are resolved , we want to neglect the part of rejection 
 
-// // Promie.race => this return once the any of the promise is settled (resolved , rejected)
-// // const prRace1 =  new Promise((resolved , rejected)=>{
+
+// // // Promise.allSettled
+// // const promises12 =  Promise.allSettled([fetcApi1() , fetcApi2() , fetcApi3() , fetcApi4() , fetcApi5(), fetcApi6()])
+
+// // promises12.then((res)=>{
+// //   console.log('ALLSETLLED success' ,res)
+// // }).catch((err)=>{
+// // //     console.log('ALLSETLLED error',err)
+// // // })
+
+
+
+
+// // // Promie.race => this return once the any of the promise is settled (resolved , rejected)
+// // // const prRace1 =  new Promise((resolved , rejected)=>{
+// // //   setTimeout(()=>{
+// // //     resolved('Hey I am Resolved after 5 second ')
+// // //   }, 5000) // 5 SEC
+// // // })
+
+// // // const prRace2 =  new Promise((resolved , rejected)=>{
+// // //   setTimeout(()=>{
+// // //     rejected('Hey I am Rejected after 4 second ')
+// // //   }, 4000) // 4 SEC
+// // // })
+// // // const prRace3 =  new Promise((resolved , rejected)=>{
+// // //   setTimeout(()=>{
+// // //     resolved('Hey I am resolved after 2 second ')
+// // //   }, 2000) // 2 SEC
+// // // })
+
+// // // const prRace4 =  new Promise((resolved , rejected)=>{
+// // //   setTimeout(()=>{
+// // //     rejected('Hey I am resolved after 1 second ')
+// // //   }, 1000) // 1 SEC
+// // // })
+
+
+// // // Promise.race([prRace1 , prRace2 , prRace3 , prRace4]).then((res)=>{
+// // //   console.log('Race Success::' , res)
+// // // }).catch((err)=>{
+// // //   console.log('Race Error::' , err)
+// // // })
+
+
+
+// // // Promise.any  => it is similar to the Promise.race  , it will look for the any first promise to resolved, if any if the promise are not resolved
+// // // then  it will gives the error AssertionError
+
+
+// // const prany1 =  new Promise((resolved , rejected)=>{
 // //   setTimeout(()=>{
 // //     resolved('Hey I am Resolved after 5 second ')
 // //   }, 5000) // 5 SEC
 // // })
 
-// // const prRace2 =  new Promise((resolved , rejected)=>{
+// // const prany2 =  new Promise((resolved , rejected)=>{
 // //   setTimeout(()=>{
 // //     rejected('Hey I am Rejected after 4 second ')
 // //   }, 4000) // 4 SEC
 // // })
-// // const prRace3 =  new Promise((resolved , rejected)=>{
+// // const prany3 =  new Promise((resolved , rejected)=>{
 // //   setTimeout(()=>{
 // //     resolved('Hey I am resolved after 2 second ')
 // //   }, 2000) // 2 SEC
 // // })
 
-// // const prRace4 =  new Promise((resolved , rejected)=>{
+// // const prany4 =  new Promise((resolved , rejected)=>{
 // //   setTimeout(()=>{
 // //     rejected('Hey I am resolved after 1 second ')
 // //   }, 1000) // 1 SEC
 // // })
 
 
-// // Promise.race([prRace1 , prRace2 , prRace3 , prRace4]).then((res)=>{
-// //   console.log('Race Success::' , res)
+// // const prany5 =  new Promise((resolved , rejected)=>{
+// //   setTimeout(()=>{
+// //     rejected('Hey I am resolved after 100 milliseocnd ')
+// //   }, 100) // 1 SEC
+// // })
+
+// // Promise.any([prany5 , prany2  , prany4]).then((res)=>{
+// //     console.log('Promise any:' , res)
 // // }).catch((err)=>{
-// //   console.log('Race Error::' , err)
+// //     console.log(err) // AggregateError: All promises were rejected
+// // })
+
+// // // settled  => either rejected  or resolved (race first settled promise)
+
+
+// // Promise.any([prany5 , prany2 , prany3 , prany4 , prany5]).then((res)=>{
+// //     console.log('Promise any:' , res)
+// // }).catch((err)=>{
+// //     console.log(err) //  
 // // })
 
 
 
-// // Promise.any  => it is similar to the Promise.race  , it will look for the any first promise to resolved, if any if the promise are not resolved
-// // then  it will gives the error AssertionError
+
+// // Promise.chaining  => I2 ()
+// // Polyfill Promise.all , allSetled 
+// // Event Loop  (full one lecture)
+// // Polyfill 
+// // currying
 
 
-// const prany1 =  new Promise((resolved , rejected)=>{
-//   setTimeout(()=>{
-//     resolved('Hey I am Resolved after 5 second ')
-//   }, 5000) // 5 SEC
-// })
+// // async and await 
+// // ployfill ()
+// // currying
 
-// const prany2 =  new Promise((resolved , rejected)=>{
-//   setTimeout(()=>{
-//     rejected('Hey I am Rejected after 4 second ')
-//   }, 4000) // 4 SEC
-// })
-// const prany3 =  new Promise((resolved , rejected)=>{
-//   setTimeout(()=>{
-//     resolved('Hey I am resolved after 2 second ')
-//   }, 2000) // 2 SEC
-// })
-
-// const prany4 =  new Promise((resolved , rejected)=>{
-//   setTimeout(()=>{
-//     rejected('Hey I am resolved after 1 second ')
-//   }, 1000) // 1 SEC
-// })
+// // Resolving
 
 
-// const prany5 =  new Promise((resolved , rejected)=>{
-//   setTimeout(()=>{
-//     rejected('Hey I am resolved after 100 milliseocnd ')
-//   }, 100) // 1 SEC
-// })
+// async function exampleAsynAwait() {
 
-// Promise.any([prany5 , prany2  , prany4]).then((res)=>{
-//     console.log('Promise any:' , res)
-// }).catch((err)=>{
-//     console.log(err) // AggregateError: All promises were rejected
-// })
+//       // fetch('https://dummyjson.com/products').then((res)=>{
+//       //   res.json().then((data)=>{
+//       //     console.log('Data', data)
+//       //   })
+//       // }).catch((err)=>{
+//       //   console.log(err)
+//       // })
 
-// // settled  => either rejected  or resolved (race first settled promise)
+//       const promise =   new  Promise((resolved , rejected)=>{
+//           setTimeout(()=>{
+//             resolved('Han I love you to....')
+//           }, 5000)
+//       })
 
+//       const promise2 =   new  Promise((resolved , rejected)=>{
+//         setTimeout(()=>{
+//           rejected('Nahi yar mera bf ha....')
+//         }, 4000)
+//     })
 
-// Promise.any([prany5 , prany2 , prany3 , prany4 , prany5]).then((res)=>{
-//     console.log('Promise any:' , res)
-// }).catch((err)=>{
-//     console.log(err) //  
-// })
+//       // promise.then((res)=>{
+//       //     console.log('response' , res)
+//       // }).catch((err)=>{
+//       //     console.log('Error::' , err)
+//       // })
+//       try {
+//         const dost1 = await promise; //  5 seconds thread => ruk gya
+//         console.log(dost1)
+//         await promise2; //  4 seconds thread => ruk gya // error
+//         console.log('Hey Raja')
+//       } catch(error) {
+//         console.log('error::', error)
+//       }
 
-
-
-
-// Promise.chaining  => I2 ()
-// Polyfill Promise.all , allSetled 
-// Event Loop  (full one lecture)
-// Polyfill 
-// currying
-
-
-// async and await 
-// ployfill ()
-// currying
-
-// Resolving
-
-
-async function exampleAsynAwait() {
-
-      // fetch('https://dummyjson.com/products').then((res)=>{
-      //   res.json().then((data)=>{
-      //     console.log('Data', data)
-      //   })
-      // }).catch((err)=>{
-      //   console.log(err)
-      // })
-
-      const promise =   new  Promise((resolved , rejected)=>{
-          setTimeout(()=>{
-            resolved('Han I love you to....')
-          }, 5000)
-      })
-
-      const promise2 =   new  Promise((resolved , rejected)=>{
-        setTimeout(()=>{
-          rejected('Nahi yar mera bf ha....')
-        }, 4000)
-    })
-
-      // promise.then((res)=>{
-      //     console.log('response' , res)
-      // }).catch((err)=>{
-      //     console.log('Error::' , err)
-      // })
-      try {
-        const dost1 = await promise; //  5 seconds thread => ruk gya
-        console.log(dost1)
-        await promise2; //  4 seconds thread => ruk gya // error
-        console.log('Hey Raja')
-      } catch(error) {
-        console.log('error::', error)
-      }
-
-}
-
-// exampleAsynAwait()
-// await  => if you put this keyword before any async task it will wait there only unitl unless that async task not resolved
-
-async  function getData () {
-  return 'Hello How are You??'
-}
-
-// function getData () {
-//   return new Promise((resolved , rejected)=>{
-//     resolved('Hello How are You??')
-//   })
 // }
 
-// getData will return the promise
-  getData().then((res)=>{
-      console.log(res)
- });
+// // exampleAsynAwait()
+// // await  => if you put this keyword before any async task it will wait there only unitl unless that async task not resolved
 
- // creating arrow function as async 
-const getData1 = async ()=>{
+// async  function getData () {
+//   return 'Hello How are You??'
+// }
 
-}
+// // function getData () {
+// //   return new Promise((resolved , rejected)=>{
+// //     resolved('Hello How are You??')
+// //   })
+// // }
 
-console.log(getData1())
+// // getData will return the promise
+//   getData().then((res)=>{
+//       console.log(res)
+//  });
+
+//  // creating arrow function as async 
+// const getData1 = async ()=>{
+
+// }
+
+// console.log(getData1())
 
 
 
-const getUsers = async ()=>{
-try {
-  const data = await fetch('https://dummyjson.com/users')
-  const jsonData = await  data.json();
-  console.log(jsonData)
-} catch(error) {
-  console.log(error)
- }
-}
+// const getUsers = async ()=>{
+// try {
+//   const data = await fetch('https://dummyjson.com/users')
+//   const jsonData = await  data.json();
+//   console.log(jsonData)
+// } catch(error) {
+//   console.log(error)
+//  }
+// }
 
-getUsers();
+// getUsers();
 
 // 
 
@@ -619,19 +619,22 @@ getUsers();
 
 
 
- 
+
  // From here
 
  const createPromise = () => Promise.resolve(1)
 
+
+
 function func1() {
-  createPromise().then(console.log)
-  console.log(2)
+  createPromise().then((a)=> {console.log(a)}) // async
+  console.log(2) // 2
 }
 
 async function func2() {
-  await createPromise()
-  console.log(3)
+ const d = await createPromise();
+ console.log(d) // 1
+  console.log(3) // 3
 }
 
 console.log(4)
@@ -641,33 +644,96 @@ func2()
 
 
 
-const promise = new Promise((resolve, reject) => {
-  const promise2 = Promise.reject('error').then(() => {
-    console.log(1)
-  }, () => {
-    console.log(2)
-  })
-  resolve(promise2)
+// const promise = new Promise((resolve, reject) => {
+
+//   const promise2 = Promise.reject('error').then(() => {
+//     console.log(1)
+//   }, () => {
+//     console.log(2) // 2
+    
+//   })
+//   console.log(promise2) // ?? 
+//   resolve(promise2)
+// });
+
+// promise.then((data)=>{
+//   console.log(data) // undefined
+// });
+
+
+
+
+// const promise1 = Promise.resolve(1)
+// const promise2 = Promise.resolve(2)
+// const promise3 = Promise.resolve(3)
+// const promise4 = Promise.reject(4)
+
+// const promiseAll = async () => {
+//   const group1 = await Promise.all([promise1, promise2])
+//   const group2 = await Promise.all([promise3, promise4])
+//   return [group1, group2]
+// }
+
+// promiseAll().then(console.log).catch(console.log)
+
+
+
+
+// 1ST
+
+console.log("begins");
+
+setTimeout(() => {
+  console.log("setTimeout 1");
+  Promise.resolve().then(() => {
+    console.log("promise 1");
+  });
+}, 0);
+
+new Promise(function (resolve, reject) {
+  console.log("promise 2");
+  setTimeout(function () {
+    console.log("setTimeout 2");
+    resolve("resolve 1");
+  }, 0);
+}).then((res) => {
+  console.log("dot then 1");
+  setTimeout(() => {
+    console.log(res);
+  }, 0);
 });
-promise.then(console.log);
 
 
 
 
-const promise1 = Promise.resolve(1)
-const promise2 = Promise.resolve(2)
-const promise3 = Promise.resolve(3)
-const promise4 = Promise.reject(4)
+// 2
 
-const promiseAll = async () => {
-  const group1 = await Promise.all([promise1, promise2])
-  const group2 = await Promise.all([promise3, promise4])
-  return [group1, group2]
+async function async1() {
+  console.log("async1 start");
+  await async2();
+  console.log("async1 end");
 }
 
-promiseAll().then(console.log).catch(console.log)
+async function async2() {
+  console.log("async2");
+}
 
+console.log("script start");
 
+setTimeout(function () {
+  console.log("setTimeout");
+}, 0);
+
+async1();
+
+new Promise(function (resolve) {
+  console.log("promise1");
+  resolve();
+}).then(function () {
+  console.log("promise2");
+});
+
+console.log("script end");
 
 
 
