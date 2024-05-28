@@ -622,24 +622,24 @@
 
  // From here
 
- const createPromise = () => Promise.resolve(1)
+//  const createPromise = () => Promise.resolve(1)
 
 
 
-function func1() {
-  createPromise().then((a)=> {console.log(a)}) // async
-  console.log(2) // 2
-}
+// function func1() {
+//   createPromise().then((a)=> {console.log(a)}) // async
+//   console.log(2) // 2
+// }
 
-async function func2() {
- const d = await createPromise();
- console.log(d) // 1
-  console.log(3) // 3
-}
+// async function func2() {
+//  const d = await createPromise();
+//  console.log(d) // 1
+//   console.log(3) // 3
+// }
 
-console.log(4)
-func1()
-func2()
+// console.log(4)
+// func1()
+// func2()
 
 
 
@@ -681,8 +681,11 @@ func2()
 
 // 1ST
 
-console.log("begins");
+console.log("begins");  // 1
 
+
+// macro task  []
+// micro [pr1]
 setTimeout(() => {
   console.log("setTimeout 1");
   Promise.resolve().then(() => {
@@ -690,13 +693,15 @@ setTimeout(() => {
   });
 }, 0);
 
-new Promise(function (resolve, reject) {
-  console.log("promise 2");
+const data = new Promise(function (resolve, reject) {
+  console.log("promise 2"); // 2
   setTimeout(function () {
     console.log("setTimeout 2");
-    resolve("resolve 1");
+    resolve("resolve 1"); /// ???  ?? 
   }, 0);
-}).then((res) => {
+})
+
+data.then((res) => {
   console.log("dot then 1");
   setTimeout(() => {
     console.log(res);
