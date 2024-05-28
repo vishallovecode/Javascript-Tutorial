@@ -116,17 +116,17 @@
 // // //   function(error) { /* handle an error */ }
 // // // );
 
-// // function fetchProduct() {
-// //   // fetch will return the promise
-// //   fetch('https://dummyjson.com/products').then((response)=>{
-// //     response.json().then((res)=>{
-// //       console.log(res)
-// //     })
-// //   }).catch((error)=>{
-// //     console.log('Error')
-// //   })
-// // }
-// // fetchProduct()
+// function fetchProduct() {
+//   // fetch will return the promise
+//   fetch('https://dummyjson.com/products').then((response)=>{
+//     response.json().then((res)=>{
+//       console.log(res)
+//     })
+//   }).catch((error)=>{
+//     console.log('Error')
+//   })
+// }
+// fetchProduct()
 
 
 // // fetch(){
@@ -586,3 +586,90 @@ try {
 getUsers();
 
 // 
+
+
+// Server  // Method ,headers (arct)
+
+// address of data store (apis) / end point
+//  fetch('url').then((result)=>{
+//    // result successfullly
+//    // fetch does not provide proper json response(object responsee)
+//    // we need to convert it inot json
+//    result.json().then((data)=>{
+//     console.log(data)
+//    })
+ 
+//  })
+
+
+
+//  fetch(url) {
+//   // url  me jake data la rha hoga 
+//   // it can take some time
+//   new Promise((res , rej)) {
+//     // once data is recied
+//     res(datasuccess)
+//   }
+//  }
+//  // fetch return the promise 
+
+
+ // we have power  , using promise that we can provide callback action once async task is done 
+
+
+
+
+ 
+ // From here
+
+ const createPromise = () => Promise.resolve(1)
+
+function func1() {
+  createPromise().then(console.log)
+  console.log(2)
+}
+
+async function func2() {
+  await createPromise()
+  console.log(3)
+}
+
+console.log(4)
+func1()
+func2()
+
+
+
+
+const promise = new Promise((resolve, reject) => {
+  const promise2 = Promise.reject('error').then(() => {
+    console.log(1)
+  }, () => {
+    console.log(2)
+  })
+  resolve(promise2)
+});
+promise.then(console.log);
+
+
+
+
+const promise1 = Promise.resolve(1)
+const promise2 = Promise.resolve(2)
+const promise3 = Promise.resolve(3)
+const promise4 = Promise.reject(4)
+
+const promiseAll = async () => {
+  const group1 = await Promise.all([promise1, promise2])
+  const group2 = await Promise.all([promise3, promise4])
+  return [group1, group2]
+}
+
+promiseAll().then(console.log).catch(console.log)
+
+
+
+
+
+
+
