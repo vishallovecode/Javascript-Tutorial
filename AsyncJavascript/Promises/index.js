@@ -658,87 +658,90 @@
 
 // promise.then((data)=>{
 //   console.log(data) // undefined
+// // });
+
+
+
+
+// // const promise1 = Promise.resolve(1)
+// // const promise2 = Promise.resolve(2)
+// // const promise3 = Promise.resolve(3)
+// // const promise4 = Promise.reject(4)
+
+// // const promiseAll = async () => {
+// //   const group1 = await Promise.all([promise1, promise2])
+// //   const group2 = await Promise.all([promise3, promise4])
+// //   return [group1, group2]
+// // }
+
+// // promiseAll().then(console.log).catch(console.log)
+
+
+
+
+// // 1ST
+
+// console.log("begins");  // 1
+
+
+// // macro task  []
+// // micro [pr1]
+// setTimeout(() => {
+//   console.log("setTimeout 1");
+//   Promise.resolve().then(() => {
+//     console.log("promise 1");
+//   });
+// }, 0);
+
+// const data = new Promise(function (resolve, reject) {
+//   console.log("promise 2"); // 2
+//   setTimeout(function () {
+//     console.log("setTimeout 2");
+//     resolve("resolve 1"); /// ???  ?? 
+//   }, 0);
+// })
+
+// data.then((res) => {
+//   console.log("dot then 1");
+//   setTimeout(() => {
+//     console.log(res);
+//   }, 0);
 // });
 
 
 
 
-// const promise1 = Promise.resolve(1)
-// const promise2 = Promise.resolve(2)
-// const promise3 = Promise.resolve(3)
-// const promise4 = Promise.reject(4)
 
-// const promiseAll = async () => {
-//   const group1 = await Promise.all([promise1, promise2])
-//   const group2 = await Promise.all([promise3, promise4])
-//   return [group1, group2]
-// }
-
-// promiseAll().then(console.log).catch(console.log)
-
-
-
-
-// 1ST
-
-console.log("begins");  // 1
-
-
-// macro task  []
-// micro [pr1]
-setTimeout(() => {
-  console.log("setTimeout 1");
-  Promise.resolve().then(() => {
-    console.log("promise 1");
-  });
-}, 0);
-
-const data = new Promise(function (resolve, reject) {
-  console.log("promise 2"); // 2
-  setTimeout(function () {
-    console.log("setTimeout 2");
-    resolve("resolve 1"); /// ???  ?? 
-  }, 0);
-})
-
-data.then((res) => {
-  console.log("dot then 1");
-  setTimeout(() => {
-    console.log(res);
-  }, 0);
-});
-
-
-
-
-// 2
 
 async function async1() {
-  console.log("async1 start");
-  await async2();
-  console.log("async1 end");
+  console.log("async1 start"); //4 
+  await async2(); // []
+  console.log("async1 end"); //6
 }
 
 async function async2() {
-  console.log("async2");
+  console.log("async2"); // 5
 }
 
-console.log("script start");
+console.log("script start"); // syn => 1
 
+// web apis async function [t1]
 setTimeout(function () {
-  console.log("setTimeout");
+  console.log("setTimeout"); //7
 }, 0);
 
+
+// micr [p1]
 async1();
 
 new Promise(function (resolve) {
-  console.log("promise1");
-  resolve();
+  console.log("promise1"); // 2
+  resolve(); //  [p1 , p2]
 }).then(function () {
   console.log("promise2");
 });
 
-console.log("script end");
+console.log("script end"); //3
 
 
 
