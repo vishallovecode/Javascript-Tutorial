@@ -13,18 +13,51 @@ async function handleChange (event) {
 // this debounced function is executed after a certain period of time 
 
 
+
+// higher order function
 function debounce(func , delay) {
   let timer = null;
-  return  (...args)=>{
+  // returning new function
+  return  (...args)=>{ 
+    // if timer has value then clear the ealier timeout from memory
     if(timer) clearTimeout(timer)
+    // setting timeout for new triggered
      timer =  setTimeout(()=>{
-        func.apply(undefined , args ) // 
+      // calling required function when given time is finised  or after delay
+        func( ...args )
+        // func.apply(undefined , args)
+      } , 1000) // this is delay after that function call if there is not input before given time
+  }
+}
+const debounceSearch =  debounce(handleChange , 500)
+
+
+
+
+
+// depend of action
+
+//  call function after given delay  everytime does not matter with action
+
+
+// every day i will give you one chocolate
+
+
+// throttling will take a func and delay as input and retunr modified function , that function 
+// called or executed delay (1000ms) after previous function was excuted
+
+function throttling (func , delay) {
+  let timer = null;
+  return (...args)=>{
+    if(!timer) {
+      func(...args);
+      timer = setTimeout(()=>{
+        timer =null;
       } , delay)
+    }
   }
 }
 
 
-[appl]
+const throttle = throttling(handleChange , 1000)
 
-
-const debounceSearch =  debounce(handleChange , 500)
