@@ -35,6 +35,7 @@ const debounceSearch =  debounce(handleChange , 500)
 
 
 
+
 // depend of action
 
 //  call function after given delay  everytime does not matter with action
@@ -50,7 +51,7 @@ function throttling (func , delay) {
   let timer = null;
   return (...args)=>{
     if(!timer) {
-      func(...args);
+      func(...args); // ?? 
       timer = setTimeout(()=>{
         timer =null;
       } , delay)
@@ -58,28 +59,37 @@ function throttling (func , delay) {
   }
 }
 
-const throttle = throttling(handleChange , 1000)
+const throttle = throttling(handleChange , 5000)
 
-function debounce(func , delay) {
-  let timerId = null;
-  // returning new function
-  return  (...args)=>{ 
-    // if timer has value then clear
-    //  the ealier timeout from memory
-    if(timerId) clearTimeout(timerId)
-    // setting timeout for new triggered
-    timerId =  setTimeout(()=>{
-      // // calling required function 
-      // when given time is finised  or after 
-      // delay
-        func( ...args )
-        // func.apply(undefined , args)
-      } , 5000) // this is delay after that 
-      // function call if there is 
-      // not input before given time
-  }
-}
-const debounceSearch1 =  debounce(handleChange , 500)
+
+// throttle('CALL1') // 
+// throttle('CALL2') // 
+// throttle('CALL3') // 
+// throttle('CALL4') // 
+// setTimeout(()=>{
+//   throttle('AFTER 5 SECOND CALL')
+// } , 5000)
+
+// function debounce(func , delay) {
+//   let timerId = null;
+//   // returning new function
+//   return  (...args)=>{ 
+//     // if timer has value then clear
+//     //  the ealier timeout from memory
+//     if(timerId) clearTimeout(timerId)
+//     // setting timeout for new triggered
+//     timerId =  setTimeout(()=>{
+//       // // calling required function 
+//       // when given time is finised  or after 
+//       // delay
+//         func( ...args )
+//         // func.apply(undefined , args)
+//       } , 5000) // this is delay after that 
+//       // function call if there is 
+//       // not input before given time
+//   }
+// }
+// const debounceSearch1 =  debounce(handleChange , 500)
 
 // debounceSearch1(1);
 
@@ -90,3 +100,16 @@ const debounceSearch1 =  debounce(handleChange , 500)
 
 // [apple]
 
+
+
+
+// limit the function 
+
+function resize (event) {
+  console.log('reseize')
+}
+
+const throttleResize =  throttling(resize , 500)
+window.addEventListener('resize', throttleResize);
+// window.addEventListener('resize', resize);
+// scroll infinite scroll
