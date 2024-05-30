@@ -58,6 +58,35 @@ function throttling (func , delay) {
   }
 }
 
-
 const throttle = throttling(handleChange , 1000)
+
+function debounce(func , delay) {
+  let timerId = null;
+  // returning new function
+  return  (...args)=>{ 
+    // if timer has value then clear
+    //  the ealier timeout from memory
+    if(timerId) clearTimeout(timerId)
+    // setting timeout for new triggered
+    timerId =  setTimeout(()=>{
+      // // calling required function 
+      // when given time is finised  or after 
+      // delay
+        func( ...args )
+        // func.apply(undefined , args)
+      } , 5000) // this is delay after that 
+      // function call if there is 
+      // not input before given time
+  }
+}
+const debounceSearch1 =  debounce(handleChange , 500)
+
+// debounceSearch1(1);
+
+
+// conssetTimeout(()=>{
+//     console.log('Hey')
+// } , 5000);
+
+// [apple]
 
