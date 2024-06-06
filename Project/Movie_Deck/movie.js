@@ -17,7 +17,8 @@ async function getAllMovies(page=1) {
     const movieList = document.getElementById('movieList');
     moviesList.results.forEach((movie , index) => {
       const container = createMovieCard(movie)
-      movieList.appendChild(container)
+      // movieList.appendChild(container) /// movie
+      movieList.innerHTML += container; // innerHtml is security wise dangerous
     });
 
  } catch(err){
@@ -29,47 +30,71 @@ getAllMovies()
 
 
 function createMovieCard(movie) {
-  const cardContainer =  document.createElement('div');
-  cardContainer.className='movie-card'
-  // header
-  const header = document.createElement('div');
-  header.style.width= '300px'
-  header.style.height= '200px'
-  const img = document.createElement('img')
-  img.className ='card-img'
-  img.src= `${base_img_url}${movie.poster_path}`
-  header.append(img)
+
+  // // container
+  // const cardContainer =  document.createElement('div');
+  // cardContainer.className='movie-card'
+
+  // // header
+  // const header = document.createElement('div');
+  // header.style.width= '300px'
+  // header.style.height= '200px'
+  // const img = document.createElement('img')
+  // img.className ='card-img'
+  // img.src= `${base_img_url}${movie.poster_path}`
+  // header.append(img)
   
-  cardContainer.appendChild(header)
+  // cardContainer.appendChild(header)
 
-  // body section
-  const body = document.createElement('div');
-  body.className ='card-body'
-  const row1 = document.createElement('div');
-  row1.className ='title'
-  row1.textContent=  movie.original_title
-  body.appendChild(row1)
-  const row2 = document.createElement('div');
-  row2.className ='content'
-  // content
-  const content = document.createElement('div');
-  content.className='footer'
+  // // body section
+  // const body = document.createElement('div');
+  // body.className ='card-body'
+
+  // // first row
+  // const row1 = document.createElement('div');
+  // row1.className ='title'
+  // row1.textContent=  movie.original_title
+  // body.appendChild(row1)
+
+  // // second row2
+  // const row2 = document.createElement('div');
+  // row2.className ='content'
+  // // content
+  // const content = document.createElement('div');
+  // content.className='footer'
  
-  const span = document.createElement('span');
-  span.textContent= `Votes: ${movie.vote_count}`
-  const span2 = document.createElement('span');
-  span2.textContent= `Rating: ${movie.vote_average}`
+  // const span = document.createElement('span');
+  // span.textContent= `Votes: ${movie.vote_count}`
+  // const span2 = document.createElement('span');
+  // span2.textContent= `Rating: ${movie.vote_average}`
 
-  content.appendChild(span)
-  content.appendChild(span2)
-  row2.appendChild(content)
+  // content.appendChild(span)
+  // content.appendChild(span2)
+  // row2.appendChild(content)
 
-  // heart section
-  const heart = document.createElement('div')
-  heart.textContent = '&#9829;'
-  row2.appendChild(heart)
-  body.appendChild(row2)
-  cardContainer.append(body)
+  // // heart section
+  // const heart = document.createElement('div')
+  // heart.textContent = '&#9829;'
+  // row2.appendChild(heart)
+  // body.appendChild(row2)
+  // cardContainer.append(body)
+  // return cardContainer;
 
-  return cardContainer;
+  return `<div class="movie-card">
+  <div style="width: 300px; height: 200px;">
+    <img class="card-img" src=${base_img_url}${movie.poster_path}/>
+  </div>
+  <div class="card-body">
+    <div class="title">${movie.title}</div>
+    <div class="content">
+      <div class="footer">
+        <span>Votes: ${movie.vote_count}</span>
+        <span>Rating: ${movie.vote_average}</span>
+        </div>
+        <div>&amp;#9829;</div>
+      </div>
+    </div>
+</div> `
 }
+
+
