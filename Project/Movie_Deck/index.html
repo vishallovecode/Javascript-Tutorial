@@ -2,6 +2,9 @@
 <html>
 <head>
   <link rel="stylesheet"  href="movie.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 </head>
 <body>
   <div id="app">
@@ -9,11 +12,16 @@
       <div>Movie Deck</div>
    </header>
    <form class="search-cont" onsubmit="handleSearch(event)">
-     <input type="text" placeholder="Movies name..." id="movieName"/>
+     <input type="text" placeholder="Movies name..." id="movieName" value=""/>
      <input type="submit" value="Search"/>
    </form>
+
+   <div style="margin-left: 120px;">
+    <button onclick="getMovies(false)">All</button>
+    <button onclick="getMovies(true)">Favourite List</button>
+   </div>
    <div id="movieList">
-    
+  
    </div>
   </div>
   <script src="movie.js"/>

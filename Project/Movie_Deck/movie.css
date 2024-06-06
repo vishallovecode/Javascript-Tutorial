@@ -87,6 +87,17 @@
   flex-wrap: wrap;
   gap: 10px;
   margin: auto;
-justify-content: center;
-margin-top: 40px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+button{
+  padding: 10px 20px;
+  border-radius: 10px ;
+  border:1px solid #C3C3C3;
+  background-color:#3A3A3A ;
+  color: white;
+  font-weight: bold;
+  min-width: 100px;
+  cursor: pointer;
 }
