@@ -1,26 +1,35 @@
 // 
+
 const base_url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f531333d637d0c44abc85b3e74db2186&language=en-US';
 const base_img_url = 'https://image.tmdb.org/t/p/original'
+let movieList = []
+let movieListContainer = document.getElementById('movieList');
+
  function handleSearch (event) {
   event.preventDefault()
   // here we need to get data first from the input value and on the basis of that call the api right/
   const movieValue = document.getElementById('movieName')?.value;
- // Calling the api
-
+ // We need to filter
+ const filterMovies = movieList.filter((movie)=>{
+  return movie.title.toLowerCase().includes(movieValue.toLowerCase())
+ })
+ movieListContainer.innerHTML = ''
+ renderMoviesCard(filterMovies)
 }
 
-
+function renderMoviesCard(lists ) {
+  lists.forEach((movie , index) => {
+   const container = createMovieCard(movie)
+   // movieList.appendChild(container) /// movie
+   movieListContainer.innerHTML += container; // innerHtml is security wise dangerous
+ });
+}
 async function getAllMovies(page=1) {
   try {
     const data = await fetch(`${base_url}&page=${page}`)
-    const moviesList =  await data.json();
-    const movieList = document.getElementById('movieList');
-    moviesList.results.forEach((movie , index) => {
-      const container = createMovieCard(movie)
-      // movieList.appendChild(container) /// movie
-      movieList.innerHTML += container; // innerHtml is security wise dangerous
-    });
-
+     const jsonData =  await data.json();
+     movieList = jsonData.results;
+     renderMoviesCard(movieList)
  } catch(err){
   console.log(err)
  }
