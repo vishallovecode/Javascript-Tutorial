@@ -747,3 +747,48 @@ console.log("script end"); //3
 
 
 
+
+
+
+
+async function fetchData(callback) {
+  try {
+   const data = await fetch('https://dummyjson.com/productsss')
+   const res = await data.json()
+   console.log(res)
+   callback(null , res)
+  } catch(err) {
+  callback(err, null)
+  }
+  }
+  function handleError(err , result) {
+      if (err) {
+      console.log('Error:', err);
+      } else {
+      console.log('Data:', result);
+      }
+  }
+  fetchData(handleError);
+
+
+
+
+
+  // 
+
+  function processArray(arr, callback) {
+    arr = [1,2,3]
+      for (let i = 0; i < arr.length; i++) {
+        callback(arr[i]);
+      }
+    }
+    processArray([1, 2, 3], function(element) {
+      console.log('Element:', element);
+    });
+    
+    
+    
+    
+  
+  
+  

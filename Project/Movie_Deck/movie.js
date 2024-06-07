@@ -155,6 +155,5 @@ function getMovies(favourite) {
   } else {
     renderMoviesCard(movieList)
   }
-
 }
 
