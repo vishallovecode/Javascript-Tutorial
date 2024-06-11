@@ -163,12 +163,12 @@ function handleSort(event) {
   if(sortType) {
     if(sortType ==='date') {
         movieList.sort((a,b)=> new Date(a.release_date)  - new Date(b.release_date))
-        console.log(movieList)
         movieListContainer.innerHTML = ''
         renderMoviesCard(movieList)
     }
   } else {
-    return movieList;
+    movieListContainer.innerHTML = ''
+    renderMoviesCard(movieList);
   }
 }
 
