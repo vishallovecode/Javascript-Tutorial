@@ -15,10 +15,16 @@
      <input type="text" placeholder="Movies name..." id="movieName" value=""/>
      <input type="submit" value="Search"/>
    </form>
-
+   <div class="filter-container">
    <div style="margin-left: 120px;">
     <button onclick="getMovies(false)">All</button>
     <button onclick="getMovies(true)">Favourite List</button>
+   </div>
+   <select class="select-container" onchange="handleSort(event)">
+    <option value="">Sort by</option>
+    <option value="date">Oldest to latest(date)</option>
+    <option value="rating">Least to most(rating)</option>
+   </select>
    </div>
    <div id="movieList">
   

@@ -19,6 +19,7 @@ let movieListContainer = document.getElementById('movieList');
 }
 
 function renderMoviesCard(lists ) {
+
   lists.forEach((movie , index) => {
    const container = createMovieCard(movie)
    movieListContainer.appendChild(container) /// movie
@@ -92,6 +93,7 @@ function createMovieCard(movie) {
   }
   image.style.height= '20px'
   image.style.width= '20px' 
+  image.style.cursor= "pointer"
    image.src = src
   heartcont.append(image)
 
@@ -122,7 +124,6 @@ function createMovieCard(movie) {
 }
 
 function addFavourite(id) {
-  movieListContainer.innerHTML = ''
  const updatedList = movieList.map((movie)=>{
   if(id===movie.id) {
     if(movie.favourite) {
@@ -146,7 +147,6 @@ function addFavourite(id) {
 
 
 function getMovies(favourite) {
-  movieListContainer.innerHTML = ''
   if(favourite) {
     const updatedList = movieList.filter((movie)=>{
         return movie.favourite;
@@ -157,3 +157,25 @@ function getMovies(favourite) {
   }
 }
 
+
+function handleSort(event) {
+  const sortType = event.target.value;
+  if(sortType) {
+    if(sortType ==='date') {
+        movieList.sort((a,b)=> new Date(a.release_date)  - new Date(b.release_date))
+        console.log(movieList)
+        movieListContainer.innerHTML = ''
+        renderMoviesCard(movieList)
+    }
+  } else {
+    return movieList;
+  }
+}
+
+
+
+
+// Polyfill
+// Prototype
+// Pormises
+// Aync Programming
