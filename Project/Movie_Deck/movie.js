@@ -19,7 +19,7 @@ let movieListContainer = document.getElementById('movieList');
 }
 
 function renderMoviesCard(lists ) {
-
+  movieListContainer.innerHTML = ''
   lists.forEach((movie , index) => {
    const container = createMovieCard(movie)
    movieListContainer.appendChild(container) /// movie
@@ -162,12 +162,21 @@ function handleSort(event) {
   const sortType = event.target.value;
   if(sortType) {
     if(sortType ==='date') {
-        movieList.sort((a,b)=> new Date(a.release_date)  - new Date(b.release_date))
-        movieListContainer.innerHTML = ''
-        renderMoviesCard(movieList)
+      // const data =  movieList; //  // shallow copy data me memory reference of movieaList will be copied
+      const data =  [...movieList]; // it is one level array list  , so we can do deep copy using spread operator
+      // for nested level; of  array we need to write our own customize deepCopy function
+    
+      data.sort((a,b)=> new Date(a.release_date)  - new Date(b.release_date))
+  
+        renderMoviesCard(data)
+    } else if(sortType==='rating') {
+      const data =  [...movieList]; // it is one level array list  , so we can do deep copy using spread operator
+      // for nested level; of  array we need to write our own customize deepCopy function
+    
+      data.sort((a,b)=> a.vote_average  - b.vote_average)
+      renderMoviesCard(data)
     }
   } else {
-    movieListContainer.innerHTML = ''
     renderMoviesCard(movieList);
   }
 }
@@ -179,3 +188,13 @@ function handleSort(event) {
 // Prototype
 // Pormises
 // Aync Programming
+
+
+// array and object  
+// number string and boolean
+
+
+// pass by value 
+// pass by reference 
+
+// movieList --> [] <--- data
