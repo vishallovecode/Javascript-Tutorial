@@ -4,6 +4,7 @@ const base_url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=f531333d6
 const base_img_url = 'https://image.tmdb.org/t/p/original'
 let movieList = []
 let movieListContainer = document.getElementById('movieList');
+let page =1;
 
  function handleSearch (event) {
   event.preventDefault()
@@ -179,6 +180,19 @@ function handleSort(event) {
   } else {
     renderMoviesCard(movieList);
   }
+}
+
+
+function handlePagination(type) {
+  if(type === 'prev' ) {
+    if(page>1) {
+      page--;
+    }
+  } else {
+    page++;
+  }
+  document.getElementById('current').textContent = `Current: ${page}`
+  getAllMovies(page)
 }
 
 
