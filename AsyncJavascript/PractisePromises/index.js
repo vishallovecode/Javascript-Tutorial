@@ -84,3 +84,26 @@ const fetchData = ()=> {
  })
 }
 fetchData()
+
+var employee = {
+  firstName: 'Radar ',
+  lastName: 'Yuirt',
+  salary: 230000,
+  getSalary: () => {
+  console.log(this.firstName + this.lastName) // undefined + undefined => NAN
+  console.log(this, 'hi1') // ??
+  const call1 = () => {
+  console.log('Function inside the getSalary' , this) // ??
+  }
+  call1()
+  },
+  getFullName () {
+  console.log(this.firstName + this.lastName) 
+  const call1 = () => {
+  console.log('Function inside the getFullName' , this) 
+  }
+  call1()
+  }
+  }
+  employee.getSalary();
+  employee.getFullName()

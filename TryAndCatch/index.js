@@ -65,3 +65,10 @@
 //     }
 // }
 
+function onClick () {
+ document.getElementById('submit').textContent = 'Submitted'
+}
+
+
+ /
+

@@ -587,3 +587,9 @@ const zz= [1,32,34,5,5]
 for(let i =0;i<n;i++) {
     console.log(zz[i]) // zz[0] // [zz[1]]
 }
+
+
+
+
+// function custom function  
+// lodash library (this we will be using in react)
